@@ -1,21 +1,36 @@
+<h4>Vous créez un {{typePersonnage}} de la maison {{maison}}</h4>
+
 <h1>Choisissez vos vertus et vices</h1>
 
-<h2>Vertus</h2>
-<table class="table table-striped" style='width:100%'>
-	<head>
-		<th>Maj / Min</th>
-		<th>Type</th>
-		<th>Nom</th>
-		<th>Effet</th>
-		<th>Select</th>
-	</head>
-	<body>
-		<tr ng-if="typePersonnage == 'Mage'">
-			<td></td>
-			<td></td>
-			<td>Le Don</td>
-			<td>Vous pouvez pratiquer la magie</td>
-			<td><input type='checkbox' checked disabled></td>
-		</tr>
-	</body>
-</table>
+<h3>Règles</h3>
+<ul>
+	<li ng-repeat="regle in regles">{{regle.rule}}</li>
+</ul>
+
+<div ng-if="typePersonnage == 'Mage'">
+	<p>Avantages offerts par la maison : </p>
+	<p>liste ici</p>
+</div>
+
+<div ng-if="vertuesHermetiquesMajeuresDispo > -1">
+	<h2>Vertus Hermétiques Majeures</h2>
+	<table class="table table-striped" style='width:100%'>
+		<head>
+			<th>Nom</th>
+			<th>Effet</th>
+			<th>Select</th>
+		</head>
+		<body>
+			<tr>
+				<td>Le Don</td>
+				<td>Vous pouvez pratiquer la magie</td>
+				<td><input type='checkbox' checked disabled></td>
+			</tr>
+			<tr>
+				<td>Don de Velours</td>
+				<td></td>
+				<td><input type='checkbox' ng-model="VHMaj1" ng-disabled="!VHMaj1 && (vertuesHermetiquesMajeuresDispo < 1 || vertuesHermetiquesDispo < 1 || vertuesDispo < 3)" ng-click="handleClickVertuesHermMaj()"></td>
+			</tr>
+		</body>
+	</table>
+</div>
