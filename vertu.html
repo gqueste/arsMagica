@@ -1,16 +1,19 @@
 <h4>Vous créez un {{typePersonnage}} de la maison {{maison}}</h4>
 
 <h1>Choisissez vos vertus et vices</h1>
+<button ng-click="scrollTo('title_Vices')">Aller aux Vices</button>
 
 <h3>Règles</h3>
 <ul>
 	<li ng-repeat="regle in regles">{{regle.rule}}</li>
 </ul>
 
-<div ng-if="typePersonnage == 'Mage'">
+<div ng-if="avantages != ''">
 	<p>Avantages offerts par la maison : </p>
-	<p>liste ici</p>
+	<p>{{avantages}}</p>
 </div>
+
+<h2 id='title_Vertus'>Vertus</h2>
 
 <div ng-if="vertuesHermetiquesMajeuresDispo > none">
 	<h2>Vertus Hermétiques Majeures</h2>
@@ -24,7 +27,7 @@
 			<tr>
 				<td>Le Don</td>
 				<td>Vous pouvez pratiquer la magie</td>
-				<td><input type='checkbox' checked disabled></td>
+				<td><input class="specialInput" type='checkbox' checked disabled></td>
 			</tr>
 			<tr>
 				<td>Don de Velours</td>
@@ -216,7 +219,7 @@
 			<tr ng-if="typePersonnage == 'Mage' && maison == 'Bjornaer'">
 				<td>Animal de coeur</td>
 				<td>Vous avez été inité au mystère du dernier cercle de l'Animal de Coeur.</td>
-				<td><input type='checkbox' disabled checked></td>
+				<td><input class="specialInput" type='checkbox' disabled checked></td>
 			</tr>
 			<tr>
 				<td>Bonus aux études</td>
@@ -248,6 +251,11 @@
 				<td>Votre magie s'accorde plus particulièrement à un domaine étroit, tel que la transformation personnelle, les oiseaux de proie ou les soins.</td>
 				<td><input type='checkbox' ng-model="VHMin8" ng-disabled="!VHMin8 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
 			</tr>
+			<tr ng-if="typePersonnage == 'Mage' && maison == 'Tremere'">
+				<td>Expertise magique mineure</td>
+				<td>Votre magie s'accorde plus particulièrement à un domaine étroit, tel que la transformation personnelle, les oiseaux de proie ou les soins.</td>
+				<td><input type='checkbox' class="specialInput" checked disabled></td>
+			</tr>
 			<tr>
 				<td>Forme de prédilection</td>
 				<td>Vous êtes particulièrement doué dans une Forme. Vous ne subissez pas de malus lorsque vous effectuez des paroles ou des gestes inhabituels.</td>
@@ -266,7 +274,7 @@
 			<tr ng-if="typePersonnage == 'Mage' && maison == 'Criamon'">
 				<td>L'Enigme</td>
 				<td>Vous avez été initié au Mystère du dernier cercle de l'Enigme</td>
-				<td><input type='checkbox' checked disabled></td>
+				<td><input class="specialInput" type='checkbox' checked disabled></td>
 			</tr>
 			<tr>
 				<td>Lancement méthodique</td>
@@ -291,12 +299,12 @@
 			<tr ng-if="typePersonnage == 'Mage' && maison == 'Verditius'">
 				<td>Magie de Verditius</td>
 				<td>Vous avez été initié au Mystère du dernier cercle de la magie Verditius.</td>
-				<td><input type='checkbox' checked disabled></td>
+				<td><input class="specialInput" type='checkbox' checked disabled></td>
 			</tr>
 			<tr ng-if="typePersonnage == 'Mage' && maison == 'Merinita'">
 				<td>Magie féérique</td>
 				<td>Vous avez été initié au Mystère du dernier cercle de la Magie féerique.</td>
-				<td><input type='checkbox' checked disabled></td>
+				<td><input class="specialInput" type='checkbox' checked disabled></td>
 			</tr>
 			<tr>
 				<td>Magie persistante</td>
@@ -357,6 +365,26 @@
 				<td>Talent en (Art) 2</td>
 				<td>Vous ajoutez un bonus à un Art pour toutes ses utilisations.</td>
 				<td><input type='checkbox' ng-model="VHMin27" ng-disabled="!VHMin27 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr ng-if="typePersonnage == 'Mage' && maison == 'Flambeau'">
+				<td><strong>Talent en Pedro (choisissez en un)</strong></td>
+				<td>Vous ajoutez un bonus à un Art pour toutes ses utilisations.</td>
+				<td><input type='checkbox' class="specialInput" ng-model="checkFlambeau" checked></td>
+			</tr>
+			<tr ng-if="typePersonnage == 'Mage' && maison == 'Flambeau'">
+				<td><strong>Talent en Ignem (choisissez en un)</strong></td>
+				<td>Vous ajoutez un bonus à un Art pour toutes ses utilisations.</td>
+				<td><input type='checkbox' class="specialInput" ng-checked="!checkFlambeau" ></td>
+			</tr>
+			<tr ng-if="typePersonnage == 'Mage' && maison == 'Mercere'">
+				<td><strong>Talent en Creo (choisissez en un)</strong></td>
+				<td>Vous ajoutez un bonus à un Art pour toutes ses utilisations.</td>
+				<td><input type='checkbox' class="specialInput" ng-model="checkMercere" checked></td>
+			</tr>
+			<tr ng-if="typePersonnage == 'Mage' && maison == 'Mercere'">
+				<td><strong>Talent en Muto (choisissez en un)</strong></td>
+				<td>Vous ajoutez un bonus à un Art pour toutes ses utilisations.</td>
+				<td><input type='checkbox' class="specialInput" ng-checked="!checkMercere" ></td>
 			</tr>
 		</body>
 	</table>
@@ -572,10 +600,15 @@
 				<td>Vous avez été entraîné à combattre et avez pu participer à une campagne militaire, peut être l'une des Croisades. Lors de la création de personnage, vous pouvez acheter des Compétences martiales et disposez de points d'expérience supplémentaires à répartir.</td>
 				<td><input type='checkbox' ng-model="VGenMin15" ng-disabled="!VGenMin15 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
 			</tr>
-			<tr>
+			<tr ng-if="typePersonnage != 'Mage' || maison != 'Tytalus'">
 				<td>Confiance en soi</td>
 				<td>Vous avez une confiance absolue en vos propres capacités, ce qui se traduit par une valeur de Confiance de 2.</td>
 				<td><input type='checkbox' ng-model="VGenMin16" ng-disabled="!VGenMin16 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr ng-if="typePersonnage == 'Mage' && maison == 'Tytalus'">
+				<td>Confiance en soi</td>
+				<td>Vous avez une confiance absolue en vos propres capacités, ce qui se traduit par une valeur de Confiance de 2.</td>
+				<td><input type='checkbox' ng-class='specialInput' disabled checked></td>
 			</tr>
 			<tr>
 				<td>Connaissances mystiques</td>
@@ -787,6 +820,16 @@
 				<td>Vous êtes particulièrement doué pour une Compétence, et ajoutez 2 à sa valeur dès que vous l'utilisez.</td>
 				<td><input type='checkbox' ng-model="VGenMin58" ng-disabled="!VGenMin58 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
 			</tr>
+			<tr ng-if=="typePersonnage == 'Mage' && maison == 'Bonisagus'">
+				<td><strong>Talent pour l'Intrigue (Choisissez en un)</strong></td>
+				<td>Vous êtes particulièrement doué pour une Compétence, et ajoutez 2 à sa valeur dès que vous l'utilisez.</td>
+				<td><input class="specialInput" type='checkbox' model='specialBonisagus' checked></td>
+			</tr>
+			<tr ng-if=="typePersonnage == 'Mage' && maison == 'Bonisagus'">
+				<td><strong>Talent pour la Théorie de la Magie (Choisissez en un)</strong></td>
+				<td>Vous êtes particulièrement doué pour une Compétence, et ajoutez 2 à sa valeur dès que vous l'utilisez.</td>
+				<td><input class="specialInput" type='checkbox' ng-checked='!specialBonisagus'></td>
+			</tr>
 			<tr>
 				<td>Verdeur</td>
 				<td>Vous ne souffrez pas des effets de l'âge.</td>
@@ -818,7 +861,7 @@
 			<tr ng-if="typePersonnage == 'Mage'">
 				<td>Mage Hermétique</td>
 				<td>Vous appartenez à l'Ordre d'Hermès.</td>
-				<td><input type='checkbox' checked disabled></td>
+				<td><input class="specialInput" type='checkbox' checked disabled></td>
 			</tr>
 			<tr>
 				<td>Artisan</td>
@@ -849,3 +892,5 @@
 	</table>
 </div>
 
+<h2 id='title_Vices'>Vices</h2>
+<button ng-click="scrollTo('title_Vertus')">Remonter aux Vertus</button>

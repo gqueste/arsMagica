@@ -67,7 +67,7 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
 .controller('AccueilCtrl', function($scope, $http) {
   $scope.chooseType = function() {
     var typeRecupere = $('#type_character_select option:selected').val();
-    window.location.replace("#/create/"+typeRecupere);
+    window.location.href = "#/create/"+typeRecupere;
   };
 })
 
@@ -76,11 +76,11 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
 
   $scope.maison = function() {
     var maison = $('#select_maison option:selected').val();
-    window.location.replace("#/create/"+$scope.typePersonnage+"/"+maison);
+    window.location.href = "#/create/"+$scope.typePersonnage+"/"+maison;
   }
 })
 
-.controller('VertuCtrl', function($scope, $routeParams, $http) {
+.controller('VertuCtrl', function($scope, $routeParams, $http, $location, $anchorScroll) {
   $scope.typePersonnage = $routeParams.typePersonnage;
   $scope.maison = $routeParams.maison;
 
@@ -89,6 +89,7 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
   $scope.costMineure = 1;
   $scope.noLimit = 50;
   $scope.none = -1;
+  $scope.avantages = '';
 
   //Déclaration variables
   $scope.regles;
@@ -104,6 +105,7 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
   $scope.vertuesHermetiquesDispo ;
   $scope.vertuesHermetiquesMajeuresDispo ;
   $scope.vicesHermetiquesDispo ;
+  $scope.vicesHermetiquesMajeursNecessaires;
   $scope.vicesHermetiquesNecessaires;
   $scope.vicesMineursDispo ;
   $scope.vicesHistoireDispo ;
@@ -130,6 +132,7 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
     $scope.vertuesHermetiquesDispo = $scope.none;
     $scope.vertuesHermetiquesMajeuresDispo = $scope.none;
     $scope.vicesHermetiquesDispo = $scope.none;
+    $scope.vicesHermetiquesMajeursNecessaires = $scope.none;
     $scope.vicesHermetiquesNecessaires = $scope.none;
     $scope.vicesMineursDispo = $scope.noLimit;
     $scope.vicesHistoireDispo = $scope.noLimit;
@@ -156,6 +159,7 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
       $scope.vertuesHermetiquesDispo = $scope.none;
       $scope.vertuesHermetiquesMajeuresDispo = $scope.none;
       $scope.vicesHermetiquesDispo = $scope.none;
+      $scope.vicesHermetiquesMajeursNecessaires = $scope.none;
       $scope.vicesHermetiquesNecessaires = $scope.none;
       $scope.vicesMineursDispo = 5;
       $scope.vicesHistoireDispo = 1;
@@ -181,9 +185,26 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
       $scope.vertuesHermetiquesDispo = $scope.noLimit;
       $scope.vertuesHermetiquesMajeuresDispo = 1;
       $scope.vicesHermetiquesDispo = $scope.noLimit;
+      $scope.vicesHermetiquesMajeursNecessaires = $scope.none;
       $scope.vicesHermetiquesNecessaires = 1;
       $scope.vicesMineursDispo = 5;
       $scope.vicesHistoireDispo = 1;
+      if ($scope.maison == 'Ex Miscellanea') {
+        $scope.avantages = 'Une Vertu hermétique mineure gratuite, une Vertu non hermétique majeure gratuite et un Vice hermétique majeur obligatoire';
+        $scope.vicesHermetiquesMajeursNecessaires = 1;
+        $scope.vertuesDispo = $scope.vertuesDispo + $scope.costMineure + $scope.costMajeure;
+      }
+      else {
+        if($scope.maison == 'Guernicus') {
+          $scope.avantages = 'Prestige hermétique';
+        }
+        else {
+          if($scope.maison == 'Jerbiton') {
+            $scope.avantages = 'Une vertu mineure liée à l\'érudition, aux arts ou aux intéractions vulgaires';
+            $scope.vertuesDispo = $scope.vertuesDispo + $scope.costMineure;
+          }
+        }
+      }
     }
   }
 
@@ -283,6 +304,10 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
       $scope.statutSocialDispo ++;
       $scope.statutSocialNecessaire ++;
     }
+  };
+  $scope.scrollTo = function(id) {
+    $location.hash(id);
+    $anchorScroll();
   };
 });
 
