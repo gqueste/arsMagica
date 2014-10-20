@@ -12,7 +12,7 @@
 	<p>liste ici</p>
 </div>
 
-<div ng-if="vertuesHermetiquesMajeuresDispo > -1">
+<div ng-if="vertuesHermetiquesMajeuresDispo > none">
 	<h2>Vertus Hermétiques Majeures</h2>
 	<table class="table table-striped" style='width:100%'>
 		<head>
@@ -28,9 +28,824 @@
 			</tr>
 			<tr>
 				<td>Don de Velours</td>
-				<td></td>
-				<td><input type='checkbox' ng-model="VHMaj1" ng-disabled="!VHMaj1 && (vertuesHermetiquesMajeuresDispo < 1 || vertuesHermetiquesDispo < 1 || vertuesDispo < 3)" ng-click="handleClickVertuesHermMaj()"></td>
+				<td>Contrairement aux autres mages, dont la nature hermétique perturbe les gens normaux et les animaux, votre Don est subtil et insensible. Vous ne subissez pas les malus habituels lorsque vous interagissez avec les gens et les animaux.</td>
+				<td><input type='checkbox' ng-model="VHMaj1" ng-disabled="!VHMaj1 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Expertise magique majeure</td>
+				<td>Votre magie est bien plus puissante dans un domaine relativement limité, tel que le climat, la nécromancie, les oiseaux ou les émotions,... (permet de doubler la technique ou la forme la plus petite lors d'un sort relatif au domaine)</td>
+				<td><input type='checkbox' ng-model="VHMaj2" ng-disabled="!VHMaj2 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Magie de Diedne</td>
+				<td>Votre lignée et votre tradition magique viennent des druides et de l'ancienne maison vaincue des Diednes, vous rendant particulièrement doué pour la magie spontanée. Vous devez dissimuler votre lignée à l'Ordre, ce qui vous donne le Vice d'Histoire Majeur Sombre Secret.</td>
+				<td><input type='checkbox' ng-model="VHMaj3" ng-disabled="!VHMaj3 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Magie de Mercure</td>
+				<td>Votre lignée et votre tradition magique remontent aux prêtres romains de Mercure, datant d'avant l'Ordre. En conséquence, vous êtes particulièrement doué pour la magie rituelle et la magie utilisée en communion avec d'autres. Mais vous ne pouvez utiliser la magie spontanée qu'en suivant les règles de l'incantation cérémonielle.</td>
+				<td><input type='checkbox' ng-model="VHMaj4" ng-disabled="!VHMaj4 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Magie élémentaire</td>
+				<td>Vous avez été entraîné à manipuler les formes élémentaires pures (Ignem, Auram, Aquam et Terram), que vous voyez comme un tout unifié plutôt que comme quatre Arts séparés. Si vous étudiez un de ces Arts, vous gagnez de l'expérience dans les autres également.</td>
+				<td><input type='checkbox' ng-model="VHMaj5" ng-disabled="!VHMaj5 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Magie formelle flexible</td>
+				<td>Vous pouvez varier les effets des sorts formels tout en conservant les avantages de lancer un sort connu (Portée, Durée, Cible).</td>
+				<td><input type='checkbox' ng-model="VHMaj6" ng-disabled="!VHMaj6 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Magie parfaite</td>
+				<td>Vous maîtrisez automatiquement tous les sorts que vous apprenez.</td>
+				<td><input type='checkbox' ng-model="VHMaj7" ng-disabled="!VHMaj7 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Magie spontanée vitalisée</td>
+				<td>Les possibilités de votre magie spontanées peuvent dépasser celles de la plupart des mages, au prix de votre énergie vitale.</td>
+				<td><input type='checkbox' ng-model="VHMaj8" ng-disabled="!VHMaj8 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Révélations secondaires</td>
+				<td>Votre méthode d'étude magique est particulièrement polyvalente. Quans vous étudiez une technique, vous gagnez des points à dépenser dans d'autres formes ou techniques.</td>
+				<td><input type='checkbox' ng-model="VHMaj9" ng-disabled="!VHMaj9 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Sang mythique</td>
+				<td>Vous êtes le descendant direct d'un magicien légendaire ou d'un être surnaturel par exemple. Vous pouvez choisir un exploit magique vous pouvez accomplir à volonté et annuler à volonté. Cela inclut également une Expertise Magique Mineure dans le domaine de l'ancêtre, et un Vice de Personnalité Mineur(les 2 gratuitement).</td>
+				<td><input type='checkbox' ng-model="VHMaj10" ng-disabled="!VHMaj10 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 || vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
 			</tr>
 		</body>
 	</table>
 </div>
+
+<div ng-if="vertusMajeuresDispo > none">
+	<h2>Vertus Surnaturelles Majeures</h2>
+	<table class="table table-striped" style='width:100%'>
+		<head>
+			<th>Nom</th>
+			<th>Effet</th>
+			<th>Select</th>
+		</head>
+		<body>
+			<tr>
+				<td>Changeforme</td>
+				<td>Vous pouvez vous transformer en un ou plusieurs animaux vulgaires. Cela vous octroie la Compétence Changeforme</td>
+				<td><input type='checkbox' ng-model="VSMaj1" ng-disabled="!VSMaj1 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesSurnMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Hypnotisme</td>
+				<td>Vous avez le pouvoir de contrôler la volonté d'un individu en le fixant dans les yeux et en donnant des ordres verbalement. Cela vous octroie la compétence Hypnotisme</td>
+				<td><input type='checkbox' ng-model="VSMaj2" ng-disabled="!VSMaj2 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesSurnMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Immunité majeure</td>
+				<td>Vous êtes immunisé contre un danger qui est soit rare, soit non-mortel, soit les deux</td>
+				<td><input type='checkbox' ng-model="VSMaj3" ng-disabled="!VSMaj3 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesSurnMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Imposition des mains majeure</td>
+				<td>Vous pouvez, en touchant de la main et en dépensant de la Fatigue, guérir une maladie grave spécifique. La maladie doit mettre la vie du patient en danger ou l'handicaper sérieusement. De plus, ce doit être une maladie dont on ne guérit pas habituellement par soi même. Vous devez choisir la maladie dont vous guérissez lorsque vous prenez la Vertue.</td>
+				<td><input type='checkbox' ng-model="VSMaj4" ng-disabled="!VSMaj4 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesSurnMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Sang féerique saillant</td>
+				<td>Le sang féerique coule à flot dans vos veines. Peut être l'un de vos parents était-il un être féerique lui même, ou peut être avez vous été conçu ou êtes vous né dans un lieu de grande puissance féerique. Cela vous confère une grande espérance de vie, la Vertu Double Vue (gratuitement). Vous pouvez apprendre Connaissance de la Féerie. Vous choisissez un type d'héritage présenté dans la Vertu Sang Féerique. Votre appartenance se montre physiquement.</td>
+				<td><input type='checkbox' ng-model="VSMaj5" ng-disabled="!VSMaj5 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesSurnMaj($event)"></td>
+			</tr>
+		</body>
+	</table>
+</div>
+
+<div ng-if="vertusMajeuresDispo > none">
+	<h2>Vertus de Statut Social Majeures</h2>
+	<table class="table table-striped" style='width:100%'>
+		<head>
+			<th>Nom</th>
+			<th>Effet</th>
+			<th>Select</th>
+		</head>
+		<body>
+			<tr>
+				<td>Magister in Artibus</td>
+				<td>Vous êtes maître des arts dans une grande université européenne où vous avez complété votre régence de deux ans d'enseignement obligatoire. Vous avez le droit de vous faire appeler Magister ou Maître, n'êtes sujet qu'au droit canon et pouvez enseigner n'importe où en Europe.</td>
+				<td><input type='checkbox' ng-model="VSSMaj1" ng-disabled="!VSSMaj1 && (vertusMajeuresDispo < 1 || statutSocialDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesStatutSocMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Noble propriétaire terrien</td>
+				<td>Vous contrôlez des terres, des serfs et des hommes d'armes, vous devez fidélité et assistance à votre suzerain. Votre demeure seigneuriale compte une demi-douzaine de serviteurs, dont quelques gardes du corps. Vous avez le droit de rendre la justice dans votre fief, mais pas d'imposer la peine capitale, ni de mutiler les criminels.</td>
+				<td><input type='checkbox' ng-model="VSSMaj2" ng-disabled="!VSSMaj2 && (vertusMajeuresDispo < 1 || statutSocialDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesStatutSocMaj($event)"></td>
+			</tr>
+			<tr ng-if="typePersonnage != 'Mage' && maison == 'Mercere'">
+				<td>Toque Rouge</td>
+				<td>Vous délivrez des messages pour l'Ordre et vous disposez de plusieurs objets enchantés pour vous aider dans cette tâche. Vous obtenez la Vertu Grand Voyageur gratuitement.</td>
+				<td><input type='checkbox' ng-model="VSSMaj3" ng-disabled="!VSSMaj3 && (vertusMajeuresDispo < 1 || statutSocialDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesStatutSocMaj($event)"></td>
+			</tr>
+		</body>
+	</table>
+</div>
+
+<div ng-if="vertusMajeuresDispo > none">
+	<h2>Vertus Générales Majeures</h2>
+	<table class="table table-striped" style='width:100%'>
+		<head>
+			<th>Nom</th>
+			<th>Effet</th>
+			<th>Select</th>
+		</head>
+		<body>
+			<tr>
+				<td>Ange gardien</td>
+				<td>Vous avez appris à entendre la voix d'un gardien divin qui vous donne des conseils pratiques et spirituels. L'ange murmure à votre oreille et vous dit ce qui est le mieux pour vous, sur le plan spirituel plutôt que matériel. Il n'approuve la violence que pour des raisons sacrées, souvent difficiles à démontrer. Si vous refusez de suivre un conseil de l'ange, il vous abandonne jusqu'à ce que vous corrigiez votre erreur. L'ange n'a qu'une connaissance partielle de vos pensées, mais quand vous parlez à voix haute, il vous entend et peut dicuter avec vous. Il peut également vous conférer un bonus en encaissement ou résistance magique. L'ange ne vous accorde ces avantages que si vous agissez en accord avec la volonté de Dieu.</td>
+				<td><input type='checkbox' ng-model="VGMaj1" ng-disabled="!VGMaj1 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesGenMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Connaissance du (Terrain)</td>
+				<td>Vous connaissez un type de terrain comme votre poche, et vous vous y sentez plus à l'aise que n'importe où ailleurs. Vous connaissez le terrain, ses habitants.</td>
+				<td><input type='checkbox' ng-model="VGMaj2" ng-disabled="!VGMaj2 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesGenMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Fantôme protecteur</td>
+				<td>Un fantôme vous protège. cela peut être un grand-parent, un ami d'enfance ou tout autre personne tenant assez à vous pour rester à vos côtés après la mort. Le fantôme est invisible et silencieux pour tous, sauf vous et les personnes dotées de Double Vue. Il peut voir et entendre ce qui se passe autour de vous, ce qui en fait un excellent espion, puisqu'il peut s'éloigner une fois par jour pendant une demi-heure. Cependant, la mort ne laisse pas les gens dans leur état normal. Le fantôme a probablement des travers qui le rendent peu fiable. Il peut aller jusqu'à vous encourager à le rejoindre de l'Autre côté.</td>
+				<td><input type='checkbox' ng-model="VGMaj3" ng-disabled="!VGMaj3 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesGenMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Foi exaltée</td>
+				<td>Votre piété et votre dévotion sont telles que votre foi pourrait déplacer des montagnes. Vous avez un point de Foi et pouvez en gagner d'autres.</td>
+				<td><input type='checkbox' ng-model="VGMaj4" ng-disabled="!VGMaj4 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesGenMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Prophétie de mort</td>
+				<td>Votre destin a fait l'objet d'une bénédiction ou d'une malédiction. Quelqu'un comme un mage, un être féerique ou tout autre créature surnaturelle a posé une condition sur votre mort. Jusqu'à ce que cette condition soit remplie, vous ne mourrez pas, quoique vous puissiez être gravement blessé. Vous ne pouvez pas mourir de vos blessures ou de vieillesse.</td>
+				<td><input type='checkbox' ng-model="VGMaj5" ng-disabled="!VGMaj5 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesGenMaj($event)"></td>
+			</tr>
+			<tr ng-if="typePersonnage != 'Mage'">
+				<td>Richesse</td>
+				<td>Vous êtes un membre privilégié de votre classe.</td>
+				<td><input type='checkbox' ng-model="VGMaj6" ng-disabled="!VGMaj6 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesGenMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Sang de géant</td>
+				<td>Le sang d'une ancienne race de géant coule dans vos veines. Bien que vous ne soyez pas aussi grand que vos ancêtres, vous mesurez jusqu'à 2 mètres et demi et pesez jusqu'à 250 kilos.</td>
+				<td><input type='checkbox' ng-model="VGMaj7" ng-disabled="!VGMaj7 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesGenMaj($event)"></td>
+			</tr>
+		</body>
+	</table>
+</div>
+
+<div ng-if="vertuesHermetiquesDispo > none">
+	<h2>Vertus Hermétiques Mineures</h2>
+	<table class="table table-striped" style='width:100%'>
+		<head>
+			<th>Nom</th>
+			<th>Effet</th>
+			<th>Select</th>
+		</head>
+		<body>
+			<tr>
+				<td>Affinité pour (Art) 1</td>
+				<td>Lors de la création de personnage, les points dans un art sont doublés</td>
+				<td><input type='checkbox' ng-model="VHMin1" ng-disabled="!VHMin1 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Affinité pour (Art) 2</td>
+				<td>Lors de la création de personnage, les points dans un art sont doublés</td>
+				<td><input type='checkbox' ng-model="VHMin2" ng-disabled="!VHMin2 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr ng-if="typePersonnage == 'Mage' && maison == 'Bjornaer'">
+				<td>Animal de coeur</td>
+				<td>Vous avez été inité au mystère du dernier cercle de l'Animal de Coeur.</td>
+				<td><input type='checkbox' disabled checked></td>
+			</tr>
+			<tr>
+				<td>Bonus aux études</td>
+				<td>Lorsque vous avez l'occasion d'étudier un Art dans un livre ou à partir de vis  brut en présence de la Forme ou de la Technique, votre environnement vous aide dans les études.</td>
+				<td><input type='checkbox' ng-model="VHMin3" ng-disabled="!VHMin3 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Circonstances spéciales</td>
+				<td>Votre magie est plus puissante dans certaines conditions inhabituelles, par exemple durant une tempête ou en touchant la Cible.</td>
+				<td><input type='checkbox' ng-model="VHMin4" ng-disabled="!VHMin4 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Effet secondaire</td>
+				<td>Votre magie présente des manifestations additionnelles, généralement utiles, quoique parfois gênantes.</td>
+				<td><input type='checkbox' ng-model="VHMin5" ng-disabled="!VHMin5 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Etudes libres</td>
+				<td>Vous êtes plus à l'aise en étudiant par vous même qu'en lisant des livres</td>
+				<td><input type='checkbox' ng-model="VHMin6" ng-disabled="!VHMin6 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Etudiant laborantin adepte</td>
+				<td>Vous assimilez facilement les instructions d'autrui.</td>
+				<td><input type='checkbox' ng-model="VHMin7" ng-disabled="!VHMin7 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Expertise magique mineure</td>
+				<td>Votre magie s'accorde plus particulièrement à un domaine étroit, tel que la transformation personnelle, les oiseaux de proie ou les soins.</td>
+				<td><input type='checkbox' ng-model="VHMin8" ng-disabled="!VHMin8 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Forme de prédilection</td>
+				<td>Vous êtes particulièrement doué dans une Forme. Vous ne subissez pas de malus lorsque vous effectuez des paroles ou des gestes inhabituels.</td>
+				<td><input type='checkbox' ng-model="VHMin9" ng-disabled="!VHMin9 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Génie inventif</td>
+				<td>L'invention vous vient naturellement. Bonus lorsque vous créez de nouveaux sorts ou expérimentez.</td>
+				<td><input type='checkbox' ng-model="VHMin10" ng-disabled="!VHMin10 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Indifférence des animaux</td>
+				<td>Votre Don ne gêne pas les animaux, bien qu'il ait un effet normal sur les gens.</td>
+				<td><input type='checkbox' ng-model="VHMin11" ng-disabled="!VHMin11 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr ng-if="typePersonnage == 'Mage' && maison == 'Criamon'">
+				<td>L'Enigme</td>
+				<td>Vous avez été initié au Mystère du dernier cercle de l'Enigme</td>
+				<td><input type='checkbox' checked disabled></td>
+			</tr>
+			<tr>
+				<td>Lancement méthodique</td>
+				<td>Vous êtes doué pour les sorts formels, ayant développé une méthode sûre et précise pour les lancer.</td>
+				<td><input type='checkbox' ng-model="VHMin12" ng-disabled="!VHMin12 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Lancement rapide</td>
+				<td>Votre magie prend moins de temps à déclencher que celle d'autres mages.</td>
+				<td><input type='checkbox' ng-model="VHMin13" ng-disabled="!VHMin13 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Magie contrôlée</td>
+				<td>Vous exercez un contrôle strict sur vos sorts. Vous pouvez annuler n'importe lequel de vos sorts en vous concentrant. Vous pouvez même annuler la magie des objets que vous avez enchantés. Lorsque vous mourez, tous vos sorts et tous vos objets magiques s'arrêtent</td>
+				<td><input type='checkbox' ng-model="VHMin14" ng-disabled="!VHMin14 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Magie cyclique (positive)</td>
+				<td>Votre magie est accordée avec un cycle de la nature, solaire, lunaire, ou saisonnière par exemple.</td>
+				<td><input type='checkbox' ng-model="VHMin15" ng-disabled="!VHMin15 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr ng-if="typePersonnage == 'Mage' && maison == 'Verditius'">
+				<td>Magie de Verditius</td>
+				<td>Vous avez été initié au Mystère du dernier cercle de la magie Verditius.</td>
+				<td><input type='checkbox' checked disabled></td>
+			</tr>
+			<tr ng-if="typePersonnage == 'Mage' && maison == 'Merinita'">
+				<td>Magie féérique</td>
+				<td>Vous avez été initié au Mystère du dernier cercle de la Magie féerique.</td>
+				<td><input type='checkbox' checked disabled></td>
+			</tr>
+			<tr>
+				<td>Magie persistante</td>
+				<td>Les effets de vos sorts ont tendance à durer plus longtemps que d'habitude.</td>
+				<td><input type='checkbox' ng-model="VHMin16" ng-disabled="!VHMin16 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Magie silencieuse</td>
+				<td>Vous pouvez lancer des sorts à voix basse sans malus, et ne souffrez que d'un malus réduit quand vous n'utilisez pas la parole du tout.</td>
+				<td><input type='checkbox' ng-model="VHMin17" ng-disabled="!VHMin17 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Magie subtile</td>
+				<td>Vous ne subissez pas de malus lorsque vous lancez des sorts sans faire de gestes.</td>
+				<td><input type='checkbox' ng-model="VHMin18" ng-disabled="!VHMin18 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Maîtrise des sorts</td>
+				<td>Vous disposez de points d'expérience à dépenser pour maîtriser des sorts connus.</td>
+				<td><input type='checkbox' ng-model="VHMin19" ng-disabled="!VHMin19 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Mémoire magique</td>
+				<td>Votre mémoire a été habituée à retenir des détails magiques plutôt que vulgaires. Vous n'avez pas besoin de conserver des textes de laboratoire.</td>
+				<td><input type='checkbox' ng-model="VHMin20" ng-disabled="!VHMin20 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Parens compétent</td>
+				<td>Votre parens étant plus puissant et un meilleur professeur que la moyenne, vous obtenez des points d'expérience et des niveaux de sort supplémentaires.</td>
+				<td><input type='checkbox' ng-model="VHMin21" ng-disabled="!VHMin21 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Prestige hermétique</td>
+				<td>En raison d'un élément de votre historique, vous êtes bien considéré par les autres mages, même si vous n'avez rien fait pour gagner leur respect. Certains vous envient, et beaucoup attendront plus de vous que d'autres.</td>
+				<td><input type='checkbox' ng-model="VHMin22" ng-disabled="!VHMin22 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Prudence en sorcellerie</td>
+				<td>Vous êtes particulièrement prudent pour ce qui touche à la magie, ce qui fait que vous courez peu de risque d'échouer catastrophiquement lorsque vous échouez.</td>
+				<td><input type='checkbox' ng-model="VHMin23" ng-disabled="!VHMin23 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Renforcement vital</td>
+				<td>Vous pouvez dépensez de la Fatigue pour augmenter votre potentiel magique.</td>
+				<td><input type='checkbox' ng-model="VHMin24" ng-disabled="!VHMin24 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Source de vis personnelle</td>
+				<td>Vous avez un accès exclusif à une réserve de vis brut.</td>
+				<td><input type='checkbox' ng-model="VHMin25" ng-disabled="!VHMin25 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Talent en (Art) 1</td>
+				<td>Vous ajoutez un bonus à un Art pour toutes ses utilisations.</td>
+				<td><input type='checkbox' ng-model="VHMin26" ng-disabled="!VHMin26 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Talent en (Art) 2</td>
+				<td>Vous ajoutez un bonus à un Art pour toutes ses utilisations.</td>
+				<td><input type='checkbox' ng-model="VHMin27" ng-disabled="!VHMin27 && (vertuesHermetiquesDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesHermMin($event)"></td>
+			</tr>
+		</body>
+	</table>
+</div>
+
+<div>
+	<h2>Vertus Surnaturelles Mineures</h2>
+	<table class="table table-striped" style='width:100%'>
+		<head>
+			<th>Nom</th>
+			<th>Effet</th>
+			<th>Select</th>
+		</head>
+		<body>
+			<tr>
+				<td>Changepeau</td>
+				<td>Vous possédez une cape, une fourrure ou un autre objet magique fait à partir d'un animal. Lorsque vous la touchez physiquement, vous pouvez prendre la forme de cet animal.</td>
+				<td><input type='checkbox' ng-model="VSMin1" ng-disabled="!VSMin1 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesSurnMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Double vue</td>
+				<td>Vous voyez à travers les déguisements et les dissimulations illusoires, y compris l'invisibilité. Vous voyez également les choses naturellement invisibles comme les esprits et les fonrtières entre les niveaux de <em>regio</em>.</td>
+				<td><input type='checkbox' ng-model="VSMin2" ng-disabled="!VSMin2 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesSurnMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Empathie avec les animaux</td>
+				<td>Vous pouvez communiquer avec les animaux commme s'ils étaient des êtres humains.</td>
+				<td><input type='checkbox' ng-model="VSMin3" ng-disabled="!VSMin3 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesSurnMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Immunité mineure</td>
+				<td>Vous êtes immunisé contre un danger qui est soit rare, soit non mortel, soit les deux.</td>
+				<td><input type='checkbox' ng-model="VSMin4" ng-disabled="!VSMin4 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesSurnMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Imposition des mains mineures</td>
+				<td>Vous pouvez guérir une maladie spécifique en touchant le patient et en dépensant un niveau de Fatigue. Cela doit être une maladie dont les gens guérissent fréquemment par eux-mêmes, ou qui n'est pas particulièrement grave. Vous ne pouvez choisir qu'une maladie, pas une blessure ou un autre mal.</td>
+				<td><input type='checkbox' ng-model="VSMin5" ng-disabled="!VSMin5 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesSurnMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Musique enchanteresse</td>
+				<td>Lorsque vous vous coencentrez sur votre tâche, vous pouvez transmettre magiquement des émotions et des croyances aux personnes qui écoutent votre musique.</td>
+				<td><input type='checkbox' ng-model="VSMin6" ng-disabled="!VSMin6 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesSurnMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Perception de la sainteté et de la malignité</td>
+				<td>Vous pouvez percevoir l'appartenance au Bien ou au Mal.</td>
+				<td><input type='checkbox' ng-model="VSMin7" ng-disabled="!VSMin7 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesSurnMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Prémonitions</td>
+				<td>Vous sentez instinctivement quand quelque chose ne tourne pas rond ou va bientôt se gâter.</td>
+				<td><input type='checkbox' ng-model="VSMin8" ng-disabled="!VSMin8 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesSurnMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Sens de la nature</td>
+				<td>Vous êtes en harmonie avec la nature.</td>
+				<td><input type='checkbox' ng-model="VSMin9" ng-disabled="!VSMin9 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesSurnMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Sensibilité à la magie</td>
+				<td>Vous arrivez souvent à identifier un endroit ou un objet comme magique. Cependant, votre sensibilité vous rend vulnérable aux effets magiques.</td>
+				<td><input type='checkbox' ng-model="VSMin10" ng-disabled="!VSMin10 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesSurnMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Sourcier</td>
+				<td>Vous avez la faculté de trouver des choses proches à l'aide d'une baguette de sourcier (généralement un bâton fourchu) et de votre propre intuition.</td>
+				<td><input type='checkbox' ng-model="VSMin11" ng-disabled="!VSMin11 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesSurnMin($event)"></td>
+			</tr>
+		</body>
+	</table>
+</div>
+
+<div>
+	<h2>Vertus de Statut Social Mineures</h2>
+	<table class="table table-striped" style='width:100%'>
+		<head>
+			<th>Nom</th>
+			<th>Effet</th>
+			<th>Select</th>
+		</head>
+		<body>
+			<tr ng-if="typePersonnage != 'Mage'">
+				<td>Apprenti raté</td>
+				<td>Vous avez été l'apprenti d'un mage, mais quelque chose a fait que vous n'avez pas achevé votre formation. Peut être votre Don était-il incomplet ou qu'un incident grave vous l'a totalement arraché. Peut être travaillez vous encore pour votre ancien maître ou pour l'alliance à un poste ou un autre. Les mages ont de la compassion pour vous. Vous pouvez apprendre les Compéthences académiques, mystiques et martiales durant la création de personnage et connaissez la vie des mages.</td>
+				<td><input type='checkbox' ng-model="VSSMin1" ng-disabled="!VSSMin1 && (statutSocialDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesStatSocMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Capitaine mercenaire</td>
+				<td>Vous dirigez une petite compagnie de mercenaires (5 à 10), louant vos services aux plus offrants. Vous êtes une sorte de chevalier errant, mais sans le prestige. Vous avez accumulé une grande richesse durant vos voyages, puis l'avez dilapidé, plusieurs fois. Vous pouvez prendre des Compétences martiales.</td>
+				<td><input type='checkbox' ng-model="VSSMin2" ng-disabled="!VSSMin2 && (statutSocialDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesStatSocMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Chevalier</td>
+				<td>Vous êtes un chevalier, un membre de la noblesse et l'un des guerriers d'élite d'Europe. Vous avez un cheval ainsi que des armes et des armures de grande qualité: lance, épée, écu, cotte de maille complète et destrier. Vous pouvez prendre des Compétences martiales durant la création de personnage.</td>
+				<td><input type='checkbox' ng-model="VSSMin3" ng-disabled="!VSSMin3 && (statutSocialDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesStatSocMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Clerc</td>
+				<td>Vous appartenez à la classe alphabétisée, et travaillez comme scribe professionnel, comptable, juriste, étudiant ou fonctionnaire. Grâce à votre formation, vous pouvez prendre des Compétences académiques durant la création de personnage. Vous pouvez appartenir à un ordre mineur (acolyte, exorciste, lecteur ou portier), ce qui vous permet de vous marier tout en bénéficiant des avantages d'être un membre du clergé, dont le fait de dépendre du droit canon plutôt que du droit laïc. Vous pouvez également être diacre ou sous-diacre.</td>
+				<td><input type='checkbox' ng-model="VSSMin4" ng-disabled="!VSSMin4 && (statutSocialDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesStatSocMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Custos</td>
+				<td>Vous êtes employé par une alliance, où vous jouissez d'un statut élevé. Vous pouvez être un servant, un spécialiste ou un intendant. Vous pouvez choisir un groupe de Compétences réservées durant la création de personnage : martiales, académiques ou mystiques. Si vous choisissez les compétences martiales ou mystiques, vous pouvez tout de même apprendre à parler le latin, mais pas à le lire ou l'écrire.</td>
+				<td><input type='checkbox' ng-model="VSSMin5" ng-disabled="!VSSMin5 && (statutSocialDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesStatSocMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Gentilhomme / Gente dame</td>
+				<td>Vous êtes un membre mineur peut être illégitime, d'une famille noble. Vous n'êtes pas en ligne pour héritier, mais on vous traite tout de même comme un membre de la famille et vous pouvez vous faire appeler Seigneur ou Dame. Vous habitez probablement près de l'alliance avec votre famille. Quoique vous ne manquiez de rien, vous n'avez aucune richesse propre. Vous pouvez occasionnellement demander à votre famille de vous acheter un équipement coûteux, mais vous devez leur donner une bonne raison. On s'attend à ce que vous serviez votre famille la majeure partie du temps, sous peine d'en perdre les avantages.</td>
+				<td><input type='checkbox' ng-model="VSSMin6" ng-disabled="!VSSMin6 && (statutSocialDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesStatSocMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Moine mendiant</td>
+				<td>TODO !!!!!!!</td>
+				<td><input type='checkbox' ng-model="VSSMin7" ng-disabled="!VSSMin7 && (statutSocialDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesStatSocMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Prêtre</td>
+				<td>TODO !!!!!!!!!!!!!</td>
+				<td><input type='checkbox' ng-model="VSSMin8" ng-disabled="!VSSMin8 && (statutSocialDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesStatSocMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Sage</td>
+				<td>Vous appartenez à une large classe comprenant les mystiques, les devins, les guérisseurs et ainsi de suite. Vous êtes probablement de nature magique et vous avez sans doute une Vertu vous donnant une capacité surnaturelle. Vous êtes bien vu de votre communauté, quoique votre présence puisse provoquer la peur autant que le respect. Dans ce cas contraire, vous pouvez être un vagabond ou un exilé. Vous pouvez prendre des Compétences mystiques ou académiques, mais pas les deux, lors de la création de personnage.</td>
+				<td><input type='checkbox' ng-model="VSSMin9" ng-disabled="!VSSMin9 && (statutSocialDispo < 1 || vertuesDispo < costMineure)" ng-click="handleClickVertuesStatSocMin($event)"></td>
+			</tr>
+		</body>
+	</table>
+</div>
+
+<div>
+	<h2>Vertus Générales Mineures</h2>
+	<table class="table table-striped" style='width:100%'>
+		<head>
+			<th>Nom</th>
+			<th>Effet</th>
+			<th>Select</th>
+		</head>
+		<body>
+			<tr>
+				<td>Affinité pour (Compétence) 1</td>
+				<td>Lors de la création, les points d'expérience utilisés dans une Compétence sont doublés.</td>
+				<td><input type='checkbox' ng-model="VGenMin1" ng-disabled="!VGenMin1 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Affinité pour (Compétence) 2</td>
+				<td>Lors de la création, les points d'expérience utilisés dans une Compétence sont doublés.</td>
+				<td><input type='checkbox' ng-model="VGenMin2" ng-disabled="!VGenMin2 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Affinité pour (Compétence) 3</td>
+				<td>Lors de la création, les points d'expérience utilisés dans une Compétence sont doublés.</td>
+				<td><input type='checkbox' ng-model="VGenMin3" ng-disabled="!VGenMin3 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Amour Véritable (PJ)</td>
+				<td>Vous avez trouvé la personne qui vous était destinée dans toute la création : le lien entre vous est inaltérable. Que vous soyez blessé, en danger ou rejeté, le simple fait de penser à votre aimé(e) vous donne la force de persévérer. De l'autre côté, vous devez revenir régulièrement auprès de votre moitié. L'Amour Véritable n'est jamais à sens unique.</td>
+				<td><input type='checkbox' ng-model="VGenMin4" ng-disabled="!VGenMin4 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Aptitude magique latente</td>
+				<td>Vous possédez une qualité magique qui n'est pas encore manifestée, mais vous ne le réalisez probablement pas. Si vous êtes un mage, votre maître ne l'a pas détecté durant votre apprentissage. A la discrétion du conteur, cette qualité peut apparaitre spontanément ou à cause d'un évènement adéquat, comme boire du vin féérique. Ce n'est pas le Don : la capacité latente est plus limitée que cela.</td>
+				<td><input type='checkbox' ng-model="VGenMin5" ng-disabled="!VGenMin5 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Bénédiction de Vénus</td>
+				<td>Vous êtes attirant, avec un bonus aux tests de Communication et de Présence avec des personnes sexuellement compatibles dans une situation appropriée. C'est utile la plupart du temps, mais parfois embêtant.</td>
+				<td><input type='checkbox' ng-model="VGenMin6" ng-disabled="!VGenMin6 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Bon sens</td>
+				<td>Dès que vous êtes sur le point d'aller à l'encontre de ce qui est raisonnable dans le monde du jeu, le bon sens (par l'intermédiaire du conteur) vous prévient de votre erreur.</td>
+				<td><input type='checkbox' ng-model="VGenMin7" ng-disabled="!VGenMin7 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Caractéristiques supérieures 1</td>
+				<td>Vous avez 3 points supplémentaires à dépenser pour vos Caractéristiques.</td>
+				<td><input type='checkbox' ng-model="VGenMin8" ng-disabled="!VGenMin8 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Caractéristiques supérieures 2</td>
+				<td>Vous avez 3 points supplémentaires à dépenser pour vos Caractéristiques.</td>
+				<td><input type='checkbox' ng-model="VGenMin9" ng-disabled="!VGenMin9 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Caractéristiques supérieures 3</td>
+				<td>Vous avez 3 points supplémentaires à dépenser pour vos Caractéristiques.</td>
+				<td><input type='checkbox' ng-model="VGenMin10" ng-disabled="!VGenMin10 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Célèbre</td>
+				<td>Vous avez une Réputation positive de niveau 4. Choisissez son contenu (il n'a pas à être justifié) et son type.</td>
+				<td><input type='checkbox' ng-model="VGenMin11" ng-disabled="!VGenMin11 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Chance</td>
+				<td>Vous vous débrouillez bien dans les situations où la chance est plus importante que l'expérience ou le talent.</td>
+				<td><input type='checkbox' ng-model="VGenMin12" ng-disabled="!VGenMin13 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Clarté de pensée</td>
+				<td>Vos pensées sont logiques et rationnelles. Vous bénéficiez d'un bonus pour résister aux mensonges, à la confusion, à l'embrouillement et à la falsification, que la tentative soit magique ou vulgaire.</td>
+				<td><input type='checkbox' ng-model="VGenMin13" ng-disabled="!VGenMin13 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Colosse</td>
+				<td>Vous mesurez entre 1m80 et 2m10.</td>
+				<td><input type='checkbox' ng-model="VGenMin14" ng-disabled="!VGenMin14 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Combattant</td>
+				<td>Vous avez été entraîné à combattre et avez pu participer à une campagne militaire, peut être l'une des Croisades. Lors de la création de personnage, vous pouvez acheter des Compétences martiales et disposez de points d'expérience supplémentaires à répartir.</td>
+				<td><input type='checkbox' ng-model="VGenMin15" ng-disabled="!VGenMin15 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Confiance en soi</td>
+				<td>Vous avez une confiance absolue en vos propres capacités, ce qui se traduit par une valeur de Confiance de 2.</td>
+				<td><input type='checkbox' ng-model="VGenMin16" ng-disabled="!VGenMin16 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Connaissances mystiques</td>
+				<td>Vous pouvez prendre des Compétences mystiques durant la création de personnage. A moins de posséder le Don, vous ne pouvez pas apprendre Parma Magica. Vous recevez des points d'expérience supplémentaires à répartir en Compétences mystiques.</td>
+				<td><input type='checkbox' ng-model="VGenMin17" ng-disabled="!VGenMin17 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Constitution solide</td>
+				<td>Vous supportez bien la douleur et la fatigue.</td>
+				<td><input type='checkbox' ng-model="VGenMin18" ng-disabled="!VGenMin18 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Contacts sociaux</td>
+				<td>Vous connaissez beaucoup de monde dans un cercle social spécifique rencontré au fil des années. Où que vous alliez ou presque, vous rencontrez des gens que vous connaissez ou vous pouvez trouver quelqu'un prêt à vous aider.</td>
+				<td><input type='checkbox' ng-model="VGenMin19" ng-disabled="!VGenMin19 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Convalescence rapide</td>
+				<td>Votre corps guérit rapidement.</td>
+				<td><input type='checkbox' ng-model="VGenMin20" ng-disabled="!VGenMin20 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Créativité foisonnante</td>
+				<td>TODO !!!!!!!!!!!!!!!!!!!!</td>
+				<td><input type='checkbox' ng-model="VGenMin21" ng-disabled="!VGenMin21 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Doigté</td>
+				<td>Vous avez une coordination main-oeil exceptionnelle, et vous êtes doué pour les gestes précis et rapides.</td>
+				<td><input type='checkbox' ng-model="VGenMin22" ng-disabled="!VGenMin22 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Education bohémienne</td>
+				<td>Vous avez été élevé au sein d'une troupe de troubadours voyageant de ville en ville.</td>
+				<td><input type='checkbox' ng-model="VGenMin23" ng-disabled="!VGenMin23 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Education classique</td>
+				<td>Vous avez suivi les cours d'une école de grammaire, ainsi qu'une université ou une école épiscopale. Vous pouvez prendre des Compétences académiques et vous disposez de points d'expérience à répartir.</td>
+				<td><input type='checkbox' ng-model="VGenMin24" ng-disabled="!VGenMin24 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Education privilégiée</td>
+				<td>TODO !!!!!!!!!!!!!!!!!!!!!!</td>
+				<td><input type='checkbox' ng-model="VGenMin25" ng-disabled="!VGenMin25 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Endurance</td>
+				<td>Vous tenez plus longtemps que la moyenne lors d'activités fatigantes.</td>
+				<td><input type='checkbox' ng-model="VGenMin26" ng-disabled="!VGenMin26 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Erreurs profitables en (Compétence) 1</td>
+				<td>Vous êtes capable d'améliorer une Compétence particulière en multipliant les erreurs.</td>
+				<td><input type='checkbox' ng-model="VGenMin27" ng-disabled="!VGenMin27 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Erreurs profitables en (Compétence) 2</td>
+				<td>Vous êtes capable d'améliorer une Compétence particulière en multipliant les erreurs.</td>
+				<td><input type='checkbox' ng-model="VGenMin28" ng-disabled="!VGenMin28 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Erreurs profitables en (Compétence) 3</td>
+				<td>Vous êtes capable d'améliorer une Compétence particulière en multipliant les erreurs.</td>
+				<td><input type='checkbox' ng-model="VGenMin29" ng-disabled="!VGenMin29 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Etudiant (Dimension) 1</td>
+				<td>Grâce à votre entraînement aux aspects mystiques de l'une des quatre Dimensions (divine, féerique, infernale, magique), vous avez un bonus lors des utilisations des Connaissances de cette Dimension.</td>
+				<td><input type='checkbox' ng-model="VGenMin30" ng-disabled="!VGenMin30 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Etudiant (Dimension) 2</td>
+				<td>Grâce à votre entraînement aux aspects mystiques de l'une des quatre Dimensions (divine, féerique, infernale, magique), vous avez un bonus lors des utilisations des Connaissances de cette Dimension.</td>
+				<td><input type='checkbox' ng-model="VGenMin31" ng-disabled="!VGenMin31 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Etudiant (Dimension) 3</td>
+				<td>Grâce à votre entraînement aux aspects mystiques de l'une des quatre Dimensions (divine, féerique, infernale, magique), vous avez un bonus lors des utilisations des Connaissances de cette Dimension.</td>
+				<td><input type='checkbox' ng-model="VGenMin32" ng-disabled="!VGenMin32 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Etudiant attentif</td>
+				<td>Vous êtes particulièrement doué pour apprendre d'un professeur.</td>
+				<td><input type='checkbox' ng-model="VGenMin33" ng-disabled="!VGenMin34 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Exaltation</td>
+				<td>Vous êtes un orateur poignant ou une figure héroïque, capable d'inciter les gens au meilleur.</td>
+				<td><input type='checkbox' ng-model="VGenMin34" ng-disabled="!VGenMin34 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Excellence (Caractéristique) 1</td>
+				<td>Vous pouvez augmenter une Caractéristique ayant déjà une valeur de +3, jusqu'à +5. Justifiez cette augmentation.</td>
+				<td><input type='checkbox' ng-model="VGenMin35" ng-disabled="!VGenMin35 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Excellence (Caractéristique) 2</td>
+				<td>Vous pouvez augmenter une Caractéristique ayant déjà une valeur de +3, jusqu'à +5. Justifiez cette augmentation.</td>
+				<td><input type='checkbox' ng-model="VGenMin36" ng-disabled="!VGenMin36 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Excellence (Caractéristique) 3</td>
+				<td>Vous pouvez augmenter une Caractéristique ayant déjà une valeur de +3, jusqu'à +5. Justifiez cette augmentation.</td>
+				<td><input type='checkbox' ng-model="VGenMin37" ng-disabled="!VGenMin37 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Frénésie berserk</td>
+				<td>Vous pouvez entrer dans une rage aveugle pendant un combat ou lors d'une situation frustrante. Vous obtenez le trait de personnalité Colérique +2. lors de votre entrée en frénésie, vous avez un bonus en attaque et encaissement, mais un malus en défense. Si, à la fin du combat, vous êtes toujours en frénésie, vous attaquez vos amis.</td>
+				<td><input type='checkbox' ng-model="VGenMin38" ng-disabled="!VGenMin38 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Grand voyageur</td>
+				<td>Vous avez beaucoup voyagé dans cette partie du monde, ce qui fait que vous vous entendez bien avec ses habitants.</td>
+				<td><input type='checkbox' ng-model="VGenMin39" ng-disabled="!VGenMin39 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Indépendance</td>
+				<td>On ne peut pas facilement vous imposer des activités, des croyances ou des sentiments.</td>
+				<td><input type='checkbox' ng-model="VGenMin40" ng-disabled="!VGenMin40 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr ng-if="typePersonnage == 'Mage'">
+				<td>Indifférence des animaux</td>
+				<td>Votre Don ne gêne pas les animaux, bien qu'il ait un effet normal sur les gens.</td>
+				<td><input type='checkbox' ng-model="VGenMin41" ng-disabled="!VGenMin41 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr ng-if="typePersonnage != 'Servant'">
+				<td>Influence temporelle</td>
+				<td>de par votre ascendance ou votre position de confiance, vous jouissez d'un certain poids politique dans la société. Vous conseillez un dirigeant, et il peut vous arriver de diriger des gens du peuple, s'ils respectent votre position. Plus vous avez d'influence, plus vous avez de responsabilités et plus il devient difficile de travailler librement avec des mages.</td>
+				<td><input type='checkbox' ng-model="VGenMin42" ng-disabled="!VGenMin42 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Intuition</td>
+				<td>Votre sensibilité naturelle vous permet de prendre les bonnes décisions plus souvent que la simple chance ne pourrait l'expliquer. A chaque fois que vous êtes confronté à un choix où le hasard tient un rôle prépondérant, comme décider quel chemin suivre, vous avez une bonne chance de choisir correctement.</td>
+				<td><input type='checkbox' ng-model="VGenMin43" ng-disabled="!VGenMin43 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Lecteur perspicace</td>
+				<td>Vous êtes doué pour comprendre les écrits d'autrui.</td>
+				<td><input type='checkbox' ng-model="VGenMin44" ng-disabled="!VGenMin44 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Ouïe fine</td>
+				<td>Vous entendez mieux que la moyenne.</td>
+				<td><input type='checkbox' ng-model="VGenMin45" ng-disabled="!VGenMin45 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Pédagogue</td>
+				<td>Vous savez expliquer simplement de nouveaux concepts.</td>
+				<td><input type='checkbox' ng-model="VGenMin46" ng-disabled="!VGenMin46 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Protection</td>
+				<td>Vous êtes sous la protection d'une personne puissante, généralement un noble ou un membre haut placé du clergé. Ceux qui connaissent votre statut vous traitent avec prudence; ceux qui l'ignorent en paient souvent le prix.</td>
+				<td><input type='checkbox' ng-model="VGenMin47" ng-disabled="!VGenMin47 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Prudence pour (Compétence)</td>
+				<td>Vous êtes si prudent en ce qui concerne une compétence spécifique que vous avez peu de chance d'échouer de façon spectaculaire en cas d'échec.</td>
+				<td><input type='checkbox' ng-model="VGenMin48" ng-disabled="!VGenMin48 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Ragots</td>
+				<td>Des contacts réguliers dans la région vous fournissent toutes sortes d'informations sur la vie sociale et politique.</td>
+				<td><input type='checkbox' ng-model="VGenMin49" ng-disabled="!VGenMin49 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Réflexe éclair</td>
+				<td>Vous réagissez presque instantanément aux surprises. En fait, vos réflexes sont parfois si rapides que vous n'avez pas le temps de penser à la façon dont vous allez répondre. Notez que vous n'avez pas le choix de réagir ou pas.</td>
+				<td><input type='checkbox' ng-model="VGenMin50" ng-disabled="!VGenMin50 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Regard perçant</td>
+				<td>Si vous fixez intensément une personne, elle se sent mal à l'aise, comme si vous observiez son âme. Les personnes ayant des intentions cachées, des choses à se reprocher ou des mensonges en bouch doivent effectuer un Test. De plus, vous avez un bonus pour l'Intimidation.</td>
+				<td><input type='checkbox' ng-model="VGenMin51" ng-disabled="!VGenMin51 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Relique</td>
+				<td>Vous possédez une sainte relique, comme la phalange d'un saint par exemple.</td>
+				<td><input type='checkbox' ng-model="VGenMin52" ng-disabled="!VGenMin52 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Réserves de force</td>
+				<td>Une fois par jour, en cas de besoin, vous pouvez réaliser un exploit de force incroyable.</td>
+				<td><input type='checkbox' ng-model="VGenMin53" ng-disabled="!VGenMin53 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Sang féerique</td>
+				<td>Vous avez un être féerique quelque part dans votre arbre généalogique. Cela vous confère une compréhension instinctive des motivations et des personnalités de ce peuple mystique. Les êtres féeriques sont plus à l'aise en votre présence qu'avec d'autres humains. Vous êtes résistant aux effets de l'Age. Choisissez un type de sang : Nain (Artisanat), gobelin (Discrétion), satyre (Communication et Présence), Sidhe (Présence), Ondine (Eau)</td>
+				<td><input type='checkbox' ng-model="VGenMin54" ng-disabled="!VGenMin54 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Sens de l'équilibre</td>
+				<td>Vous êtes doué pour garder l'équilibre, notamment sur les corniches ou les cordes raides.</td>
+				<td><input type='checkbox' ng-model="VGenMin55" ng-disabled="!VGenMin55 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Talent pour (Compétence) 1</td>
+				<td>Vous êtes particulièrement doué pour une Compétence, et ajoutez 2 à sa valeur dès que vous l'utilisez.</td>
+				<td><input type='checkbox' ng-model="VGenMin56" ng-disabled="!VGenMin56 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Talent pour (Compétence) 2</td>
+				<td>Vous êtes particulièrement doué pour une Compétence, et ajoutez 2 à sa valeur dès que vous l'utilisez.</td>
+				<td><input type='checkbox' ng-model="VGenMin57" ng-disabled="!VGenMin57 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Talent pour (Compétence) 3</td>
+				<td>Vous êtes particulièrement doué pour une Compétence, et ajoutez 2 à sa valeur dès que vous l'utilisez.</td>
+				<td><input type='checkbox' ng-model="VGenMin58" ng-disabled="!VGenMin58 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Verdeur</td>
+				<td>Vous ne souffrez pas des effets de l'âge.</td>
+				<td><input type='checkbox' ng-model="VGenMin59" ng-disabled="!VGenMin59 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Vigueur</td>
+				<td>Vous résistez mieux aux coups que la plupart des gens.</td>
+				<td><input type='checkbox' ng-model="VGenMin60" ng-disabled="!VGenMin60 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Vision acérée</td>
+				<td>Vous voyez plus loin et plus clairement que les autres.</td>
+				<td><input type='checkbox' ng-model="VGenMin61" ng-disabled="!VGenMin61 && (vertuesDispo < costMineure)" ng-click="handleClickVertuesGenMin($event)"></td>
+			</tr>
+		</body>
+	</table>
+</div>
+
+<div>
+	<h2>Vertus de Statut Social Gratuites</h2>
+	<table class="table table-striped" style='width:100%'>
+		<head>
+			<th>Nom</th>
+			<th>Effet</th>
+			<th>Select</th>
+		</head>
+		<body>
+			<tr ng-if="typePersonnage == 'Mage'">
+				<td>Mage Hermétique</td>
+				<td>Vous appartenez à l'Ordre d'Hermès.</td>
+				<td><input type='checkbox' checked disabled></td>
+			</tr>
+			<tr>
+				<td>Artisan</td>
+				<td>Vous gagnez votre vie en fabriquant et en vendant des biens. Vous êtes probablement un habitant libre d'une ville, mais vous pouvez venir d'une zone rurale.</td>
+				<td><input type='checkbox' ng-model="VSSGrat2" ng-disabled="!VSSGrat2 && (statutSocialDispo < 1)" ng-click="handleClickVertuesStatSocGrat($event)"></td>
+			</tr>
+			<tr>
+				<td>Marchand</td>
+				<td>Vous vivez de l'achat et la revente de biens. Vous pouvez être un colporteur, tenir une échoppe, ou être sur les routes.</td>
+				<td><input type='checkbox' ng-model="VSSGrat3" ng-disabled="!VSSGrat3 && (statutSocialDispo < 1)" ng-click="handleClickVertuesStatSocGrat($event)"></td>
+			</tr>
+			<tr>
+				<td>Paysan</td>
+				<td>Vous vivez en travaillant la terre. Vous pouvez contrôler des terres étendues et engager des gens pour cultiver, si vous êtes riche, ou être une des personnes engagées.</td>
+				<td><input type='checkbox' ng-model="VSSGrat4" ng-disabled="!VSSGrat4 && (statutSocialDispo < 1)" ng-click="handleClickVertuesStatSocGrat($event)"></td>
+			</tr>
+			<tr>
+				<td>Résident d'une alliance</td>
+				<td>Vous êtes membre du personnel d'une alliance, où vous avez vécu toute votre vie. Etant entretenu par l'alliance, votre niveau de vie dépend de ses ressources plutôt que des vôtres.</td>
+				<td><input type='checkbox' ng-model="VSSGrat5" ng-disabled="!VSSGrat5 && (statutSocialDispo < 1)" ng-click="handleClickVertuesStatSocGrat($event)"></td>
+			</tr>
+			<tr>
+				<td>Vagabond</td>
+				<td>Vous n'êtes pas lié à une communauté, survivant en effectuant des travaux journaliers quelconques.</td>
+				<td><input type='checkbox' ng-model="VSSGrat6" ng-disabled="!VSSGrat6 && (statutSocialDispo < 1)" ng-click="handleClickVertuesStatSocGrat($event)"></td>
+			</tr>
+		</body>
+	</table>
+</div>
+

@@ -146,7 +146,7 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
       ];
       $scope.vertuesDispo = 10;
       $scope.vicesDispo = 10;
-      $scope.statutSocialDispo = $scope.noLimit;
+      $scope.statutSocialDispo = 1;
       $scope.statutSocialNecessaire = 1;
       $scope.vicesHistoireDispo = 1;
       $scope.vicesPersonnaliteDispo = 2;
@@ -171,7 +171,7 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
       ];
       $scope.vertuesDispo = 10;
       $scope.vicesDispo = 10;
-      $scope.statutSocialDispo = $scope.noLimit;
+      $scope.statutSocialDispo = 0;
       $scope.statutSocialNecessaire = 0;
       $scope.vicesHistoireDispo = 1;
       $scope.vicesPersonnaliteDispo = 2;
@@ -186,5 +186,103 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
       $scope.vicesHistoireDispo = 1;
     }
   }
+
+  $scope.handleClickVertuesHermMaj = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vertuesDispo = $scope.vertuesDispo - $scope.costMajeure;
+      $scope.vertusMajeuresDispo --;
+      $scope.vertuesHermetiquesDispo --;
+      $scope.vertuesHermetiquesMajeuresDispo --;
+      
+    }
+    else{ //decoche
+      $scope.vertuesDispo = $scope.vertuesDispo + $scope.costMajeure;
+      $scope.vertusMajeuresDispo ++;
+      $scope.vertuesHermetiquesDispo ++;
+      $scope.vertuesHermetiquesMajeuresDispo ++;
+    }
+  };
+  $scope.handleClickVertuesSurnMaj = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vertuesDispo = $scope.vertuesDispo - $scope.costMajeure;
+      $scope.vertusMajeuresDispo --;      
+    }
+    else{ //decoche
+      $scope.vertuesDispo = $scope.vertuesDispo + $scope.costMajeure;
+      $scope.vertusMajeuresDispo ++;
+    }
+  };
+  $scope.handleClickVertuesStatutSocMaj = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vertuesDispo = $scope.vertuesDispo - $scope.costMajeure;
+      $scope.vertusMajeuresDispo --;
+      $scope.statutSocialDispo --;
+      $scope.statutSocialNecessaire --;     
+    }
+    else{ //decoche
+      $scope.vertuesDispo = $scope.vertuesDispo + $scope.costMajeure;
+      $scope.vertusMajeuresDispo ++;
+      $scope.statutSocialDispo ++;
+      $scope.statutSocialNecessaire ++;
+    }
+  };
+  $scope.handleClickVertuesGenMaj = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vertuesDispo = $scope.vertuesDispo - $scope.costMajeure;
+      $scope.vertusMajeuresDispo --;    
+    }
+    else{ //decoche
+      $scope.vertuesDispo = $scope.vertuesDispo + $scope.costMajeure;
+      $scope.vertusMajeuresDispo ++;
+    }
+  };
+  $scope.handleClickVertuesHermMin = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vertuesDispo = $scope.vertuesDispo - $scope.costMineure;
+      $scope.vertuesHermetiquesDispo --;
+    }
+    else{ //decoche
+      $scope.vertuesDispo = $scope.vertuesDispo + $scope.costMineure;
+      $scope.vertuesHermetiquesDispo ++;
+    }
+  };
+  $scope.handleClickVertuesSurnMin = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vertuesDispo = $scope.vertuesDispo - $scope.costMineure;
+    }
+    else{ //decoche
+      $scope.vertuesDispo = $scope.vertuesDispo + $scope.costMineure;
+    }
+  };
+  $scope.handleClickVertuesStatSocMin = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vertuesDispo = $scope.vertuesDispo - $scope.costMineure;
+      $scope.statutSocialDispo --;
+      $scope.statutSocialNecessaire --;     
+    }
+    else{ //decoche
+      $scope.vertuesDispo = $scope.vertuesDispo + $scope.costMineure;
+      $scope.statutSocialDispo ++;
+      $scope.statutSocialNecessaire ++;
+    }
+  };
+  $scope.handleClickVertuesGenMin = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vertuesDispo = $scope.vertuesDispo - $scope.costMajeure;   
+    }
+    else{ //decoche
+      $scope.vertuesDispo = $scope.vertuesDispo + $scope.costMajeure;
+    }
+  };
+  $scope.handleClickVertuesStatSocGrat = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.statutSocialDispo --;
+      $scope.statutSocialNecessaire --;     
+    }
+    else{ //decoche
+      $scope.statutSocialDispo ++;
+      $scope.statutSocialNecessaire ++;
+    }
+  };
 });
 
