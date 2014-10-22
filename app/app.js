@@ -305,6 +305,53 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
       $scope.statutSocialNecessaire ++;
     }
   };
+
+
+
+  //VICES
+  $scope.handleClickVicesHermMaj = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vicesDispo = $scope.vicesDispo - costMajeure;
+      $scope.vicesMajeursDispo --;
+      $scope.vicesHermetiquesDispo --; 
+    }
+    else{ //decoche
+      $scope.vicesDispo = $scope.vicesDispo + costMajeure;
+      $scope.vicesMajeursDispo ++;
+      $scope.vicesHermetiquesDispo ++;
+    }
+  };
+  $scope.handleClickVicesPersMaj = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vicesDispo = $scope.vicesDispo - costMajeure;
+      $scope.vicesPersonnaliteDispo --;
+      $scope.vicesPersonnaliteMajeurDispo --; 
+    }
+    else{ //decoche
+      $scope.vicesDispo = $scope.vicesDispo + costMajeure;
+      $scope.vicesPersonnaliteDispo ++;
+      $scope.vicesPersonnaliteMajeurDispo ++;
+    }
+  };
+  $scope.handleClickVicesPersMin = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vicesDispo = $scope.vicesDispo - costMajeure;
+      $scope.vicesPersonnaliteDispo --;
+    }
+    else{ //decoche
+      $scope.vicesDispo = $scope.vicesDispo + costMajeure;
+      $scope.vicesPersonnaliteDispo ++;
+    }
+  };
+
+
+
+
+
+
+
+
+
   $scope.scrollTo = function(id) {
     $location.hash(id);
     $anchorScroll();

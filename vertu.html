@@ -894,3 +894,205 @@
 
 <h2 id='title_Vices'>Vices</h2>
 <button ng-click="scrollTo('title_Vertus')">Remonter aux Vertus</button>
+
+<div ng-if="typePersonnage =='Mage'">
+	<h2>Vices Hermétiques Majeurs</h2>
+	<table class="table table-striped" style='width:100%'>
+		<head>
+			<th>Nom</th>
+			<th>Effet</th>
+			<th>Select</th>
+		</head>
+		<body>
+			<tr>
+				<td>Condition nécessaire</td>
+				<td>Pour que votre magie fonctionne, vous devez effectuer une action spécifique durant le lancement du sort. Cela peut être quelque chose de simple, comme chanter ou tourner trois fois sur vous-même. Si vous êtes dans l'incapacité de réaliser cette action, vous ne pouvez plus lancer de sorts du tout.</td>
+				<td><input type='checkbox' ng-model="ViHMaj1" ng-disabled="!ViHMaj1 && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHermetiquesDispo < 1)" ng-click="handleClickVicesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Dépendance à la magie</td>
+				<td>Vous raffolez de la sensation ressentie en générant et en maîtrisant la magie. A chaque fois que vous lancez un soirt, vous avez du mal à vous empêcher de recommencer encore et encore jusqu'à tomber d'épuisement.</td>
+				<td><input type='checkbox' ng-model="ViHMaj2" ng-disabled="!ViHMaj2 && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHermetiquesDispo < 1)" ng-click="handleClickVicesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Don tapageur</td>
+				<td>Les gens se rendent rapidement compte que vous avez quelque chose d'étrange, même s'ils ne savent pas que vous êtes un mage. Les animaux sont extrêmement perturbés, effrayés, voire enragés par votre présence.</td>
+				<td><input type='checkbox' ng-model="ViHMaj3" ng-disabled="!ViHMaj3 && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHermetiquesDispo < 1)" ng-click="handleClickVicesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Enclin au Crépuscule</td>
+				<td>Lorsque vous lancez des sorts, vous ne pouvez vous empêcher de canaliser des quantités superflues de magie. Ou peut-être que vous aimez cela. Lorsque vous lancez un sort, vous êtes donc plus enclin à tomber dans le Crépuscule.</td>
+				<td><input type='checkbox' ng-model="ViHMaj4" ng-disabled="!ViHMaj4 && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHermetiquesDispo < 1)" ng-click="handleClickVicesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Etudes contraintes</td>
+				<td>Vous êtes incapable d'étudier la magie à partir de livres ou de vis uniquement. Vous devez être en présence de l'Art en question. Par exemple, vous devez être assis à proximité d'une source ou d'une mare pour étudier Aquam, ou d'un grand feu pour étudier Ignem.</td>
+				<td><input type='checkbox' ng-model="ViHMaj5" ng-disabled="!ViHMaj5 && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHermetiquesDispo < 1)" ng-click="handleClickVicesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Gâchis de vis</td>
+				<td>Lorsque vous utilisez du vis brut, vous gâchez un quart des pions appliqués.</td>
+				<td><input type='checkbox' ng-model="ViHMaj6" ng-disabled="!ViHMaj6 && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHermetiquesDispo < 1)" ng-click="handleClickVicesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Mage non structuré</td>
+				<td>N'ayant jamais parfaitement saisi la complexité du lancement des sorts, vous êtes incapable de pratiquer la magie formelle sans des efforts intenses. Vous lancez tous les sorts formels comme des sorts rituels. Vous ne pouvez pas apprendre de sorts rituels.</td>
+				<td><input type='checkbox' ng-model="ViHMaj7" ng-disabled="!ViHMaj7 && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHermetiquesDispo < 1)" ng-click="handleClickVicesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Magie à portée réduite</td>
+				<td>Vous êtes handicapé dans l'utilisation de la magie lorsque vous ne touchez pas la Cible de votre sort.</td>
+				<td><input type='checkbox' ng-model="ViHMaj8" ng-disabled="!ViHMaj8 && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHermetiquesDispo < 1)" ng-click="handleClickVicesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Magie chaotique</td>
+				<td>Votre magie est indomptable.</td>
+				<td><input type='checkbox' ng-model="ViHMaj9" ng-disabled="!ViHMaj9 && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHermetiquesDispo < 1)" ng-click="handleClickVicesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Magie douloureuse</td>
+				<td>Manipuler la Magie vous cause une souffrance telle que vous perdez l'équivalent d'un niveau de Fatigue à chaque fois que vous lancez un sort.</td>
+				<td><input type='checkbox' ng-model="ViHMaj10" ng-disabled="!ViHMaj10 && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHermetiquesDispo < 1)" ng-click="handleClickVicesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Magie rigide</td>
+				<td>Vous ne pouvez pas utiliser de vis lorsque vous lancez des sorts. Ainsi, vous êtes incapable de d'augmenter vos jets de sorts ou d'utiliser la magie rituelle.</td>
+				<td><input type='checkbox' ng-model="ViHMaj11" ng-disabled="!ViHMaj11 && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHermetiquesDispo < 1)" ng-click="handleClickVicesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Magie spontanée difficile</td>
+				<td>La magie spontanée est toujours un effort pour vous.</td>
+				<td><input type='checkbox' ng-model="ViHMaj12" ng-disabled="!ViHMaj12 && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHermetiquesDispo < 1)" ng-click="handleClickVicesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Magie spontanée faible</td>
+				<td>Vous ne pouvez pas vous fatiguer lorsque vous utilisez la magie spontanée, ce qui vous oblige à toujours diviser votre Total de Lancement par 5.</td>
+				<td><input type='checkbox' ng-model="ViHMaj13" ng-disabled="!ViHMaj13 && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHermetiquesDispo < 1)" ng-click="handleClickVicesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Résistance magique faible</td>
+				<td>Toute forme de Résistance magique que vous générez est notablement plus faible sous certaines conditions relativement courantes et faciles à utiliser par vos adversaires.</td>
+				<td><input type='checkbox' ng-model="ViHMaj14" ng-disabled="!ViHMaj14 && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHermetiquesDispo < 1)" ng-click="handleClickVicesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Restriction</td>
+				<td>Vous ne pouvez pas lancer de sorts dans certains conditions inhabituelles.</td>
+				<td><input type='checkbox' ng-model="ViHMaj15" ng-disabled="!ViHMaj15 && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHermetiquesDispo < 1)" ng-click="handleClickVicesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Rituel de longévité difficile</td>
+				<td>Quelque chose dans votre nature rend difficile la conception d'un Rituel de longétivité efficace sur vous.</td>
+				<td><input type='checkbox' ng-model="ViHMaj16" ng-disabled="!ViHMaj16 && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHermetiquesDispo < 1)" ng-click="handleClickVicesHermMaj($event)"></td>
+			</tr>
+			<tr>
+				<td>Technique déficiente</td>
+				<td>Tous les Totaux, impliquant une Technique spécifique, sont divisés par 2.</td>
+				<td><input type='checkbox' ng-model="ViHMaj17" ng-disabled="!ViHMaj17 && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHermetiquesDispo < 1)" ng-click="handleClickVicesHermMaj($event)"></td>
+			</tr>
+		</body>
+	</table>
+</div>
+
+<div>
+	<h2>Vices de Personnalité Majeurs ou Mineurs</h2>
+	<table class="table table-striped" style='width:100%'>
+		<head>
+			<th>Nom</th>
+			<th>Effet</th>
+			<th>Majeur</th>
+			<th>Mineur</th>
+		</head>
+		<body>
+			<tr>
+				<td>Ambition</td>
+				<td>Vous voulez être le meilleur, ou le plus puissant dans un domaine particulier. Vous ne vous laissez pas distraire dans votre progression vers la gloire et vous êtes impatient de réaliser tout ce qui vous rapproche de votre ambition.</td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMaj1" ng-disabled="(!ViPersMajMinMaj1 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1 || vicesPersonnaliteMajeurDispo < 1)) || ViPersMajMinMin1" ng-click="handleClickVicesPersMaj($event)"></td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMin1" ng-disabled="(!ViPersMajMinMin1 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1)) || ViPersMajMinMaj1" ng-click="handleClickVicesPersMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Arrogance</td>
+				<td>Vous avez une foi absolue en vos propres capacités. Vous pensez que vous agissez toujours au mieux de vos possibilités, voire légèrement au-dessus. Jamais vous n'envisagez l'échec. Si vous obtenez un échec, vous trouvez une explication rationnelle à ce qui s'est réellement passé.</td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMaj2" ng-disabled="(!ViPersMajMinMaj2 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1 || vicesPersonnaliteMajeurDispo < 1)) || ViPersMajMinMin2" ng-click="handleClickVicesPersMaj($event)"></td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMin2" ng-disabled="(!ViPersMajMinMin2 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1)) || ViPersMajMinMaj2" ng-click="handleClickVicesPersMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Avarice</td>
+				<td>Vous voulez de l'argent, beaucoup d'argent. Quand vous en obtenez, vous ne le dépensez pas, mais le mettez de côté afin de pouvoir le compter. Votre avarice peut être tournée vers d'autres choses que la richesse matérielle, comme les livres, ou le vis brut. Dans ce cas, vous n'utilisez pas ce que vous accumulez, et ne laissez personne s'en servir.</td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMaj3" ng-disabled="(!ViPersMajMinMaj3 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1 || vicesPersonnaliteMajeurDispo < 1)) || ViPersMajMinMin3" ng-click="handleClickVicesPersMaj($event)"></td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMin3" ng-disabled="(!ViPersMajMinMin3 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1)) || ViPersMajMinMaj3" ng-click="handleClickVicesPersMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Compassion</td>
+				<td>Vous aidez toujours les personnes blessées et les gens ayant des problèmes. Vous ne supportez pas la souffrance chez les autres, quoique vous vous démeniez vous-même jusqu'à l'épuisement.</td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMaj4" ng-disabled="(!ViPersMajMinMaj4 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1 || vicesPersonnaliteMajeurDispo < 1)) || ViPersMajMinMin4" ng-click="handleClickVicesPersMaj($event)"></td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMin4" ng-disabled="(!ViPersMajMinMin4 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1)) || ViPersMajMinMaj4" ng-click="handleClickVicesPersMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Courroux</td>
+				<td>Vous vous mettez en colère pour un rien. Votre fureur lorsque vous êtes contrarié pour un motif sérieux est un spectacle terrible.</td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMaj5" ng-disabled="(!ViPersMajMinMaj5 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1 || vicesPersonnaliteMajeurDispo < 1)) || ViPersMajMinMin5" ng-click="handleClickVicesPersMaj($event)"></td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMin5" ng-disabled="(!ViPersMajMinMin5 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1)) || ViPersMajMinMaj5" ng-click="handleClickVicesPersMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Détermination</td>
+				<td>Vous vous êtes fixé un but que vous êtes déterminé à réaliser. Cela doit être quelque chose d'important, l'objectif de toute une vie. Mais si vous en voyez le bout, vous le remplacerez immédiatement par autre chose.</td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMaj6" ng-disabled="(!ViPersMajMinMaj6 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1 || vicesPersonnaliteMajeurDispo < 1)) || ViPersMajMinMin6" ng-click="handleClickVicesPersMaj($event)"></td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMin6" ng-disabled="(!ViPersMajMinMin6 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1)) || ViPersMajMinMaj6" ng-click="handleClickVicesPersMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Envie</td>
+				<td>Vous pensez que tout le monde a plus de chance que vous, et qu'ils ne la méritent pas, alors que vous, oui. C'est pourquoi vous vous efforcez de leur gâcher la vie et de leur prendre leurs biens.</td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMaj7" ng-disabled="(!ViPersMajMinMaj7 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1 || vicesPersonnaliteMajeurDispo < 1)) || ViPersMajMinMin7" ng-click="handleClickVicesPersMaj($event)"></td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMin7" ng-disabled="(!ViPersMajMinMin7 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1)) || ViPersMajMinMaj7" ng-click="handleClickVicesPersMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Fierté</td>
+				<td>Vous pensez être plus important que n'importe qui d'autre et vous vous attendez à être traité en conséquence. Les mages peuvent admettre un ou deux égaux, mais estiment ne pas avoir de supérieurs. Les vulgaires acceptent les supérieurs sociaux, mais ils se pensent tout de même fondamentalement supérieurs au roi, par exemple.</td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMaj8" ng-disabled="(!ViPersMajMinMaj8 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1 || vicesPersonnaliteMajeurDispo < 1)) || ViPersMajMinMin8" ng-click="handleClickVicesPersMaj($event)"></td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMin8" ng-disabled="(!ViPersMajMinMin8 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1)) || ViPersMajMinMaj8" ng-click="handleClickVicesPersMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Générosité</td>
+				<td>Vous offrez de bonne volonté vos possessions à quiconque en exprime le désir, même s'il ne le désire pas vraiment. S'il veut quelque chose d'important à vos yeux, vous pouvez ne pas le donner, mais vous le prêterez volontiers.</td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMaj9" ng-disabled="(!ViPersMajMinMaj9 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1 || vicesPersonnaliteMajeurDispo < 1)) || ViPersMajMinMin9" ng-click="handleClickVicesPersMaj($event)"></td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMin9" ng-disabled="(!ViPersMajMinMin9 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1)) || ViPersMajMinMaj9" ng-click="handleClickVicesPersMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Gourmandise</td>
+				<td>Vous aimez boire et manger, ce que vous faites avec excès dès que possible. Vous êtes probablement gros, sauf si vous n'avez pas souvent l'occasion de manger abondamment.</td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMaj10" ng-disabled="(!ViPersMajMinMaj10 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1 || vicesPersonnaliteMajeurDispo < 1)) || ViPersMajMinMin10" ng-click="handleClickVicesPersMaj($event)"></td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMin10" ng-disabled="(!ViPersMajMinMin10 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1)) || ViPersMajMinMaj10" ng-click="handleClickVicesPersMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Haine</td>
+				<td>Vous haïssez tellement une personne ou un groupe que vous consacrez votre vie à leur malheur. La cible de votre haine ne doit pas être quelqu'un que vous pouvez facilement vaincre.</td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMaj11" ng-disabled="(!ViPersMajMinMaj11 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1 || vicesPersonnaliteMajeurDispo < 1)) || ViPersMajMinMin11" ng-click="handleClickVicesPersMaj($event)"></td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMin11" ng-disabled="(!ViPersMajMinMin11 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1)) || ViPersMajMinMaj11" ng-click="handleClickVicesPersMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Ingérence</td>
+				<td>Vous voulez remédier aux problèmes des gens, en jouant les entremetteurs, en apprenant aux enfants à coudre "comme il faut" ou en soignant les malades. Non seulement vous y consacrez beaucoup de temps et d'énergie, mais les gens ont tendance à mal prendre votre aide.</td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMaj12" ng-disabled="(!ViPersMajMinMaj12 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1 || vicesPersonnaliteMajeurDispo < 1)) || ViPersMajMinMin12" ng-click="handleClickVicesPersMaj($event)"></td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMin12" ng-disabled="(!ViPersMajMinMin12 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1)) || ViPersMajMinMaj12" ng-click="handleClickVicesPersMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Luxure</td>
+				<td>Vous cherchez des contacts sexuels avec autant de personnes que possible. Notez que vous n'êtes pas nécessairement doué pour la séduction; le talent ne fait que changer le type de problème que vous rencontrez.</td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMaj13" ng-disabled="(!ViPersMajMinMaj13 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1 || vicesPersonnaliteMajeurDispo < 1)) || ViPersMajMinMin13" ng-click="handleClickVicesPersMaj($event)"></td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMin13" ng-disabled="(!ViPersMajMinMin13 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1)) || ViPersMajMinMaj13" ng-click="handleClickVicesPersMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Optimisme</td>
+				<td>Vous êtes convaincu que tout se finira bien. Ce n'est pas de l'aggorance, puisque vous acceptez la possibilité de l'échec. Mais, même dans ce cas, vous pensez que les circonstances se retourneront en votre faveur en fin de compte, et que tout sera pour le mieux.</td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMaj14" ng-disabled="(!ViPersMajMinMaj14 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1 || vicesPersonnaliteMajeurDispo < 1)) || ViPersMajMinMin14" ng-click="handleClickVicesPersMaj($event)"></td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMin14" ng-disabled="(!ViPersMajMinMin14 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1)) || ViPersMajMinMaj14" ng-click="handleClickVicesPersMin($event)"></td>
+			</tr>
+			<tr>
+				<td>Piété</td>
+				<td>Vous êtes un fidèle zélé de votre religion. Vous évitez ce qu'elle interdit et suivez ses obligations avec enthousiasme.</td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMaj15" ng-disabled="(!ViPersMajMinMaj15 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1 || vicesPersonnaliteMajeurDispo < 1)) || ViPersMajMinMin15" ng-click="handleClickVicesPersMaj($event)"></td>
+				<td><input type='checkbox' ng-model="ViPersMajMinMin15" ng-disabled="(!ViPersMajMinMin15 && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1)) || ViPersMajMinMaj15" ng-click="handleClickVicesPersMin($event)"></td>
+			</tr>
+		</body>
+	</table>
+</div>
