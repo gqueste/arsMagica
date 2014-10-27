@@ -108,7 +108,6 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
   $scope.vicesHermetiquesMajeursNecessaires;
   $scope.vicesHermetiquesNecessaires;
   $scope.vicesMineursDispo ;
-  $scope.vicesHistoireDispo ;
 
   //initialisation des variables
   if ($scope.typePersonnage == 'Servant') {
@@ -135,7 +134,6 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
     $scope.vicesHermetiquesMajeursNecessaires = $scope.none;
     $scope.vicesHermetiquesNecessaires = $scope.none;
     $scope.vicesMineursDispo = $scope.noLimit;
-    $scope.vicesHistoireDispo = $scope.noLimit;
   }
   else {
     if ($scope.typePersonnage == 'Compagnon') {
@@ -162,7 +160,6 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
       $scope.vicesHermetiquesMajeursNecessaires = $scope.none;
       $scope.vicesHermetiquesNecessaires = $scope.none;
       $scope.vicesMineursDispo = 5;
-      $scope.vicesHistoireDispo = 1;
     }
     else { //Mages
        $scope.regles = [
@@ -188,7 +185,6 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
       $scope.vicesHermetiquesMajeursNecessaires = $scope.none;
       $scope.vicesHermetiquesNecessaires = 1;
       $scope.vicesMineursDispo = 5;
-      $scope.vicesHistoireDispo = 1;
       if ($scope.maison == 'Ex Miscellanea') {
         $scope.avantages = 'Une Vertu hermétique mineure gratuite, une Vertu non hermétique majeure gratuite et un Vice hermétique majeur obligatoire';
         $scope.vicesHermetiquesMajeursNecessaires = 1;
@@ -226,7 +222,7 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
   $scope.handleClickVertuesSurnMaj = function(obj) {
     if(obj.target.checked) { //coche
       $scope.vertuesDispo = $scope.vertuesDispo - $scope.costMajeure;
-      $scope.vertusMajeuresDispo --;      
+      $scope.vertusMajeuresDispo --;     
     }
     else{ //decoche
       $scope.vertuesDispo = $scope.vertuesDispo + $scope.costMajeure;
@@ -311,36 +307,130 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
   //VICES
   $scope.handleClickVicesHermMaj = function(obj) {
     if(obj.target.checked) { //coche
-      $scope.vicesDispo = $scope.vicesDispo - costMajeure;
+      $scope.vicesDispo = $scope.vicesDispo - $scope.costMajeure;
       $scope.vicesMajeursDispo --;
       $scope.vicesHermetiquesDispo --; 
     }
     else{ //decoche
-      $scope.vicesDispo = $scope.vicesDispo + costMajeure;
+      $scope.vicesDispo = $scope.vicesDispo + $scope.costMajeure;
       $scope.vicesMajeursDispo ++;
       $scope.vicesHermetiquesDispo ++;
     }
   };
   $scope.handleClickVicesPersMaj = function(obj) {
     if(obj.target.checked) { //coche
-      $scope.vicesDispo = $scope.vicesDispo - costMajeure;
+      $scope.vicesDispo = $scope.vicesDispo - $scope.costMajeure;
+      $scope.vicesMajeursDispo --;
       $scope.vicesPersonnaliteDispo --;
       $scope.vicesPersonnaliteMajeurDispo --; 
     }
     else{ //decoche
-      $scope.vicesDispo = $scope.vicesDispo + costMajeure;
+      $scope.vicesDispo = $scope.vicesDispo + $scope.costMajeure;
       $scope.vicesPersonnaliteDispo ++;
+      $scope.vicesMajeursDispo ++;
       $scope.vicesPersonnaliteMajeurDispo ++;
+    }
+  };
+  $scope.handleClickVicesPersMaj = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vicesDispo = $scope.vicesDispo - $scope.costMajeure;
+      $scope.vicesMajeursDispo --;
+      $scope.vicesPersonnaliteDispo --;
+    }
+    else{ //decoche
+      $scope.vicesDispo = $scope.vicesDispo + $scope.costMajeure;
+      $scope.vicesMajeursDispo ++;
+      $scope.vicesPersonnaliteDispo ++;
+    }
+  };
+  $scope.handleClickVicesSSMaj = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vicesDispo = $scope.vicesDispo - $scope.costMajeure;
+      $scope.vicesMajeursDispo --;
+      $scope.statutSocialDispo --;
+    }
+    else{ //decoche
+      $scope.vicesDispo = $scope.vicesDispo + $scope.costMajeure;
+      $scope.vicesMajeursDispo ++;
+      $scope.statutSocialDispo ++;
+    }
+  };
+  $scope.handleClickVicesSurMaj = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vicesDispo = $scope.vicesDispo - $scope.costMajeure;
+      $scope.vicesMajeursDispo --;
+    }
+    else{ //decoche
+      $scope.vicesDispo = $scope.vicesDispo + $scope.costMajeure;
+      $scope.vicesMajeursDispo ++;
+    }
+  };
+  $scope.handleClickVicesGenMaj = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vicesDispo = $scope.vicesDispo - $scope.costMajeure;
+      $scope.vicesMajeursDispo --;
+    }
+    else{ //decoche
+      $scope.vicesDispo = $scope.vicesDispo + $scope.costMajeure;
+      $scope.vicesMajeursDispo ++;
+    }
+  };
+  $scope.handleClickVicesHermMin = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vicesDispo = $scope.vicesDispo - $scope.costMineure;
+      $scope.vicesHermetiquesDispo --;
+      $scope.vicesMineursDispo --;
+    }
+    else{ //decoche
+      $scope.vicesDispo = $scope.vicesDispo + $scope.costMineure;
+      $scope.vicesHermetiquesDispo ++;
+      $scope.vicesMineursDispo ++;
     }
   };
   $scope.handleClickVicesPersMin = function(obj) {
     if(obj.target.checked) { //coche
-      $scope.vicesDispo = $scope.vicesDispo - costMajeure;
+      $scope.vicesDispo = $scope.vicesDispo - $scope.costMineure;
       $scope.vicesPersonnaliteDispo --;
+      $scope.vicesMineursDispo --;
     }
     else{ //decoche
-      $scope.vicesDispo = $scope.vicesDispo + costMajeure;
+      $scope.vicesDispo = $scope.vicesDispo + $scope.costMineure;
       $scope.vicesPersonnaliteDispo ++;
+      $scope.vicesMineursDispo ++;
+    }
+  };
+  $scope.handleClickVicesHistMin = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vicesDispo = $scope.vicesDispo - $scope.costMineure;
+      $scope.vicesHistoireDispo --;
+      $scope.vicesMineursDispo --;
+    }
+    else{ //decoche
+      $scope.vicesDispo = $scope.vicesDispo + $scope.costMineure;
+      $scope.vicesHistoireDispo ++;
+      $scope.vicesMineursDispo ++;
+    }
+  };
+  $scope.handleClickVicesStatSocMin = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vicesDispo = $scope.vicesDispo - $scope.costMineure;
+      $scope.statutSocialDispo --;
+      $scope.vicesMineursDispo --;
+    }
+    else{ //decoche
+      $scope.vicesDispo = $scope.vicesDispo + $scope.costMineure;
+      $scope.statutSocialDispo ++;
+      $scope.vicesMineursDispo ++;
+    }
+  };
+  $scope.handleClickVicesSurnatMin = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vicesDispo = $scope.vicesDispo - $scope.costMineure;
+      $scope.vicesMineursDispo --;
+    }
+    else{ //decoche
+      $scope.vicesDispo = $scope.vicesDispo + $scope.costMineure;
+      $scope.vicesMineursDispo ++;
     }
   };
 
