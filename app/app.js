@@ -65,6 +65,9 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
 })
 
 .controller('AccueilCtrl', function($scope, $http) {
+  $http.get('./data/typesPersonnages.json').success(function(data) {
+    $scope.typesPersonnages = data;
+  });
   $scope.chooseType = function() {
     var typeRecupere = $('#type_character_select option:selected').val();
     window.location.href = "#/create/"+typeRecupere;

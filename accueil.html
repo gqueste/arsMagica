@@ -3,9 +3,7 @@
 	<p>Choisissez un type de personnage : </p>
 	<div>
 		<select id='type_character_select'>
-			<option>Mage</option>
-			<option>Compagnon</option>
-			<option>Servant</option>
+			<option ng-repeat="typePers in typesPersonnages">{{typePers.nom}}</option>
 		</select></br></br>
 		<button class="btn btn-primary btn-lg" ng-click='chooseType()'>Créer le personnage</button>
 	</div>
