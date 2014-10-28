@@ -1,0 +1,32 @@
+[
+{
+ "nom": "Changeforme",
+ "effet": "Vous pouvez vous transformer en un ou plusieurs animaux vulgaires. Cela vous octroie la Compétence Changeforme",
+ "default": "",
+ "model": "VerSurnMaj1"
+},
+{
+ "nom": "Hypnotisme",
+ "effet": "Vous avez le pouvoir de contrôler la volonté d'un individu en le fixant dans les yeux et en donnant des ordres verbalement. Cela vous octroie la compétence Hypnotisme",
+ "default": "",
+ "model": "VerSurnMaj2"
+},
+{
+ "nom": "Immunité majeure",
+ "effet": "Vous êtes immunisé contre un danger qui est soit rare, soit non-mortel, soit les deux",
+ "default": "",
+ "model": "VerSurnMaj3"
+},
+{
+ "nom": "Imposition des mains majeure",
+ "effet": "Vous pouvez, en touchant de la main et en dépensant de la Fatigue, guérir une maladie grave spécifique. La maladie doit mettre la vie du patient en danger ou l'handicaper sérieusement. De plus, ce doit être une maladie dont on ne guérit pas habituellement par soi même. Vous devez choisir la maladie dont vous guérissez lorsque vous prenez la Vertue.",
+ "default": "",
+ "model": "VerSurnMaj4"
+},
+{
+ "nom": "Sang féerique saillant",
+ "effet": "Le sang féerique coule à flot dans vos veines. Peut être l'un de vos parents était-il un être féerique lui même, ou peut être avez vous été conçu ou êtes vous né dans un lieu de grande puissance féerique. Cela vous confère une grande espérance de vie, la Vertu Double Vue (gratuitement). Vous pouvez apprendre Connaissance de la Féerie. Vous choisissez un type d'héritage présenté dans la Vertu Sang Féerique. Votre appartenance se montre physiquement.",
+ "default": "",
+ "model": "VerSurnMaj5"
+}
+]

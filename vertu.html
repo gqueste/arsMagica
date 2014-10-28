@@ -24,56 +24,36 @@
 			<div ng-if="vertuesHermetiquesMajeuresDispo > none">
 				<h2>Vertus Hermétiques Majeures</h2>
 				<table class="table table-striped" style='width:100%'>
-					<head>
+					<thead>
 						<th>Nom</th>
 						<th>Effet</th>
 						<th>Select</th>
-					</head>
-					<body>
-						<tr ng-repeat="vertue in vertuesHermetiquesMajeures track by $index">
-							<td>{{vertue.nom}}</td>
-							<td>{{vertue.effet}}</td>
-							<td><input type='checkbox' ng-model="VHMaj[$index]" ng-disabled="(!VHMaj[$index] && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)) || vertue.default == typePersonnage" ng-checked="vertue.default == typePersonnage" ng-click="handleClickVertuesHermMaj($event)"></td>
+					</thead>
+					<tbody>
+						<tr ng-repeat="vertuHermetiqueMajeure in vertusHermetiquesMajeures track by $index">
+							<td>{{vertuHermetiqueMajeure.nom}}</td>
+							<td>{{vertuHermetiqueMajeure.effet}}</td>
+							<td><input type='checkbox' ng-model="vertuHermetiqueMajeure.model" ng-disabled="(!vertuHermetiqueMajeure.model && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)) || vertuHermetiqueMajeure.default == typePersonnage" ng-checked="vertuHermetiqueMajeure.default == typePersonnage" ng-click="handleClickVertuesHermMaj($event)"></td>
 						</tr>
-					</body>
+					</tbody>
 				</table>
 			</div>
 
 			<div ng-if="vertusMajeuresDispo > none">
 				<h2>Vertus Surnaturelles Majeures</h2>
 				<table class="table table-striped" style='width:100%'>
-					<head>
+					<thead>
 						<th>Nom</th>
 						<th>Effet</th>
 						<th>Select</th>
-					</head>
-					<body>
-						<tr>
-							<td>Changeforme</td>
-							<td>Vous pouvez vous transformer en un ou plusieurs animaux vulgaires. Cela vous octroie la Compétence Changeforme</td>
-							<td><input type='checkbox' ng-model="VSMaj1" ng-disabled="!VSMaj1 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesSurnMaj($event)"></td>
+					</thead>
+					<tbody>
+						<tr ng-repeat="vertuSurnaturelleMajeure in vertusSurnaturellesMajeures track by $index">
+							<td>{{vertuSurnaturelleMajeure.nom}}</td>
+							<td>{{vertuSurnaturelleMajeure.effet}}</td>
+							<td><input type='checkbox' ng-model="vertuSurnaturelleMajeure.model" ng-disabled="!vertuSurnaturelleMajeure.model && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesSurnMaj($event)"></td>	
 						</tr>
-						<tr>
-							<td>Hypnotisme</td>
-							<td>Vous avez le pouvoir de contrôler la volonté d'un individu en le fixant dans les yeux et en donnant des ordres verbalement. Cela vous octroie la compétence Hypnotisme</td>
-							<td><input type='checkbox' ng-model="VSMaj2" ng-disabled="!VSMaj2 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesSurnMaj($event)"></td>
-						</tr>
-						<tr>
-							<td>Immunité majeure</td>
-							<td>Vous êtes immunisé contre un danger qui est soit rare, soit non-mortel, soit les deux</td>
-							<td><input type='checkbox' ng-model="VSMaj3" ng-disabled="!VSMaj3 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesSurnMaj($event)"></td>
-						</tr>
-						<tr>
-							<td>Imposition des mains majeure</td>
-							<td>Vous pouvez, en touchant de la main et en dépensant de la Fatigue, guérir une maladie grave spécifique. La maladie doit mettre la vie du patient en danger ou l'handicaper sérieusement. De plus, ce doit être une maladie dont on ne guérit pas habituellement par soi même. Vous devez choisir la maladie dont vous guérissez lorsque vous prenez la Vertue.</td>
-							<td><input type='checkbox' ng-model="VSMaj4" ng-disabled="!VSMaj4 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesSurnMaj($event)"></td>
-						</tr>
-						<tr>
-							<td>Sang féerique saillant</td>
-							<td>Le sang féerique coule à flot dans vos veines. Peut être l'un de vos parents était-il un être féerique lui même, ou peut être avez vous été conçu ou êtes vous né dans un lieu de grande puissance féerique. Cela vous confère une grande espérance de vie, la Vertu Double Vue (gratuitement). Vous pouvez apprendre Connaissance de la Féerie. Vous choisissez un type d'héritage présenté dans la Vertu Sang Féerique. Votre appartenance se montre physiquement.</td>
-							<td><input type='checkbox' ng-model="VSMaj5" ng-disabled="!VSMaj5 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesSurnMaj($event)"></td>
-						</tr>
-					</body>
+					</tbody>
 				</table>
 			</div>
 

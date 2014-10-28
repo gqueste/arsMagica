@@ -90,8 +90,11 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
   $scope.typePersonnage = $routeParams.typePersonnage;
   $scope.maison = $routeParams.maison;
 
-  $http.get("./data/vertuesHermetiquesMajeures.json").success(function(data) {
-    $scope.vertuesHermetiquesMajeures = data;
+  $http.get("./data/vertusHermetiquesMajeures.json").success(function(data) {
+    $scope.vertusHermetiquesMajeures = data;
+  });
+  $http.get("./data/vertusSurnaturellesMajeures.json").success(function(data) {
+    $scope.vertusSurnaturellesMajeures = data;
   });
 
   //Déclaration Constantes
@@ -220,7 +223,6 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
       $scope.vertusMajeuresDispo --;
       $scope.vertuesHermetiquesDispo --;
       $scope.vertuesHermetiquesMajeuresDispo --;
-      
     }
     else{ //decoche
       $scope.vertuesDispo = $scope.vertuesDispo + $scope.costMajeure;
