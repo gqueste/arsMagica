@@ -2,104 +2,28 @@
 
 <div>
 	<h1>Choisissez une maison</h1>
+	<input type="text" class="form-control" placeholder="Je recherche" ng-model="query">
 	<table class="table table-striped" style='width:100%'>
-		<head>
+		<thead>
 			<th>Maison</th>
 			<th>Type</th>
 			<th>Description</th>
 			<th>Avantage (pour mages)</th>
-		</head>
-		<body>
-			<tr>
-				<td>Bjornaer</td>
-				<td>Culte des mystères</td>
-				<td>Mages qui sont autant des animaux que des humains</td>
-				<td>Animal de coeur</td>
+		</thead>
+		<tbody>
+			<tr ng-repeat="maison in maisons | filter:query">
+				<td>{{maison.nom}}</td>
+				<td>{{maison.type}}</td>
+				<td>{{maison.description}}</td>
+				<td>{{maison.avantages}}</td>
 			</tr>
-			<tr>
-				<td>Bonisagus</td>
-				<td>Vraie lignée</td>
-				<td>Des chercheurs ou des politiciens</td>
-				<td>Talent pour la Théorie de la magie (chercheurs) ou Talent pour l'Intrigue (politiciens)</td>
-			</tr>
-			<tr>
-				<td>Criamon</td>
-				<td>Culte des mystères</td>
-				<td>Philosophie mystiques et maîtres des énigmes</td>
-				<td>L'Enigme (exploration du crépuscule) et valeur initiale de 1 dans la Compétence Sagesse énigmatique</td>
-			</tr>
-			<tr>
-				<td>Ex Miscellanea</td>
-				<td>Societas</td>
-				<td>Mages de différentes traditions, pas toutes hermétiques</td>
-				<td>Une Vertu hermétique mineure gratuite, une Vertu non hermétique majeure gratuite et un Vice hermétique majeur obligatoire, représentant la tradition au sein de la maison. Ces vertus et Vices ne comptent pas dans le maximum normal</td>
-			</tr>
-			<tr>
-				<td>Flambeau</td>
-				<td>Societas</td>
-				<td>Maître martiaux du feu et de la destruciton</td>
-				<td>Talent en Perdo ou Talent en Ignem</td>
-			</tr>
-			<tr>
-				<td>Guernicus</td>
-				<td>Vraie lignée</td>
-				<td>Enquêteurs, juristes et médiateurs</td>
-				<td>Prestige hermétique</td>
-			</tr>
-			<tr>
-				<td>Jerbiton</td>
-				<td>Societas</td>
-				<td>Nobles, érudits et artistes</td>
-				<td>Une Vertu Mineure liée à l'érudition, aux arts ou aux interactions vulgaires</td>
-			</tr>
-			<tr>
-				<td>Mercere</td>
-				<td>Vraie lignée</td>
-				<td>Messagers de l'Ordre</td>
-				<td>Talent en Creo ou Talent en Muto. Notez que les Toques Rouges dénués de Don sont créés en tant que compagnons, avec la Vertu de Statut Majeur Toque Rouge. Les Mercere dotés du Don prennent la Vertu de Statut Mage hermétique plutôt que Toque Rouge.</td>
-			</tr>
-			<tr>
-				<td>Merinita</td>
-				<td>Culte des mystères</td>
-				<td>Mages féériques</td>
-				<td>Magie féérique. Tout mage de cette maison n'ayant pas une Vertu ou un Vice lié à la Féérie reçoit un point de Distorsion, représentant son initiation au Mystère</td>
-			</tr>
-			<tr>
-				<td>Tremere</td>
-				<td>Vraie lignée</td>
-				<td>Une maison prônant la hiérarchie et la discipline</td>
-				<td>Expertise magique mineure</td>
-			</tr>
-			<tr>
-				<td>Tytalus</td>
-				<td>Societas</td>
-				<td>Des mages aimant les conflits de toutes sortes</td>
-				<td>Confiance en soi</td>
-			</tr>
-			<tr>
-				<td>Verditius</td>
-				<td>Culte des mystères</td>
-				<td>Créateurs d'objets enchantés</td>
-				<td>Magie de Verditius (avantage à la création d'objets enchantés)</td>
-			</tr>
-		</body>
+		</tbody>
 	</table>
 </div>
 
 <div style='text-align:center;'>
 	<select id='select_maison'>
-		<option>Bjornaer</option>
-		<option>Bonisagus</option>
-		<option>Criamon</option>
-		<option>Ex Miscellanea</option>
-		<option>Flambeau</option>
-		<option>Guernicus</option>
-		<option>Jerbiton</option>
-		<option>Mercere</option>
-		<option>Merinita</option>
-		<option>Tremere</option>
-		<option>Tytalus</option>
-		<option>Verditius</option>
+		<option ng-repeat="maison in maisons">{{maison.nom}}</option>
 	</select>
 	<button class="btn btn-primary btn-lg" ng-click='maison()'>Continuer aux Vertus et Vices</button>
 </div>

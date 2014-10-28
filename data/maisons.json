@@ -1,0 +1,74 @@
+[
+{
+ "nom": "Bjornaer",
+ "type": "Culte des mystères",
+ "description": "Mages qui sont autant des animaux que des humains",
+ "avantages": "Animal de coeur"
+},
+{
+ "nom": "Bonisagus",
+ "type": "Vraie lignée",
+ "description": "Des chercheurs ou des politiciens",
+ "avantages": "Talent pour la Théorie de la magie (chercheurs) ou Talent pour l'Intrigue (politiciens)"
+},
+{
+ "nom": "Criamon",
+ "type": "Culte des mystères",
+ "description": "Philosophie mystiques et maîtres des énigmes",
+ "avantages": "L'Enigme (exploration du crépuscule) et valeur initiale de 1 dans la Compétence Sagesse énigmatique"
+},
+{
+ "nom": "Ex Miscellanea",
+ "type": "Societas",
+ "description": "Mages de différentes traditions, pas toutes hermétiques",
+ "avantages": "Une Vertu hermétique mineure gratuite, une Vertu non hermétique majeure gratuite et un Vice hermétique majeur obligatoire, représentant la tradition au sein de la maison. Ces vertus et Vices ne comptent pas dans le maximum normal"
+},
+{
+ "nom": "Flambeau",
+ "type": "Societas",
+ "description": "Maître martiaux du feu et de la destruciton",
+ "avantages": "Talent en Perdo ou Talent en Ignem"
+},
+{
+ "nom": "Guernicus",
+ "type": "Vraie lignée",
+ "description": "Enquêteurs, juristes et médiateurs",
+ "avantages": "Prestige hermétique"
+},
+{
+ "nom": "Jerbiton",
+ "type": "Societas",
+ "description": "Nobles, érudits et artistes",
+ "avantages": "Une Vertu Mineure liée à l'érudition, aux arts ou aux interactions vulgaires"
+},
+{
+ "nom": "Mercere",
+ "type": "Vraie lignée",
+ "description": "Messagers de l'Ordre",
+ "avantages": "Talent en Creo ou Talent en Muto. Notez que les Toques Rouges dénués de Don sont créés en tant que compagnons, avec la Vertu de Statut Majeur Toque Rouge. Les Mercere dotés du Don prennent la Vertu de Statut Mage hermétique plutôt que Toque Rouge."
+},
+{
+ "nom": "Merinita",
+ "type": "Culte des mystères",
+ "description": "Mages féériques",
+ "avantages": "Magie féérique. Tout mage de cette maison n'ayant pas une Vertu ou un Vice lié à la Féérie reçoit un point de Distorsion, représentant son initiation au Mystère"
+},
+{
+ "nom": "Tremere",
+ "type": "Vraie lignée",
+ "description": "Une maison prônant la hiérarchie et la discipline",
+ "avantages": "Expertise magique mineure"
+},
+{
+ "nom": "Tytalus",
+ "type": "Societas",
+ "description": "Des mages aimant les conflits de toutes sortes",
+ "avantages": "Confiance en soi"
+},
+{
+ "nom": "Verditius",
+ "type": "Culte des mystères",
+ "description": "Créateurs d'objets enchantés",
+ "avantages": "Magie de Verditius (avantage à la création d'objets enchantés)"
+}
+]

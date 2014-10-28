@@ -73,6 +73,9 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
 
 .controller('CreateCtrl', function($scope, $routeParams, $http) {
   $scope.typePersonnage = $routeParams.typePersonnage;
+  $http.get('./data/maisons.json').success(function(data) {
+    $scope.maisons = data;
+  });
 
   $scope.maison = function() {
     var maison = $('#select_maison option:selected').val();
