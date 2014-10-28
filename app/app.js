@@ -90,6 +90,10 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
   $scope.typePersonnage = $routeParams.typePersonnage;
   $scope.maison = $routeParams.maison;
 
+  $http.get("./data/vertuesHermetiquesMajeures.json").success(function(data) {
+    $scope.vertuesHermetiquesMajeures = data;
+  });
+
   //Déclaration Constantes
   $scope.costMajeure = 3;
   $scope.costMineure = 1;

@@ -30,60 +30,10 @@
 						<th>Select</th>
 					</head>
 					<body>
-						<tr>
-							<td>Le Don</td>
-							<td>Vous pouvez pratiquer la magie</td>
-							<td><input class="specialInput" type='checkbox' checked disabled></td>
-						</tr>
-						<tr>
-							<td>Don de Velours</td>
-							<td>Contrairement aux autres mages, dont la nature hermétique perturbe les gens normaux et les animaux, votre Don est subtil et insensible. Vous ne subissez pas les malus habituels lorsque vous interagissez avec les gens et les animaux.</td>
-							<td><input type='checkbox' ng-model="VHMaj1" ng-disabled="!VHMaj1 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
-						</tr>
-						<tr>
-							<td>Expertise magique majeure</td>
-							<td>Votre magie est bien plus puissante dans un domaine relativement limité, tel que le climat, la nécromancie, les oiseaux ou les émotions,... (permet de doubler la technique ou la forme la plus petite lors d'un sort relatif au domaine)</td>
-							<td><input type='checkbox' ng-model="VHMaj2" ng-disabled="!VHMaj2 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
-						</tr>
-						<tr>
-							<td>Magie de Diedne</td>
-							<td>Votre lignée et votre tradition magique viennent des druides et de l'ancienne maison vaincue des Diednes, vous rendant particulièrement doué pour la magie spontanée. Vous devez dissimuler votre lignée à l'Ordre, ce qui vous donne le Vice d'Histoire Majeur Sombre Secret.</td>
-							<td><input type='checkbox' ng-model="VHMaj3" ng-disabled="!VHMaj3 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
-						</tr>
-						<tr>
-							<td>Magie de Mercure</td>
-							<td>Votre lignée et votre tradition magique remontent aux prêtres romains de Mercure, datant d'avant l'Ordre. En conséquence, vous êtes particulièrement doué pour la magie rituelle et la magie utilisée en communion avec d'autres. Mais vous ne pouvez utiliser la magie spontanée qu'en suivant les règles de l'incantation cérémonielle.</td>
-							<td><input type='checkbox' ng-model="VHMaj4" ng-disabled="!VHMaj4 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
-						</tr>
-						<tr>
-							<td>Magie élémentaire</td>
-							<td>Vous avez été entraîné à manipuler les formes élémentaires pures (Ignem, Auram, Aquam et Terram), que vous voyez comme un tout unifié plutôt que comme quatre Arts séparés. Si vous étudiez un de ces Arts, vous gagnez de l'expérience dans les autres également.</td>
-							<td><input type='checkbox' ng-model="VHMaj5" ng-disabled="!VHMaj5 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
-						</tr>
-						<tr>
-							<td>Magie formelle flexible</td>
-							<td>Vous pouvez varier les effets des sorts formels tout en conservant les avantages de lancer un sort connu (Portée, Durée, Cible).</td>
-							<td><input type='checkbox' ng-model="VHMaj6" ng-disabled="!VHMaj6 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
-						</tr>
-						<tr>
-							<td>Magie parfaite</td>
-							<td>Vous maîtrisez automatiquement tous les sorts que vous apprenez.</td>
-							<td><input type='checkbox' ng-model="VHMaj7" ng-disabled="!VHMaj7 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
-						</tr>
-						<tr>
-							<td>Magie spontanée vitalisée</td>
-							<td>Les possibilités de votre magie spontanées peuvent dépasser celles de la plupart des mages, au prix de votre énergie vitale.</td>
-							<td><input type='checkbox' ng-model="VHMaj8" ng-disabled="!VHMaj8 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
-						</tr>
-						<tr>
-							<td>Révélations secondaires</td>
-							<td>Votre méthode d'étude magique est particulièrement polyvalente. Quans vous étudiez une technique, vous gagnez des points à dépenser dans d'autres formes ou techniques.</td>
-							<td><input type='checkbox' ng-model="VHMaj9" ng-disabled="!VHMaj9 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
-						</tr>
-						<tr>
-							<td>Sang mythique</td>
-							<td>Vous êtes le descendant direct d'un magicien légendaire ou d'un être surnaturel par exemple. Vous pouvez choisir un exploit magique vous pouvez accomplir à volonté et annuler à volonté. Cela inclut également une Expertise Magique Mineure dans le domaine de l'ancêtre, et un Vice de Personnalité Mineur(les 2 gratuitement).</td>
-							<td><input type='checkbox' ng-model="VHMaj10" ng-disabled="!VHMaj10 && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 || vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesHermMaj($event)"></td>
+						<tr ng-repeat="vertue in vertuesHermetiquesMajeures track by $index">
+							<td>{{vertue.nom}}</td>
+							<td>{{vertue.effet}}</td>
+							<td><input type='checkbox' ng-model="VHMaj[$index]" ng-disabled="(!VHMaj[$index] && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)) || vertue.default == typePersonnage" ng-checked="vertue.default == typePersonnage" ng-click="handleClickVertuesHermMaj($event)"></td>
 						</tr>
 					</body>
 				</table>
