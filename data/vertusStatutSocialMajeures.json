@@ -1,0 +1,20 @@
+[
+{
+	"nom": "Magister in Artibus",
+ 	"effet": "Vous êtes maître des arts dans une grande université européenne où vous avez complété votre régence de deux ans d'enseignement obligatoire. Vous avez le droit de vous faire appeler Magister ou Maître, n'êtes sujet qu'au droit canon et pouvez enseigner n'importe où en Europe.",
+ 	"defaultTypePersonnage": "",
+ 	"defaultMaison": ""
+},
+{
+	"nom": "Noble propriétaire terrien",
+ 	"effet": "Vous contrôlez des terres, des serfs et des hommes d'armes, vous devez fidélité et assistance à votre suzerain. Votre demeure seigneuriale compte une demi-douzaine de serviteurs, dont quelques gardes du corps. Vous avez le droit de rendre la justice dans votre fief, mais pas d'imposer la peine capitale, ni de mutiler les criminels.",
+ 	"defaultTypePersonnage": "",
+ 	"defaultMaison": ""
+},
+{
+	"nom": "Toque Rouge",
+ 	"effet": "Vous délivrez des messages pour l'Ordre et vous disposez de plusieurs objets enchantés pour vous aider dans cette tâche. Vous obtenez la Vertu Grand Voyageur gratuitement.",
+ 	"defaultTypePersonnage": "Mage",
+ 	"defaultMaison": "Mercere"
+}
+]

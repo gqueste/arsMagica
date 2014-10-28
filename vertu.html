@@ -33,7 +33,7 @@
 						<tr ng-repeat="vertuHermetiqueMajeure in vertusHermetiquesMajeures track by $index">
 							<td>{{vertuHermetiqueMajeure.nom}}</td>
 							<td>{{vertuHermetiqueMajeure.effet}}</td>
-							<td><input type='checkbox' ng-model="vertuHermetiqueMajeure.model" ng-disabled="(!vertuHermetiqueMajeure.model && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)) || vertuHermetiqueMajeure.default == typePersonnage" ng-checked="vertuHermetiqueMajeure.default == typePersonnage" ng-click="handleClickVertuesHermMaj($event)"></td>
+							<td><input type='checkbox' ng-model="model" ng-disabled="(!model && (vertuesHermetiquesMajeuresDispo < 1 || vertusMajeuresDispo < 1 ||  vertuesHermetiquesDispo < 1 || vertuesDispo < costMajeure)) || vertuHermetiqueMajeure.default == typePersonnage" ng-checked="vertuHermetiqueMajeure.default == typePersonnage" ng-click="handleClickVertuesHermMaj($event)"></td>
 						</tr>
 					</tbody>
 				</table>
@@ -51,7 +51,7 @@
 						<tr ng-repeat="vertuSurnaturelleMajeure in vertusSurnaturellesMajeures track by $index">
 							<td>{{vertuSurnaturelleMajeure.nom}}</td>
 							<td>{{vertuSurnaturelleMajeure.effet}}</td>
-							<td><input type='checkbox' ng-model="vertuSurnaturelleMajeure.model" ng-disabled="!vertuSurnaturelleMajeure.model && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesSurnMaj($event)"></td>	
+							<td><input type='checkbox' ng-model="model" ng-disabled="!model && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesSurnMaj($event)"></td>	
 						</tr>
 					</tbody>
 				</table>
@@ -66,20 +66,10 @@
 						<th>Select</th>
 					</head>
 					<body>
-						<tr>
-							<td>Magister in Artibus</td>
-							<td>Vous êtes maître des arts dans une grande université européenne où vous avez complété votre régence de deux ans d'enseignement obligatoire. Vous avez le droit de vous faire appeler Magister ou Maître, n'êtes sujet qu'au droit canon et pouvez enseigner n'importe où en Europe.</td>
-							<td><input type='checkbox' ng-model="VSSMaj1" ng-disabled="!VSSMaj1 && (vertusMajeuresDispo < 1 || statutSocialDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesStatutSocMaj($event)"></td>
-						</tr>
-						<tr>
-							<td>Noble propriétaire terrien</td>
-							<td>Vous contrôlez des terres, des serfs et des hommes d'armes, vous devez fidélité et assistance à votre suzerain. Votre demeure seigneuriale compte une demi-douzaine de serviteurs, dont quelques gardes du corps. Vous avez le droit de rendre la justice dans votre fief, mais pas d'imposer la peine capitale, ni de mutiler les criminels.</td>
-							<td><input type='checkbox' ng-model="VSSMaj2" ng-disabled="!VSSMaj2 && (vertusMajeuresDispo < 1 || statutSocialDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesStatutSocMaj($event)"></td>
-						</tr>
-						<tr ng-if="typePersonnage != 'Mage' && maison == 'Mercere'">
-							<td>Toque Rouge</td>
-							<td>Vous délivrez des messages pour l'Ordre et vous disposez de plusieurs objets enchantés pour vous aider dans cette tâche. Vous obtenez la Vertu Grand Voyageur gratuitement.</td>
-							<td><input type='checkbox' ng-model="VSSMaj3" ng-disabled="!VSSMaj3 && (vertusMajeuresDispo < 1 || statutSocialDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesStatutSocMaj($event)"></td>
+						<tr ng-repeat="vertu in vertusStatutSocialMajeures">
+							<td>{{vertu.nom}}</td>
+							<td>{{vertu.effet}}</td>
+							<td><input type='checkbox' ng-model="model" ng-disabled="(!model && (vertusMajeuresDispo < 1 || statutSocialDispo < 1 || vertuesDispo < costMajeure)) || vertu.defaultTypePersonnage == typePersonnage || ((vertu.defaultMaison != maison) && vertu.defaultMaison != '')" ng-click="handleClickVertuesStatutSocMaj($event)"></td>
 						</tr>
 					</body>
 				</table>
