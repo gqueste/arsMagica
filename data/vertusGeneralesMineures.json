@@ -1,0 +1,632 @@
+[
+{
+	"nom": "Affinité pour (Compétence) 1",
+	"effet": "Lors de la création, les points d'expérience utilisés dans une Compétence sont doublés.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Affinité pour (Compétence) 2",
+	"effet": "Lors de la création, les points d'expérience utilisés dans une Compétence sont doublés.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Affinité pour (Compétence) 3",
+	"effet": "Lors de la création, les points d'expérience utilisés dans une Compétence sont doublés.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Amour Véritable (PJ)",
+	"effet": "Vous avez trouvé la personne qui vous était destinée dans toute la création : le lien entre vous est inaltérable. Que vous soyez blessé, en danger ou rejeté, le simple fait de penser à votre aimé(e) vous donne la force de persévérer. De l'autre côté, vous devez revenir régulièrement auprès de votre moitié. L'Amour Véritable n'est jamais à sens unique.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Aptitude magique latente",
+	"effet": "Vous possédez une qualité magique qui n'est pas encore manifestée, mais vous ne le réalisez probablement pas. Si vous êtes un mage, votre maître ne l'a pas détecté durant votre apprentissage. A la discrétion du conteur, cette qualité peut apparaitre spontanément ou à cause d'un évènement adéquat, comme boire du vin féérique. Ce n'est pas le Don : la capacité latente est plus limitée que cela.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Bénédiction de Vénus",
+	"effet": "Vous êtes attirant, avec un bonus aux tests de Communication et de Présence avec des personnes sexuellement compatibles dans une situation appropriée. C'est utile la plupart du temps, mais parfois embêtant.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Bon sens",
+	"effet": "Dès que vous êtes sur le point d'aller à l'encontre de ce qui est raisonnable dans le monde du jeu, le bon sens (par l'intermédiaire du conteur) vous prévient de votre erreur.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Caractéristiques supérieures 1",
+	"effet": "Vous avez 3 points supplémentaires à dépenser pour vos Caractéristiques.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Caractéristiques supérieures 2",
+	"effet": "Vous avez 3 points supplémentaires à dépenser pour vos Caractéristiques.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Caractéristiques supérieures 3",
+	"effet": "Vous avez 3 points supplémentaires à dépenser pour vos Caractéristiques.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Célèbre",
+	"effet": "Vous avez une Réputation positive de niveau 4. Choisissez son contenu (il n'a pas à être justifié) et son type.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Chance",
+	"effet": "Vous vous débrouillez bien dans les situations où la chance est plus importante que l'expérience ou le talent.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Clarté de pensée",
+	"effet": "Vos pensées sont logiques et rationnelles. Vous bénéficiez d'un bonus pour résister aux mensonges, à la confusion, à l'embrouillement et à la falsification, que la tentative soit magique ou vulgaire.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Colosse",
+	"effet": "Vous mesurez entre 1m80 et 2m10.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Combattant",
+	"effet": "Vous avez été entraîné à combattre et avez pu participer à une campagne militaire, peut être l'une des Croisades. Lors de la création de personnage, vous pouvez acheter des Compétences martiales et disposez de points d'expérience supplémentaires à répartir.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Confiance en soi",
+	"effet": "Vous avez une confiance absolue en vos propres capacités, ce qui se traduit par une valeur de Confiance de 2.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "Mage",
+	"automatiquePourMaison" : "Tytalus",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Connaissances mystiques",
+	"effet": "Vous pouvez prendre des Compétences mystiques durant la création de personnage. A moins de posséder le Don, vous ne pouvez pas apprendre Parma Magica. Vous recevez des points d'expérience supplémentaires à répartir en Compétences mystiques.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Constitution solide",
+	"effet": "Vous supportez bien la douleur et la fatigue.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Contacts sociaux",
+	"effet": "Vous connaissez beaucoup de monde dans un cercle social spécifique rencontré au fil des années. Où que vous alliez ou presque, vous rencontrez des gens que vous connaissez ou vous pouvez trouver quelqu'un prêt à vous aider.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Convalescence rapide",
+	"effet": "Votre corps guérit rapidement.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Créativité foisonnante",
+	"effet": "TODO !!!",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Doigté",
+	"effet": "Vous avez une coordination main-oeil exceptionnelle, et vous êtes doué pour les gestes précis et rapides.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Education bohémienne",
+	"effet": "Vous avez été élevé au sein d'une troupe de troubadours voyageant de ville en ville.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Education classique",
+	"effet": "Vous avez suivi les cours d'une école de grammaire, ainsi qu'une université ou une école épiscopale. Vous pouvez prendre des Compétences académiques et vous disposez de points d'expérience à répartir.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Education privilégiée",
+	"effet": "TODO !!!",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Endurance",
+	"effet": "Vous tenez plus longtemps que la moyenne lors d'activités fatigantes.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Erreurs profitables en (Compétence) 1",
+	"effet": "Vous êtes capable d'améliorer une Compétence particulière en multipliant les erreurs.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Erreurs profitables en (Compétence) 2",
+	"effet": "Vous êtes capable d'améliorer une Compétence particulière en multipliant les erreurs.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Erreurs profitables en (Compétence) 3",
+	"effet": "Vous êtes capable d'améliorer une Compétence particulière en multipliant les erreurs.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Etudiant (Dimension) 1",
+	"effet": "Grâce à votre entraînement aux aspects mystiques de l'une des quatre Dimensions (divine, féerique, infernale, magique), vous avez un bonus lors des utilisations des Connaissances de cette Dimension.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Etudiant (Dimension) 2",
+	"effet": "Grâce à votre entraînement aux aspects mystiques de l'une des quatre Dimensions (divine, féerique, infernale, magique), vous avez un bonus lors des utilisations des Connaissances de cette Dimension.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Etudiant (Dimension) 3",
+	"effet": "Grâce à votre entraînement aux aspects mystiques de l'une des quatre Dimensions (divine, féerique, infernale, magique), vous avez un bonus lors des utilisations des Connaissances de cette Dimension.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Etudiant attentif",
+	"effet": "Vous êtes particulièrement doué pour apprendre d'un professeur.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Exaltation",
+	"effet": "Vous êtes un orateur poignant ou une figure héroïque, capable d'inciter les gens au meilleur.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Excellence (Caractéristique) 1",
+	"effet": "Vous pouvez augmenter une Caractéristique ayant déjà une valeur de +3, jusqu'à +5. Justifiez cette augmentation.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Excellence (Caractéristique) 2",
+	"effet": "Vous pouvez augmenter une Caractéristique ayant déjà une valeur de +3, jusqu'à +5. Justifiez cette augmentation.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Excellence (Caractéristique) 3",
+	"effet": "Vous pouvez augmenter une Caractéristique ayant déjà une valeur de +3, jusqu'à +5. Justifiez cette augmentation.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Frénésie berserk",
+	"effet": "Vous pouvez entrer dans une rage aveugle pendant un combat ou lors d'une situation frustrante. Vous obtenez le trait de personnalité Colérique +2. lors de votre entrée en frénésie, vous avez un bonus en attaque et encaissement, mais un malus en défense. Si, à la fin du combat, vous êtes toujours en frénésie, vous attaquez vos amis.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Grand voyageur",
+	"effet": "Vous avez beaucoup voyagé dans cette partie du monde, ce qui fait que vous vous entendez bien avec ses habitants.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Indépendance",
+	"effet": "On ne peut pas facilement vous imposer des activités, des croyances ou des sentiments.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Indifférence des animaux",
+	"effet": "Votre Don ne gêne pas les animaux, bien qu'il ait un effet normal sur les gens.",
+	"requiredTypePersonnage" : "Mage",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Influence temporelle",
+	"effet": "de par votre ascendance ou votre position de confiance, vous jouissez d'un certain poids politique dans la société. Vous conseillez un dirigeant, et il peut vous arriver de diriger des gens du peuple, s'ils respectent votre position. Plus vous avez d'influence, plus vous avez de responsabilités et plus il devient difficile de travailler librement avec des mages.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "Servant",
+	"choixNecessaire": false
+},
+{
+	"nom": "Intuition",
+	"effet": "Votre sensibilité naturelle vous permet de prendre les bonnes décisions plus souvent que la simple chance ne pourrait l'expliquer. A chaque fois que vous êtes confronté à un choix où le hasard tient un rôle prépondérant, comme décider quel chemin suivre, vous avez une bonne chance de choisir correctement.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Lecteur perspicace",
+	"effet": "Vous êtes doué pour comprendre les écrits d'autrui.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Ouïe fine",
+	"effet": "Vous entendez mieux que la moyenne.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Pédagogue",
+	"effet": "Vous savez expliquer simplement de nouveaux concepts.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Protection",
+	"effet": "Vous êtes sous la protection d'une personne puissante, généralement un noble ou un membre haut placé du clergé. Ceux qui connaissent votre statut vous traitent avec prudence; ceux qui l'ignorent en paient souvent le prix.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Prudence pour (Compétence)",
+	"effet": "Vous êtes si prudent en ce qui concerne une compétence spécifique que vous avez peu de chance d'échouer de façon spectaculaire en cas d'échec.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Ragots",
+	"effet": "Des contacts réguliers dans la région vous fournissent toutes sortes d'informations sur la vie sociale et politique.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Réflexe éclair",
+	"effet": "Vous réagissez presque instantanément aux surprises. En fait, vos réflexes sont parfois si rapides que vous n'avez pas le temps de penser à la façon dont vous allez répondre. Notez que vous n'avez pas le choix de réagir ou pas.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Regard perçant",
+	"effet": "Si vous fixez intensément une personne, elle se sent mal à l'aise, comme si vous observiez son âme. Les personnes ayant des intentions cachées, des choses à se reprocher ou des mensonges en bouch doivent effectuer un Test. De plus, vous avez un bonus pour l'Intimidation.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Relique",
+	"effet": "Vous possédez une sainte relique, comme la phalange d'un saint par exemple.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Réserves de force",
+	"effet": "Une fois par jour, en cas de besoin, vous pouvez réaliser un exploit de force incroyable.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Sang féerique",
+	"effet": "Vous avez un être féerique quelque part dans votre arbre généalogique. Cela vous confère une compréhension instinctive des motivations et des personnalités de ce peuple mystique. Les êtres féeriques sont plus à l'aise en votre présence qu'avec d'autres humains. Vous êtes résistant aux effets de l'Age. Choisissez un type de sang : Nain (Artisanat), gobelin (Discrétion), satyre (Communication et Présence), Sidhe (Présence), Ondine (Eau)",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Sens de l'équilibre",
+	"effet": "Vous êtes doué pour garder l'équilibre, notamment sur les corniches ou les cordes raides.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Talent pour (Compétence) 1",
+	"effet": "Vous êtes particulièrement doué pour une Compétence, et ajoutez 2 à sa valeur dès que vous l'utilisez.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Talent pour (Compétence) 2",
+	"effet": "Vous êtes particulièrement doué pour une Compétence, et ajoutez 2 à sa valeur dès que vous l'utilisez.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Talent pour (Compétence) 3",
+	"effet": "Vous êtes particulièrement doué pour une Compétence, et ajoutez 2 à sa valeur dès que vous l'utilisez.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Talent pour l'Intrigue (Choisissez en un)",
+	"effet": "Vous êtes particulièrement doué pour une Compétence, et ajoutez 2 à sa valeur dès que vous l'utilisez.",
+	"requiredTypePersonnage" : "Mage",
+	"requiredMaison": "Bonisagus",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": true
+},
+{
+	"nom": "Talent pour la Théorie de la Magie (Choisissez en un)",
+	"effet": "Vous êtes particulièrement doué pour une Compétence, et ajoutez 2 à sa valeur dès que vous l'utilisez.",
+	"requiredTypePersonnage" : "Mage",
+	"requiredMaison": "Bonisagus",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": true
+},
+{
+	"nom": "Verdeur",
+	"effet": "Vous ne souffrez pas des effets de l'âge.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Vigueur",
+	"effet": "Vous résistez mieux aux coups que la plupart des gens.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+{
+	"nom": "Vision acérée",
+	"effet": "Vous voyez plus loin et plus clairement que les autres.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage" : "",
+	"automatiquePourMaison" : "",
+	"withoutTypePersonnage": "",
+	"choixNecessaire": false
+},
+]

@@ -1,0 +1,46 @@
+[
+{
+	"nom": "Changepeau",
+	"effet": "Vous possédez une cape, une fourrure ou un autre objet magique fait à partir d'un animal. Lorsque vous la touchez physiquement, vous pouvez prendre la forme de cet animal."
+},
+{
+	"nom": "Double vue",
+	"effet": "Vous voyez à travers les déguisements et les dissimulations illusoires, y compris l'invisibilité. Vous voyez également les choses naturellement invisibles comme les esprits et les fonrtières entre les niveaux de <em>regio</em>."
+},
+{
+	"nom": "Empathie avec les animaux",
+	"effet": "Vous pouvez communiquer avec les animaux commme s'ils étaient des êtres humains."
+},
+{
+	"nom": "Immunité mineure",
+	"effet": "Vous êtes immunisé contre un danger qui est soit rare, soit non mortel, soit les deux."
+},
+{
+	"nom": "Imposition des mains mineures",
+	"effet": "Vous pouvez guérir une maladie spécifique en touchant le patient et en dépensant un niveau de Fatigue. Cela doit être une maladie dont les gens guérissent fréquemment par eux-mêmes, ou qui n'est pas particulièrement grave. Vous ne pouvez choisir qu'une maladie, pas une blessure ou un autre mal."
+},
+{
+	"nom": "Musique enchanteresse",
+	"effet": "Lorsque vous vous coencentrez sur votre tâche, vous pouvez transmettre magiquement des émotions et des croyances aux personnes qui écoutent votre musique."
+},
+{
+	"nom": "Perception de la sainteté et de la malignité",
+	"effet": "Vous pouvez percevoir l'appartenance au Bien ou au Mal."
+},
+{
+	"nom": "Prémonitions",
+	"effet": "Vous sentez instinctivement quand quelque chose ne tourne pas rond ou va bientôt se gâter."
+},
+{
+	"nom": "Sens de la nature",
+	"effet": "Vous êtes en harmonie avec la nature."
+},
+{
+	"nom": "Sensibilité à la magie",
+	"effet": "Vous arrivez souvent à identifier un endroit ou un objet comme magique. Cependant, votre sensibilité vous rend vulnérable aux effets magiques."
+},
+{
+	"nom": "Sourcier",
+	"effet": "Vous avez la faculté de trouver des choses proches à l'aide d'une baguette de sourcier (généralement un bâton fourchu) et de votre propre intuition."
+}
+]

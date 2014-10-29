@@ -1,0 +1,47 @@
+[
+{
+	"nom": "Apprenti raté",
+	"effet": "Vous avez été l'apprenti d'un mage, mais quelque chose a fait que vous n'avez pas achevé votre formation. Peut être votre Don était-il incomplet ou qu'un incident grave vous l'a totalement arraché. Peut être travaillez vous encore pour votre ancien maître ou pour l'alliance à un poste ou un autre. Les mages ont de la compassion pour vous. Vous pouvez apprendre les Compéthences académiques, mystiques et martiales durant la création de personnage et connaissez la vie des mages.",
+	"withoutTypePersonnage" : "Mage"
+},
+{
+	"nom": "Capitaine mercenaire",
+	"effet": "Vous dirigez une petite compagnie de mercenaires (5 à 10), louant vos services aux plus offrants. Vous êtes une sorte de chevalier errant, mais sans le prestige. Vous avez accumulé une grande richesse durant vos voyages, puis l'avez dilapidé, plusieurs fois. Vous pouvez prendre des Compétences martiales.",
+	"withoutTypePersonnage" : ""
+},
+{
+	"nom": "Chevalier",
+	"effet": "Vous êtes un chevalier, un membre de la noblesse et l'un des guerriers d'élite d'Europe. Vous avez un cheval ainsi que des armes et des armures de grande qualité: lance, épée, écu, cotte de maille complète et destrier. Vous pouvez prendre des Compétences martiales durant la création de personnage.",
+	"withoutTypePersonnage" : ""
+},
+{
+	"nom": "Clerc",
+	"effet": "Vous appartenez à la classe alphabétisée, et travaillez comme scribe professionnel, comptable, juriste, étudiant ou fonctionnaire. Grâce à votre formation, vous pouvez prendre des Compétences académiques durant la création de personnage. Vous pouvez appartenir à un ordre mineur (acolyte, exorciste, lecteur ou portier), ce qui vous permet de vous marier tout en bénéficiant des avantages d'être un membre du clergé, dont le fait de dépendre du droit canon plutôt que du droit laïc. Vous pouvez également être diacre ou sous-diacre.",
+	"withoutTypePersonnage" : ""
+},
+{
+	"nom": "Custos",
+	"effet": "Vous êtes employé par une alliance, où vous jouissez d'un statut élevé. Vous pouvez être un servant, un spécialiste ou un intendant. Vous pouvez choisir un groupe de Compétences réservées durant la création de personnage : martiales, académiques ou mystiques. Si vous choisissez les compétences martiales ou mystiques, vous pouvez tout de même apprendre à parler le latin, mais pas à le lire ou l'écrire.",
+	"withoutTypePersonnage" : ""
+},
+{
+	"nom": "Gentilhomme / Gente dame",
+	"effet": "Vous êtes un membre mineur peut être illégitime, d'une famille noble. Vous n'êtes pas en ligne pour héritier, mais on vous traite tout de même comme un membre de la famille et vous pouvez vous faire appeler Seigneur ou Dame. Vous habitez probablement près de l'alliance avec votre famille. Quoique vous ne manquiez de rien, vous n'avez aucune richesse propre. Vous pouvez occasionnellement demander à votre famille de vous acheter un équipement coûteux, mais vous devez leur donner une bonne raison. On s'attend à ce que vous serviez votre famille la majeure partie du temps, sous peine d'en perdre les avantages.",
+	"withoutTypePersonnage" : ""
+},
+{
+	"nom": "Moine mendiant",
+	"effet": "TODO !!!!",
+	"withoutTypePersonnage" : ""
+},
+{
+	"nom": "Prêtre",
+	"effet": "TODO !!!!",
+	"withoutTypePersonnage" : ""
+},
+{
+	"nom": "Sage",
+	"effet": "Vous appartenez à une large classe comprenant les mystiques, les devins, les guérisseurs et ainsi de suite. Vous êtes probablement de nature magique et vous avez sans doute une Vertu vous donnant une capacité surnaturelle. Vous êtes bien vu de votre communauté, quoique votre présence puisse provoquer la peur autant que le respect. Dans ce cas contraire, vous pouvez être un vagabond ou un exilé. Vous pouvez prendre des Compétences mystiques ou académiques, mais pas les deux, lors de la création de personnage.",
+	"withoutTypePersonnage" : ""
+}
+]
