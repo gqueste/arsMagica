@@ -117,6 +117,15 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
   $http.get("./data/vertusHermetiquesMineures.json").success(function(data) {
     $scope.vertusHermetiquesMineures = data;
   });
+  $http.get("./data/vertusSurnaturellesMineures.json").success(function(data) {
+    $scope.vertusSurnaturellesMineures = data;
+  });
+  $http.get("./data/vertusStatutSocialMineures.json").success(function(data) {
+    $scope.vertusStatutSocialMineures = data;
+  });
+  $http.get("./data/vertusGeneralesMineures.json").success(function(data) {
+    $scope.vertusGeneralesMineures = data;
+  });
 
   //Déclaration Constantes
   $scope.costMajeure = 3;
@@ -238,7 +247,7 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
             $scope.vertuesDispo = $scope.vertuesDispo + $scope.costMineure;
           }
           else{
-            if($scope.maison == 'Mercere' || $scope.maison=='Flambeau') {
+            if($scope.maison == 'Mercere' || $scope.maison=='Flambeau' || $scope.maison=='Bonisagus') {
               $scope.choixNecessaire = 1;
             }
           }
@@ -300,7 +309,6 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
       $scope.vertuesDispo = $scope.vertuesDispo - $scope.costMineure;
       $scope.vertuesHermetiquesDispo --;
       if(choixNecessaire) {
-        console.log("ezdzee");
         $scope.choixNecessaire --;
       }
     }
@@ -332,12 +340,18 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
       $scope.statutSocialNecessaire ++;
     }
   };
-  $scope.handleClickVertuesGenMin = function(obj) {
+  $scope.handleClickVertuesGenMin = function(obj, choixNecessaire) {
     if(obj.target.checked) { //coche
       $scope.vertuesDispo = $scope.vertuesDispo - $scope.costMajeure;   
+      if(choixNecessaire) {
+        $scope.choixNecessaire --;
+      }
     }
     else{ //decoche
       $scope.vertuesDispo = $scope.vertuesDispo + $scope.costMajeure;
+      if(choixNecessaire) {
+        $scope.choixNecessaire ++;
+      }
     }
   };
   $scope.handleClickVertuesStatSocGrat = function(obj) {
