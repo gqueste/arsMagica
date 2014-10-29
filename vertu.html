@@ -84,40 +84,10 @@
 						<th>Select</th>
 					</head>
 					<body>
-						<tr>
-							<td>Ange gardien</td>
-							<td>Vous avez appris à entendre la voix d'un gardien divin qui vous donne des conseils pratiques et spirituels. L'ange murmure à votre oreille et vous dit ce qui est le mieux pour vous, sur le plan spirituel plutôt que matériel. Il n'approuve la violence que pour des raisons sacrées, souvent difficiles à démontrer. Si vous refusez de suivre un conseil de l'ange, il vous abandonne jusqu'à ce que vous corrigiez votre erreur. L'ange n'a qu'une connaissance partielle de vos pensées, mais quand vous parlez à voix haute, il vous entend et peut dicuter avec vous. Il peut également vous conférer un bonus en encaissement ou résistance magique. L'ange ne vous accorde ces avantages que si vous agissez en accord avec la volonté de Dieu.</td>
-							<td><input type='checkbox' ng-model="VGMaj1" ng-disabled="!VGMaj1 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesGenMaj($event)"></td>
-						</tr>
-						<tr>
-							<td>Connaissance du (Terrain)</td>
-							<td>Vous connaissez un type de terrain comme votre poche, et vous vous y sentez plus à l'aise que n'importe où ailleurs. Vous connaissez le terrain, ses habitants.</td>
-							<td><input type='checkbox' ng-model="VGMaj2" ng-disabled="!VGMaj2 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesGenMaj($event)"></td>
-						</tr>
-						<tr>
-							<td>Fantôme protecteur</td>
-							<td>Un fantôme vous protège. cela peut être un grand-parent, un ami d'enfance ou tout autre personne tenant assez à vous pour rester à vos côtés après la mort. Le fantôme est invisible et silencieux pour tous, sauf vous et les personnes dotées de Double Vue. Il peut voir et entendre ce qui se passe autour de vous, ce qui en fait un excellent espion, puisqu'il peut s'éloigner une fois par jour pendant une demi-heure. Cependant, la mort ne laisse pas les gens dans leur état normal. Le fantôme a probablement des travers qui le rendent peu fiable. Il peut aller jusqu'à vous encourager à le rejoindre de l'Autre côté.</td>
-							<td><input type='checkbox' ng-model="VGMaj3" ng-disabled="!VGMaj3 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesGenMaj($event)"></td>
-						</tr>
-						<tr>
-							<td>Foi exaltée</td>
-							<td>Votre piété et votre dévotion sont telles que votre foi pourrait déplacer des montagnes. Vous avez un point de Foi et pouvez en gagner d'autres.</td>
-							<td><input type='checkbox' ng-model="VGMaj4" ng-disabled="!VGMaj4 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesGenMaj($event)"></td>
-						</tr>
-						<tr>
-							<td>Prophétie de mort</td>
-							<td>Votre destin a fait l'objet d'une bénédiction ou d'une malédiction. Quelqu'un comme un mage, un être féerique ou tout autre créature surnaturelle a posé une condition sur votre mort. Jusqu'à ce que cette condition soit remplie, vous ne mourrez pas, quoique vous puissiez être gravement blessé. Vous ne pouvez pas mourir de vos blessures ou de vieillesse.</td>
-							<td><input type='checkbox' ng-model="VGMaj5" ng-disabled="!VGMaj5 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesGenMaj($event)"></td>
-						</tr>
-						<tr ng-if="typePersonnage != 'Mage'">
-							<td>Richesse</td>
-							<td>Vous êtes un membre privilégié de votre classe.</td>
-							<td><input type='checkbox' ng-model="VGMaj6" ng-disabled="!VGMaj6 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesGenMaj($event)"></td>
-						</tr>
-						<tr>
-							<td>Sang de géant</td>
-							<td>Le sang d'une ancienne race de géant coule dans vos veines. Bien que vous ne soyez pas aussi grand que vos ancêtres, vous mesurez jusqu'à 2 mètres et demi et pesez jusqu'à 250 kilos.</td>
-							<td><input type='checkbox' ng-model="VGMaj7" ng-disabled="!VGMaj7 && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesGenMaj($event)"></td>
+						<tr ng-repeat="vertu in vertusGeneralesMajeures | filter:{withoutPersonnage:'!'+typePersonnage}">
+							<td>{{vertu.nom}}</td>
+							<td>{{vertu.effet}}</td>
+							<td><input type='checkbox' ng-model="model" ng-disabled="!model && (vertusMajeuresDispo < 1 || vertuesDispo < costMajeure)" ng-click="handleClickVertuesGenMaj($event)"></td>
 						</tr>
 					</body>
 				</table>

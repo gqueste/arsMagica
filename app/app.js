@@ -99,6 +99,9 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
   $http.get("./data/vertusStatutSocialMajeures.json").success(function(data) {
     $scope.vertusStatutSocialMajeures = data;
   });
+  $http.get("./data/vertusGeneralesMajeures.json").success(function(data) {
+    $scope.vertusGeneralesMajeures = data;
+  });
 
   //Déclaration Constantes
   $scope.costMajeure = 3;
