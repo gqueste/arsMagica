@@ -86,6 +86,18 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
   }
 })
 
+.filter('requiredFilter', function(){
+  return function(items, typePersonnage, maison) {
+    var filtered = [];
+    angular.forEach(items, function(item) {
+      if((item.requiredTypePersonnage == typePersonnage || item.requiredTypePersonnage == '') && (item.requiredMaison == maison || item.requiredMaison == '')) {
+        filtered.push(item);
+      }
+    });
+    return filtered;
+  };
+})
+
 .controller('VertuCtrl', function($scope, $routeParams, $http, $location, $anchorScroll) {
   $scope.typePersonnage = $routeParams.typePersonnage;
   $scope.maison = $routeParams.maison;
@@ -101,6 +113,9 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
   });
   $http.get("./data/vertusGeneralesMajeures.json").success(function(data) {
     $scope.vertusGeneralesMajeures = data;
+  });
+  $http.get("./data/vertusHermetiquesMineures.json").success(function(data) {
+    $scope.vertusHermetiquesMineures = data;
   });
 
   //Déclaration Constantes
@@ -127,6 +142,7 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
   $scope.vicesHermetiquesMajeursNecessaires;
   $scope.vicesHermetiquesNecessaires;
   $scope.vicesMineursDispo ;
+  $scope.choixNecessaire;
 
   //initialisation des variables
   if ($scope.typePersonnage == 'Servant') {
@@ -153,6 +169,7 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
     $scope.vicesHermetiquesMajeursNecessaires = $scope.none;
     $scope.vicesHermetiquesNecessaires = $scope.none;
     $scope.vicesMineursDispo = $scope.noLimit;
+    $scope.choixNecessaire = $scope.none;
   }
   else {
     if ($scope.typePersonnage == 'Compagnon') {
@@ -179,6 +196,7 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
       $scope.vicesHermetiquesMajeursNecessaires = $scope.none;
       $scope.vicesHermetiquesNecessaires = $scope.none;
       $scope.vicesMineursDispo = 5;
+      $scope.choixNecessaire = $scope.none;
     }
     else { //Mages
        $scope.regles = [
@@ -204,6 +222,7 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
       $scope.vicesHermetiquesMajeursNecessaires = $scope.none;
       $scope.vicesHermetiquesNecessaires = 1;
       $scope.vicesMineursDispo = 5;
+      $scope.choixNecessaire = $scope.none;
       if ($scope.maison == 'Ex Miscellanea') {
         $scope.avantages = 'Une Vertu hermétique mineure gratuite, une Vertu non hermétique majeure gratuite et un Vice hermétique majeur obligatoire';
         $scope.vicesHermetiquesMajeursNecessaires = 1;
@@ -217,6 +236,11 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
           if($scope.maison == 'Jerbiton') {
             $scope.avantages = 'Une vertu mineure liée à l\'érudition, aux arts ou aux intéractions vulgaires';
             $scope.vertuesDispo = $scope.vertuesDispo + $scope.costMineure;
+          }
+          else{
+            if($scope.maison == 'Mercere' || $scope.maison=='Flambeau') {
+              $scope.choixNecessaire = 1;
+            }
           }
         }
       }
@@ -271,14 +295,21 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
       $scope.vertusMajeuresDispo ++;
     }
   };
-  $scope.handleClickVertuesHermMin = function(obj) {
+  $scope.handleClickVertuesHermMin = function(obj, choixNecessaire) {
     if(obj.target.checked) { //coche
       $scope.vertuesDispo = $scope.vertuesDispo - $scope.costMineure;
       $scope.vertuesHermetiquesDispo --;
+      if(choixNecessaire) {
+        console.log("ezdzee");
+        $scope.choixNecessaire --;
+      }
     }
     else{ //decoche
       $scope.vertuesDispo = $scope.vertuesDispo + $scope.costMineure;
       $scope.vertuesHermetiquesDispo ++;
+      if(choixNecessaire) {
+        $scope.choixNecessaire ++;
+      }
     }
   };
   $scope.handleClickVertuesSurnMin = function(obj) {
