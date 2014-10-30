@@ -1,0 +1,44 @@
+[
+{
+	"nom": "Mage Hermétique",
+	"effet": "Vous appartenez à l'Ordre d'Hermès.",
+	"requiredTypePersonnage" : "Mage",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage": "Mage"
+},
+{
+	"nom": "Artisan",
+	"effet": "Vous gagnez votre vie en fabriquant et en vendant des biens. Vous êtes probablement un habitant libre d'une ville, mais vous pouvez venir d'une zone rurale.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage": ""
+},
+{
+	"nom": "Marchand",
+	"effet": "Vous vivez de l'achat et la revente de biens. Vous pouvez être un colporteur, tenir une échoppe, ou être sur les routes.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage": ""
+},
+{
+	"nom": "Paysan",
+	"effet": "Vous vivez en travaillant la terre. Vous pouvez contrôler des terres étendues et engager des gens pour cultiver, si vous êtes riche, ou être une des personnes engagées.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage": ""
+},
+{
+	"nom": "Résident d'une alliance",
+	"effet": "Vous êtes membre du personnel d'une alliance, où vous avez vécu toute votre vie. Etant entretenu par l'alliance, votre niveau de vie dépend de ses ressources plutôt que des vôtres.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage": ""
+},
+{
+	"nom": "Vagabond",
+	"effet": "Vous n'êtes pas lié à une communauté, survivant en effectuant des travaux journaliers quelconques.",
+	"requiredTypePersonnage" : "",
+	"requiredMaison": "",
+	"automatiquePourTypePersonnage": ""
+}
+]
