@@ -102,6 +102,7 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
   $scope.typePersonnage = $routeParams.typePersonnage;
   $scope.maison = $routeParams.maison;
 
+  //Chargement Vertus
   $http.get("./data/vertusHermetiquesMajeures.json").success(function(data) {
     $scope.vertusHermetiquesMajeures = data;
   });
@@ -129,6 +130,8 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
   $http.get("./data/vertusStatutSocialGratuites.json").success(function(data) {
     $scope.vertusStatutSocialGratuites = data;
   });
+
+  //Chargement vices
   $http.get("./data/vicesHermetiquesMajeurs.json").success(function(data) {
     $scope.vicesHermetiquesMajeurs = data;
   });
@@ -152,6 +155,18 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
   });
   $http.get("./data/vicesPersonnaliteMineurs.json").success(function(data) {
     $scope.vicesPersonnaliteMineurs = data;
+  });
+  $http.get("./data/vicesHistoireMineurs.json").success(function(data) {
+    $scope.vicesHistoireMineurs = data;
+  });
+  $http.get("./data/vicesStatutSocialMineurs.json").success(function(data) {
+    $scope.vicesStatutSocialMineurs = data;
+  });
+  $http.get("./data/vicesSurnaturelsMineurs.json").success(function(data) {
+    $scope.vicesSurnaturelsMineurs = data;
+  });
+  $http.get("./data/vicesGenerauxMineurs.json").success(function(data) {
+    $scope.vicesGenerauxMineurs = data;
   });
 
 

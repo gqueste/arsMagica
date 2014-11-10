@@ -192,405 +192,218 @@
 			<div ng-if="typePersonnage == 'Mage'">
 				<h2>Vices Hermétiques Majeurs</h2>
 				<table class="table table-striped" style='width:100%'>
-					<head>
+					<thead>
 						<th>Nom</th>
 						<th>Effet</th>
 						<th>Select</th>
-					</head>
-					<body>
+					</thead>
+					<tbody>
 						<tr ng-repeat="vice in vicesHermetiquesMajeurs">
 							<td>{{vice.nom}}</td>
 							<td>{{vice.effet}}</td>
 							<td><input type='checkbox' ng-model="model" ng-disabled="!model && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHermetiquesDispo < 1)" ng-click="handleClickVicesHermMaj($event)"></td>
 						</tr>
-					</body>
+					</tbody>
 				</table>
 			</div>
 
 			<div>
 				<h2>Vices de Personnalité Majeurs ou Mineurs</h2>
 				<table class="table table-striped" style='width:100%'>
-					<head>
+					<thead>
 						<th>Nom</th>
 						<th>Effet</th>
 						<th>Majeur</th>
 						<th>Mineur</th>
-					</head>
-					<body>
+					</thead>
+					<tbody>
 						<tr ng-repeat="vice in vicesPersonnaliteMajeursMineurs">
 							<td>{{vice.nom}}</td>
 							<td>{{vice.effet}}</td>
 							<td><input type='checkbox' ng-model="modelMaj" ng-disabled="(!modelMaj && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1 || vicesMajeurDispo < 1 || vicesPersonnaliteMajeurDispo < 1)) || modelMin" ng-click="handleClickVicesPersMaj($event)"></td>
 							<td><input type='checkbox' ng-model="modelMin" ng-disabled="(!modelMin && (vicesDispo < costMajeure || vicesPersonnaliteDispo < 1)) || modelMaj" ng-click="handleClickVicesPersMin($event)"></td>
 						</tr>
-					</body>
+					</tbody>
 				</table>
 			</div>
 
 			<div>
 				<h2>Vices d'Histoire Majeurs</h2>
 				<table class="table table-striped" style='width:100%'>
-					<head>
+					<thead>
 						<th>Nom</th>
 						<th>Effet</th>
 						<th>Select</th>
-					</head>
-					<body>
+					</thead>
+					<tbody>
 						<tr ng-repeat="vice in vicesHistoireMajeurs">
 							<td>{{vice.nom}}</td>
 							<td>{{vice.effet}}</td>
 							<td><input type='checkbox' ng-model="model" ng-disabled="!model && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHistoireDispo < 1)" ng-click="handleClickVicesPersMaj($event)"></td>
 						</tr>
-					</body>
+					</tbody>
 				</table>
 			</div>
 
 			<div>
 				<h2>Vices de Statut Social Majeurs</h2>
 				<table class="table table-striped" style='width:100%'>
-					<head>
+					<thead>
 						<th>Nom</th>
 						<th>Effet</th>
 						<th>Select</th>
-					</head>
-					<body>
+					</thead>
+					<tbody>
 						<tr ng-repeat="vice in vicesStatutSocialMajeurs">
 							<td>{{vice.nom}}</td>
 							<td>{{vice.effet}}</td>
 							<td><input type='checkbox' ng-model="model" ng-disabled="!model && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || statutSocialDispo < 1)" ng-click="handleClickVicesSSMaj($event)"></td>
 						</tr>
-					</body>
+					</tbody>
 				</table>
 			</div>
 
 			<div>
 				<h2>Vices Surnaturels Majeurs</h2>
 				<table class="table table-striped" style='width:100%'>
-					<head>
+					<thead>
 						<th>Nom</th>
 						<th>Effet</th>
 						<th>Select</th>
-					</head>
-					<body>
+					</thead>
+					<tbody>
 						<tr ng-repeat="vice in vicesSurnaturelsMajeurs">
 							<td>{{vice.nom}}</td>
 							<td>{{vice.effet}}</td>
 							<td><input type='checkbox' ng-model="model" ng-disabled="!model && (vicesDispo < costMajeure || vicesMajeursDispo < 1)" ng-click="handleClickVicesSurMaj($event)"></td>
 						</tr>
-					</body>
+					</tbody>
 				</table>
 			</div>
 
 			<div>
 				<h2>Vices Généraux Majeurs</h2>
 				<table class="table table-striped" style='width:100%'>
-					<head>
+					<thead>
 						<th>Nom</th>
 						<th>Effet</th>
 						<th>Select</th>
-					</head>
-					<body>
+					</thead>
+					<tbody>
 						<tr ng-repeat="vice in vicesGenerauxMajeurs">
 							<td>{{vice.nom}}</td>
 							<td>{{vice.effet}}</td>
 							<td><input type='checkbox' ng-model="model" ng-disabled="!model && (vicesDispo < costMajeure || vicesMajeursDispo < 1)" ng-click="handleClickVicesGenMaj($event)"></td>
 						</tr>
-					</body>
+					</tbody>
 				</table>
 			</div>
 
 			<div ng-if="typePersonnage == 'Mage'">
 				<h2>Vices Hermétiques Mineurs</h2>
 				<table class="table table-striped" style='width:100%'>
-					<head>
+					<thead>
 						<th>Nom</th>
 						<th>Effet</th>
 						<th>Select</th>
-					</head>
-					<body>
+					</thead>
+					<tbody>
 						<tr ng-repeat="vice in vicesHermetiquesMineurs">
 							<td>{{vice.nom}}</td>
 							<td>{{vice.effet}}</td>
 							<td><input type='checkbox' ng-model="model" ng-disabled="!model && (vicesDispo < costMineure || vicesHermetiquesDispo < 1 || vicesMineursDispo < 1)" ng-click="handleClickVicesHermMin($event)"></td>
 						</tr>
-					</body>
+					</tbody>
 				</table>
 			</div>
 
 			<div>
 				<h2>Vices de Personnalité Mineurs</h2>
 				<table class="table table-striped" style='width:100%'>
-					<head>
+					<thead>
 						<th>Nom</th>
 						<th>Effet</th>
 						<th>Select</th>
-					</head>
-					<body>
+					</thead>
+					<tbody>
 						<tr ng-repeat="vice in vicesPersonnaliteMineurs">
 							<td>{{vice.nom}}</td>
 							<td>{{vice.effet}}</td>
 							<td><input type='checkbox' ng-model="model" ng-disabled="!model && (vicesDispo < costMineure || vicesPersonnaliteDispo < 1 || vicesMineursDispo < 1)" ng-click="handleClickVicesPersMin($event)"></td>
 						</tr>
-					</body>
+					</tbody>
 				</table>
 			</div>
 			
 			<div>
 				<h2>Vices d'Histoire Mineurs</h2>
 				<table class="table table-striped" style='width:100%'>
-					<head>
+					<thead>
 						<th>Nom</th>
 						<th>Effet</th>
 						<th>Select</th>
-					</head>
-					<body>
-						<tr>
-							<td>Ami féérique</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViHMin1" ng-disabled="!ViHMin1 && (vicesDispo < costMineure || vicesHistoireDispo < 1 || vicesMineursDispo < 1)" ng-click="handleClickVicesHistMin($event)"></td>
+					</thead>
+					<tbody>
+						<tr ng-repeat="vice in vicesHistoireMineurs">
+							<td>{{vice.nom}}</td>
+							<td>{{vice.effet}}</td>
+							<td><input type='checkbox' ng-model="model" ng-disabled="!model && (vicesDispo < costMineure || vicesHistoireDispo < 1 || vicesMineursDispo < 1)" ng-click="handleClickVicesHistMin($event)"></td>
 						</tr>
-						<tr>
-							<td>Chantage</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViHMin2" ng-disabled="!ViHMin2 && (vicesDispo < costMineure || vicesHistoireDispo < 1 || vicesMineursDispo < 1)" ng-click="handleClickVicesHistMin($event)"></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViHMin3" ng-disabled="!ViHMin3 && (vicesDispo < costMineure || vicesHistoireDispo < 1 || vicesMineursDispo < 1)" ng-click="handleClickVicesHistMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Compagnon animal</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViHMin4" ng-disabled="!ViHMin4 && (vicesDispo < costMineure || vicesHistoireDispo < 1 || vicesMineursDispo < 1)" ng-click="handleClickVicesHistMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Compagnon animal magique</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViHMin5" ng-disabled="!ViHMin5 && (vicesDispo < costMineure || vicesHistoireDispo < 1 || vicesMineursDispo < 1)" ng-click="handleClickVicesHistMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Héritier</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViHMin6" ng-disabled="!ViHMin6 && (vicesDispo < costMineure || vicesHistoireDispo < 1 || vicesMineursDispo < 1)" ng-click="handleClickVicesHistMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Liens familiaux étroits</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViHMin7" ng-disabled="!ViHMin7 && (vicesDispo < costMineure || vicesHistoireDispo < 1 || vicesMineursDispo < 1)" ng-click="handleClickVicesHistMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Mentor</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViHMin8" ng-disabled="!ViHMin8 && (vicesDispo < costMineure || vicesHistoireDispo < 1 || vicesMineursDispo < 1)" ng-click="handleClickVicesHistMin($event)"></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViHMin9" ng-disabled="!ViHMin9 && (vicesDispo < costMineure || vicesHistoireDispo < 1 || vicesMineursDispo < 1)" ng-click="handleClickVicesHistMin($event)"></td>
-						</tr>
-					</body>
+					</tbody>
 				</table>
 			</div>
+
 			<div>
 				<h2>Vices de Statut Social Mineurs</h2>
 				<table class="table table-striped" style='width:100%'>
-					<head>
+					<thead>
 						<th>Nom</th>
 						<th>Effet</th>
 						<th>Select</th>
-					</head>
-					<body>
-						<tr>
-							<td>Chef hors-la-loi</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViSSMin1" ng-disabled="!ViSSMin1 && (vicesDispo < costMineure || statutSocialDispo < 1 || vicesMineursDispo < 1)" ng-click="handleClickVicesStatSocMin($event)"></td>
+					</thead>
+					<tbody>
+						<tr ng-repeat="vice in vicesStatutSocialMineurs">
+							<td>{{vice.nom}}</td>
+							<td>{{vice.effet}}</td>
+							<td><input type='checkbox' ng-model="model" ng-disabled="!model && (vicesDispo < costMineure || statutSocialDispo < 1 || vicesMineursDispo < 1)" ng-click="handleClickVicesStatSocMin($event)"></td>
 						</tr>
-						<tr>
-							<td>Criminel marqué</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViSSMin2" ng-disabled="!ViSSMin2 && (vicesDispo < costMineure || statutSocialDispo < 1 || vicesMineursDispo < 1)" ng-click="handleClickVicesStatSocMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Marginal</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViSSMin3" ng-disabled="!ViSSMin3 && (vicesDispo < costMineure || statutSocialDispo < 1 || vicesMineursDispo < 1)" ng-click="handleClickVicesStatSocMin($event)"></td>
-						</tr>
-					</body>
+					</tbody>
 				</table>
 			</div>
+
 			<div>
 				<h2>Vices Surnaturels Mineurs</h2>
 				<table class="table table-striped" style='width:100%'>
-					<head>
+					<thead>
 						<th>Nom</th>
 						<th>Effet</th>
 						<th>Select</th>
-					</head>
-					<body>
-						<tr>
-							<td>Haine des animaux</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViSurMin1" ng-disabled="!ViSurMin1 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesSurnatMin($event)"></td>
+					</thead>
+					<tbody>
+						<tr ng-repeat="vice in vicesSurnaturelsMineurs">
+							<td>{{vice.nom}}</td>
+							<td>{{vice.effet}}</td>
+							<td><input type='checkbox' ng-model="model" ng-disabled="!model && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesSurnatMin($event)"></td>
 						</tr>
-						<tr>
-							<td>Petite malédiction</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViSurMin2" ng-disabled="!ViSurMin2 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesSurnatMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Visions</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViSurMin3" ng-disabled="!ViSurMin3 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesSurnatMin($event)"></td>
-						</tr>
-					</body>
+					</tbody>
 				</table>
 			</div>
+
 			<div>
 				<h2>Vices Généraux Mineurs</h2>
 				<table class="table table-striped" style='width:100%'>
-					<head>
+					<thead>
 						<th>Nom</th>
 						<th>Effet</th>
 						<th>Select</th>
-					</head>
-					<body>
-						<tr>
-							<td>Arthrite</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin1" ng-disabled="!ViGenMin1 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
+					</thead>
+					<tbody>
+						<tr ng-repeat="vice in vicesGenerauxMineurs">
+							<td>{{vice.nom}}</td>
+							<td>{{vice.effet}}</td>
+							<td><input type='checkbox' ng-model="model" ng-disabled="!model && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
 						</tr>
-						<tr>
-							<td>Caractéristiques inférieures</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin2" ng-disabled="!ViGenMin2 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Compétences inhibées</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin3" ng-disabled="!ViGenMin3 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Constitution facile</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin4" ng-disabled="!ViGenMin4 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Défaut de prononciation</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin5" ng-disabled="!ViGenMin5 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Défiguration</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin6" ng-disabled="!ViGenMin6 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Désorientation</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin7" ng-disabled="!ViGenMin7 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Difformité</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin8" ng-disabled="!ViGenMin8 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Dur d'oreille</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin9" ng-disabled="!ViGenMin9 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Education sauvage</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin10" ng-disabled="!ViGenMin10 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Haine des animaux</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin11" ng-disabled="!ViGenMin11 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Handicaps</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin12" ng-disabled="!ViGenMin12 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Handicap social</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin13" ng-disabled="!ViGenMin13 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Incompréhensible</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin14" ng-disabled="!ViGenMin14 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Main manquante</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin15" ng-disabled="!ViGenMin15 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Mal des transports</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin16" ng-disabled="!ViGenMin16 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Maladresse</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin17" ng-disabled="!ViGenMin17 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Mauvais étudiant</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin18" ng-disabled="!ViGenMin18 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Obésité</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin19" ng-disabled="!ViGenMin19 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Oeil manquant</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin20" ng-disabled="!ViGenMin20 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Oreille manquante</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin21" ng-disabled="!ViGenMin21 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Petite carrure</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin22" ng-disabled="!ViGenMin22 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Piètre (Caractéristique)</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin23" ng-disabled="!ViGenMin23 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Souillure maléfique</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin24" ng-disabled="!ViGenMin24 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Tremblote</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin25" ng-disabled="!ViGenMin25 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Tristement célèbre</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin26" ng-disabled="!ViGenMin26 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-						<tr>
-							<td>Vue basse</td>
-							<td></td>
-							<td><input type='checkbox' ng-model="ViGenMin27" ng-disabled="!ViGenMin27 && (vicesDispo < costMineure || vicesMineursDispo < 1)" ng-click="handleClickVicesGenMin($event)"></td>
-						</tr>
-					</body>
+					</tbody>
 				</table>
 			</div>
     	</div>
