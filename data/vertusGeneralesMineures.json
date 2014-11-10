@@ -201,7 +201,7 @@
 },
 {
 	"nom": "Créativité foisonnante",
-	"effet": "TODO !!!",
+	"effet": "Vous avez l'imagination et la créativité nécessaires pour composer une nouvelle balade ou pour peindre un tableau original. Vous vaez le potentiel pour devenir un grand artiste. Vous obtenez un bonus sur tous les jets visant à créer une oeuvre d'art inédite",
 	"requiredTypePersonnage" : "",
 	"requiredMaison": "",
 	"automatiquePourTypePersonnage" : "",
@@ -241,7 +241,7 @@
 },
 {
 	"nom": "Education privilégiée",
-	"effet": "TODO !!!",
+	"effet": "Vous avez grandi dans un environnement où vous aviez accès à des professeurs et du temps libre pour étudier. Vous avez 50 points d'expérience supplémentaires qui peuvent être dépensés pour des Compétences générales, académiques ou martiales. L'explication la plus courante est que votre famille était riche quand vous étiez enfant, mais ne l'est plus maintenant (sauf Vertu Richesse).",
 	"requiredTypePersonnage" : "",
 	"requiredMaison": "",
 	"automatiquePourTypePersonnage" : "",

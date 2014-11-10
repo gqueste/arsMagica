@@ -31,12 +31,12 @@
 },
 {
 	"nom": "Moine mendiant",
-	"effet": "TODO !!!!",
+	"effet": "Vous êtes un disciple de saint François ou de saint Dominique, prêchant la bonne parole parmi des riches et les pauvres et réconfortant les malades, les miséreux, les affamés et les mourants. Bien que vous ayez juré de servir l'Eglise pour le reste de votre vie, vos voyages perpétuels sont vus d'un mauvais oeil par l'évêque et le clergé de la paroisse; vous n'avez donc aucune influence politique au sein de l'organisation. Comme tous les religieux, vous n'êtes soumis qu'au droit canon. En raison de votre formation, vous pouvez prendre des Compétences académiques durant la création de personnage. Si vous le souhaitez, vous pouvez avoir été ordonné prêtre, ce qui vous permet d'officier lros des mariages, des baptêmes, des funérailles, ainsi que pour la messe. Toutefois le clergé local peut vous en vouloir d'empiéter sur son territoire. Vous avez prononcé des voeux de pauvreté, de chasteté et d'obéissance (vous n'avez pas besoin de prendre le Vice Voeux monastiques.",
 	"withoutTypePersonnage" : ""
 },
 {
 	"nom": "Prêtre",
-	"effet": "TODO !!!!",
+	"effet": "Vous avez été ordonné prêtre, ce qui signifie que vous pouvez célébrer la messe et administrer les sacrements de la pénitence et de l'extrême-onction. Par votre parole, le Fils de Dieu peut se manifester dans le pain et le vin. En tant que prêtre, vous êtes sous la protection du droit canon, ce qui implique que vous ne pouvez être poursuivi par les autorités séculières. Votre position vous accorde un respect considérable, et les personnes prêtes à vous insulter sont rares. Vous pouvez être curés d'une paroisse. Dans ce cas, vous ne pouvez pas prendre le Vice Pauvreté. Vos devoirs comprennent écouter la confession, prêcher à vos ouailles et s'occuper de leurs besoins spirituels. Avec la Vertu Richesse, votre paroisse est assez riche pour payer un vicaire qui se charge d'une partie de votre travail; vous pouvez être un pluraliste, détenant la cure de plusieurs paroisses. les hommes d'Eglise réformateurs n'approuvent pas le pluralisme. Vous pouvez prendre des Compétences académiques durant la création de personnage.",
 	"withoutTypePersonnage" : ""
 },
 {
