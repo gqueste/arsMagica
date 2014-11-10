@@ -129,6 +129,31 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
   $http.get("./data/vertusStatutSocialGratuites.json").success(function(data) {
     $scope.vertusStatutSocialGratuites = data;
   });
+  $http.get("./data/vicesHermetiquesMajeurs.json").success(function(data) {
+    $scope.vicesHermetiquesMajeurs = data;
+  });
+  $http.get("./data/vicesPersonnaliteMajeursMineurs.json").success(function(data) {
+    $scope.vicesPersonnaliteMajeursMineurs = data;
+  });
+  $http.get("./data/vicesHistoireMajeurs.json").success(function(data) {
+    $scope.vicesHistoireMajeurs = data;
+  });
+  $http.get("./data/vicesStatutSocialMajeurs.json").success(function(data) {
+    $scope.vicesStatutSocialMajeurs = data;
+  });
+  $http.get("./data/vicesSurnaturelsMajeurs.json").success(function(data) {
+    $scope.vicesSurnaturelsMajeurs = data;
+  });
+  $http.get("./data/vicesGenerauxMajeurs.json").success(function(data) {
+    $scope.vicesGenerauxMajeurs = data;
+  });
+  $http.get("./data/vicesHermetiquesMineurs.json").success(function(data) {
+    $scope.vicesHermetiquesMineurs = data;
+  });
+  $http.get("./data/vicesPersonnaliteMineurs.json").success(function(data) {
+    $scope.vicesPersonnaliteMineurs = data;
+  });
+
 
   //Déclaration Constantes
   $scope.costMajeure = 3;
@@ -397,18 +422,6 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
       $scope.vicesPersonnaliteMajeurDispo ++;
     }
   };
-  $scope.handleClickVicesPersMaj = function(obj) {
-    if(obj.target.checked) { //coche
-      $scope.vicesDispo = $scope.vicesDispo - $scope.costMajeure;
-      $scope.vicesMajeursDispo --;
-      $scope.vicesPersonnaliteDispo --;
-    }
-    else{ //decoche
-      $scope.vicesDispo = $scope.vicesDispo + $scope.costMajeure;
-      $scope.vicesMajeursDispo ++;
-      $scope.vicesPersonnaliteDispo ++;
-    }
-  };
   $scope.handleClickVicesSSMaj = function(obj) {
     if(obj.target.checked) { //coche
       $scope.vicesDispo = $scope.vicesDispo - $scope.costMajeure;
@@ -499,8 +512,6 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
       $scope.vicesMineursDispo ++;
     }
   };
-
-
 
 
 

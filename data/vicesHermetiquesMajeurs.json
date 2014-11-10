@@ -1,0 +1,70 @@
+[
+{
+	"nom": "Condition nécessaire",
+	"effet": "Pour que votre magie fonctionne, vous devez effectuer une action spécifique durant le lancement du sort. Cela peut être quelque chose de simple, comme chanter ou tourner trois fois sur vous-même. Si vous êtes dans l'incapacité de réaliser cette action, vous ne pouvez plus lancer de sorts du tout."
+},
+{
+	"nom": "Dépendance à la magie",
+	"effet": "Vous raffolez de la sensation ressentie en générant et en maîtrisant la magie. A chaque fois que vous lancez un soirt, vous avez du mal à vous empêcher de recommencer encore et encore jusqu'à tomber d'épuisement."
+},
+{
+	"nom": "Don tapageur",
+	"effet": "Les gens se rendent rapidement compte que vous avez quelque chose d'étrange, même s'ils ne savent pas que vous êtes un mage. Les animaux sont extrêmement perturbés, effrayés, voire enragés par votre présence."
+},
+{
+	"nom": "Enclin au Crépuscule",
+	"effet": "Lorsque vous lancez des sorts, vous ne pouvez vous empêcher de canaliser des quantités superflues de magie. Ou peut-être que vous aimez cela. Lorsque vous lancez un sort, vous êtes donc plus enclin à tomber dans le Crépuscule."
+},
+{
+	"nom": "Etudes contraintes",
+	"effet": "Vous êtes incapable d'étudier la magie à partir de livres ou de vis uniquement. Vous devez être en présence de l'Art en question. Par exemple, vous devez être assis à proximité d'une source ou d'une mare pour étudier Aquam, ou d'un grand feu pour étudier Ignem."
+},
+{
+	"nom": "Gâchis de vis",
+	"effet": "Lorsque vous utilisez du vis brut, vous gâchez un quart des pions appliqués."
+},
+{
+	"nom": "Mage non structuré",
+	"effet": "N'ayant jamais parfaitement saisi la complexité du lancement des sorts, vous êtes incapable de pratiquer la magie formelle sans des efforts intenses. Vous lancez tous les sorts formels comme des sorts rituels. Vous ne pouvez pas apprendre de sorts rituels."
+},
+{
+	"nom": "Magie à portée réduite",
+	"effet": "Vous êtes handicapé dans l'utilisation de la magie lorsque vous ne touchez pas la Cible de votre sort."
+},
+{
+	"nom": "Magie chaotique",
+	"effet": "Votre magie est indomptable."
+},
+{
+	"nom": "Magie douloureuse",
+	"effet": "Manipuler la Magie vous cause une souffrance telle que vous perdez l'équivalent d'un niveau de Fatigue à chaque fois que vous lancez un sort."
+},
+{
+	"nom": "Magie rigide",
+	"effet": "Vous ne pouvez pas utiliser de vis lorsque vous lancez des sorts. Ainsi, vous êtes incapable de d'augmenter vos jets de sorts ou d'utiliser la magie rituelle."
+},
+{
+	"nom": "Magie spontanée difficile",
+	"effet": "La magie spontanée est toujours un effort pour vous."
+},
+{
+	"nom": "Magie spontanée faible",
+	"effet": "Vous ne pouvez pas vous fatiguer lorsque vous utilisez la magie spontanée, ce qui vous oblige à toujours diviser votre Total de Lancement par 5."
+},
+{
+	"nom": "Résistance magique faible",
+	"effet": "Toute forme de Résistance magique que vous générez est notablement plus faible sous certaines conditions relativement courantes et faciles à utiliser par vos adversaires."
+},
+{
+	"nom": "Restriction",
+	"effet": "Vous ne pouvez pas lancer de sorts dans certains conditions inhabituelles."
+},
+{
+	"nom": "Rituel de longévité difficile",
+	"effet": "Quelque chose dans votre nature rend difficile la conception d'un Rituel de longétivité efficace sur vous."
+},
+{
+	"nom": "Technique déficiente",
+	"effet": "Tous les Totaux, impliquant une Technique spécifique, sont divisés par 2."
+}
+]

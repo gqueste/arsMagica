@@ -1,0 +1,62 @@
+[
+{
+	"nom": "Ambition",
+	"effet": "Vous voulez être le meilleur, ou le plus puissant dans un domaine particulier. Vous ne vous laissez pas distraire dans votre progression vers la gloire et vous êtes impatient de réaliser tout ce qui vous rapproche de votre ambition."
+},
+{
+	"nom": "Arrogance",
+	"effet": "Vous avez une foi absolue en vos propres capacités. Vous pensez que vous agissez toujours au mieux de vos possibilités, voire légèrement au-dessus. Jamais vous n'envisagez l'échec. Si vous obtenez un échec, vous trouvez une explication rationnelle à ce qui s'est réellement passé."
+},
+{
+	"nom": "Avarice",
+	"effet": "Vous voulez de l'argent, beaucoup d'argent. Quand vous en obtenez, vous ne le dépensez pas, mais le mettez de côté afin de pouvoir le compter. Votre avarice peut être tournée vers d'autres choses que la richesse matérielle, comme les livres, ou le vis brut. Dans ce cas, vous n'utilisez pas ce que vous accumulez, et ne laissez personne s'en servir."
+},
+{
+	"nom": "Compassion",
+	"effet": "Vous aidez toujours les personnes blessées et les gens ayant des problèmes. Vous ne supportez pas la souffrance chez les autres, quoique vous vous démeniez vous-même jusqu'à l'épuisement."
+},
+{
+	"nom": "Courroux",
+	"effet": "Vous vous mettez en colère pour un rien. Votre fureur lorsque vous êtes contrarié pour un motif sérieux est un spectacle terrible."
+},
+{
+	"nom": "Détermination",
+	"effet": "Vous vous êtes fixé un but que vous êtes déterminé à réaliser. Cela doit être quelque chose d'important, l'objectif de toute une vie. Mais si vous en voyez le bout, vous le remplacerez immédiatement par autre chose."
+},
+{
+	"nom": "Envie",
+	"effet": "Vous pensez que tout le monde a plus de chance que vous, et qu'ils ne la méritent pas, alors que vous, oui. C'est pourquoi vous vous efforcez de leur gâcher la vie et de leur prendre leurs biens."
+},
+{
+	"nom": "Fierté",
+	"effet": "Vous pensez être plus important que n'importe qui d'autre et vous vous attendez à être traité en conséquence. Les mages peuvent admettre un ou deux égaux, mais estiment ne pas avoir de supérieurs. Les vulgaires acceptent les supérieurs sociaux, mais ils se pensent tout de même fondamentalement supérieurs au roi, par exemple."
+},
+{
+	"nom": "Générosité",
+	"effet": "Vous offrez de bonne volonté vos possessions à quiconque en exprime le désir, même s'il ne le désire pas vraiment. S'il veut quelque chose d'important à vos yeux, vous pouvez ne pas le donner, mais vous le prêterez volontiers."
+},
+{
+	"nom": "Gourmandise",
+	"effet": "Vous aimez boire et manger, ce que vous faites avec excès dès que possible. Vous êtes probablement gros, sauf si vous n'avez pas souvent l'occasion de manger abondamment."
+},
+{
+	"nom": "Haine",
+	"effet": "Vous haïssez tellement une personne ou un groupe que vous consacrez votre vie à leur malheur. La cible de votre haine ne doit pas être quelqu'un que vous pouvez facilement vaincre."
+},
+{
+	"nom": "Ingérence",
+	"effet": "Vous voulez remédier aux problèmes des gens, en jouant les entremetteurs, en apprenant aux enfants à coudre comme il faut ou en soignant les malades. Non seulement vous y consacrez beaucoup de temps et d'énergie, mais les gens ont tendance à mal prendre votre aide."
+},
+{
+	"nom": "Luxure",
+	"effet": "Vous cherchez des contacts sexuels avec autant de personnes que possible. Notez que vous n'êtes pas nécessairement doué pour la séduction; le talent ne fait que changer le type de problème que vous rencontrez."
+},
+{
+	"nom": "Optimisme",
+	"effet": "Vous êtes convaincu que tout se finira bien. Ce n'est pas de l'aggorance, puisque vous acceptez la possibilité de l'échec. Mais, même dans ce cas, vous pensez que les circonstances se retourneront en votre faveur en fin de compte, et que tout sera pour le mieux."
+},
+{
+	"nom": "Piété",
+	"effet": "Vous êtes un fidèle zélé de votre religion. Vous évitez ce qu'elle interdit et suivez ses obligations avec enthousiasme."
+}
+]
