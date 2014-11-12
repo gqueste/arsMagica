@@ -236,10 +236,10 @@
 						<th>Select</th>
 					</thead>
 					<tbody>
-						<tr ng-repeat="vice in vicesHistoireMajeurs">
+						<tr ng-repeat="vice in vicesHistoireMajeurs | requiredFilter:typePersonnage:maison">
 							<td>{{vice.nom}}</td>
 							<td>{{vice.effet}}</td>
-							<td><input type='checkbox' ng-model="model" ng-disabled="!model && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHistoireDispo < 1)" ng-click="handleClickVicesPersMaj($event)"></td>
+							<td><input type='checkbox' ng-model="model" ng-disabled="!model && (vicesDispo < costMajeure || vicesMajeursDispo < 1 || vicesHistoireDispo < 1)" ng-click="handleClickVicesHistMaj($event)"></td>
 						</tr>
 					</tbody>
 				</table>

@@ -428,15 +428,27 @@ angular.module('arsMagica', ['ngRoute'], function($httpProvider){
       $scope.vicesDispo = $scope.vicesDispo - $scope.costMajeure;
       $scope.vicesMajeursDispo --;
       $scope.vicesPersonnaliteDispo --;
-      $scope.vicesPersonnaliteMajeurDispo --; 
+      $scope.vicesPersonnaliteMajeurDispo --;
     }
     else{ //decoche
       $scope.vicesDispo = $scope.vicesDispo + $scope.costMajeure;
       $scope.vicesPersonnaliteDispo ++;
-      $scope.vicesMajeursDispo ++;
+      $scope.vicesPersonnaliteDispo ++;
       $scope.vicesPersonnaliteMajeurDispo ++;
     }
   };
+  $scope.handleClickVicesHistMaj = function(obj) {
+    if(obj.target.checked) { //coche
+      $scope.vicesDispo = $scope.vicesDispo - $scope.costMajeure;
+      $scope.vicesMajeursDispo --;
+      $scope.vicesHistoireDispo --;
+    }
+    else{ //decoche
+      $scope.vicesDispo = $scope.vicesDispo + $scope.costMajeure;
+      $scope.vicesPersonnaliteDispo ++;
+      $scope.vicesHistoireDispo ++;
+    }
+  }
   $scope.handleClickVicesSSMaj = function(obj) {
     if(obj.target.checked) { //coche
       $scope.vicesDispo = $scope.vicesDispo - $scope.costMajeure;

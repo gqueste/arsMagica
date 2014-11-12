@@ -1,74 +1,110 @@
 [
 {
 	"nom": "Amour véritable (PNJ)",
-	"effet": ""
+	"effet": "Vous avez trouvé la personne qui vous était destinée dans toute la création; le lien entre entre vous est inaltérable. Quand vous êtes blessé, en danger ou rejeté, le simple fait de penser à votre aimé(e) vous donne la force de persévérer. Dans la pire des situations, il/elle peut même venir à votre secours. le plus souvent, il/elle sera en danger et ce sera à vous de le/la sauver.",
+	"requiredMaison": "",
+	"requiredTypePersonnage": ""
 },
 {
 	"nom": "Brebis galeuse",
-	"effet": ""
+	"effet": "Vous êtes issu d'une famille prestigieuse, dont vous avez été rejeté pour une raison ou une autre. Ils ne veulent rien avoir à faire avec vous, si ce n'est vous punir ou se servir de vous. Les personnes jalouses du pouvoir de votre famille peuvent se venger en s'en prenant à vous.",
+	"requiredMaison": "",
+	"requiredTypePersonnage": ""
 },
 {
 	"nom": "Ennemis",
-	"effet": ""
+	"effet": "Quelqu'un vous cause des problèmes, comme un baron ou un évêque, une bande de hors-la-loi ou un aubergiste vraiment méchant. L'ennemi doit être assez puissant pour vous menacer.",
+	"requiredMaison": "",
+	"requiredTypePersonnage": ""
 },
 {
 	"nom": "Erreur sur la personne",
-	"effet": ""
+	"effet": "Quelqu'un qui vous ressemble parfaitement, que vous et vos compagnons ne rencontreront probablement jamais, vviant près de chez vous, commet toutes sortes d'actes violents, illégaux, obscènes ou embarassants. Vous devez souvent expliquer qui vous êtes, et devez parfois faire face aux conséquences des actes de l'autre personne.",
+	"requiredMaison": "",
+	"requiredTypePersonnage": ""
 },
 {
 	"nom": "Faveurs",
-	"effet": ""
+	"effet": "Vous devez un service à quelqu'un ou à plusieurs personnes, qui peuvent vous le demander n'importe quand. Ignorer leur requête aurait des conséquences allant du gênant au mortellement grave.",
+	"requiredMaison": "",
+	"requiredTypePersonnage": ""
 },
 {
 	"nom": "Fureur",
-	"effet": ""
+	"effet": "D'un tempérament violent, vous êtes parfois sujet à des crises de rage destructrices et incontrôlables. Elles peuvent être provoquées par des événements spécifiques, comme être insulté, être blessé ou entendre quelqu'un dénigrer l'Ordre d'Hermès. Vous devez faire un test pour savoir si vous conservez votre calme. pendant ces crises, vous avez un bonus aux dégâts mais un malus sur tous les autres jets.",
+	"requiredMaison": "",
+	"requiredTypePersonnage": ""
 },
 {
 	"nom": "Harcelé par une entité surnaturelle",
-	"effet": ""
+	"effet": "Un être surnaturel intervient dans votre vie relativement régulièrement. Il peut très bien avoir de bonnes intentions à votre égard, mais le résultat vous entraîne dans des histoires. Des exemples pourraient être un démon tentant de vous corrompre, un ange tâchant de vous sauver, un être féérique jouant avec vous ou un fantôme poursuivant les desseins qu'il avait de son vivant.",
+	"requiredMaison": "",
+	"requiredTypePersonnage": ""
 },
 {
 	"nom": "Indiscrétion",
-	"effet": ""
+	"effet": "Vous êtes incapable de farder un secret. Vous ne pouvez vous empêcher de le raconter aux premières personnes intéressées que vous rencontrez, dans l'idée d'aider, de distraire ou de montrer que vous êtes au courant, à moins que vous ne réussissiez un test de tension d'Intelligence.",
+	"requiredMaison": "",
+	"requiredTypePersonnage": ""
 },
 {
 	"nom": "Maître ennemi",
-	"effet": ""
+	"effet": "Votre maître ne pense pas que vous ayez passé le Gant de l'apprenti, le test nécessaire pour devenir mage. Il vous harcèle régulièrement avec des manoeuvres politiques et des attaques indirectes.",
+	"requiredMaison": "",
+	"requiredTypePersonnage": "Mage"
 },
 {
 	"nom": "Malédiction de Vénus",
-	"effet": ""
+	"effet": "Vous attirez les personnes que vous n'avez aucune envie d'attirer. Des gens que vuos détestez ont le béguin pour vous et refusent d'entendre vos refus. De plus, vous avez tendance à tomber amoureux de gens inappropriés, dans des circonstances inappropriées. Les personnes qui vous intéressent vous trouvent vain et creux.",
+	"requiredMaison": "",
+	"requiredTypePersonnage": ""
 },
 {
 	"nom": "Nuisance surnaturelle",
-	"effet": ""
+	"effet": "Des entités surnaturelles d'un certain type interfèrent avec votre vie de façon mineure dès que vous êtes parmi elles.",
+	"requiredMaison": "",
+	"requiredTypePersonnage": ""
 },
 {
 	"nom": "Passé diabolique",
-	"effet": ""
+	"effet": "Vous êtes associé à des diabolistes. Bien que vous ayez renoncé à leur philosophie maléfique, vous êtes toujours hanté par votre éducation et les souvenirs d'actes qu'il vaut mieux taire. Peut-être vos parents étaient-ils diaboliques, mais vous non. Peut-être avez-vous rejoint une secte avant de vous repentir et de fuir. Vos anciens associés peuvent toujours s'intéresser à vous et à vos activités, malheureusement.",
+	"requiredMaison": "",
+	"requiredTypePersonnage": ""
 },
 {
 	"nom": "Querelle",
-	"effet": ""
+	"effet": "Votre famille est impliquée dans une querelle. La ou les familles rivales sont d'une force à peu près équivalente à la vôtre et ses alliés. Vous risquez d'être pris en embuscade ou attaqué par des rivaux, et votre famille s'attend à ce que vous participiez aux raids contre vos ennemis.",
+	"requiredMaison": "",
+	"requiredTypePersonnage": ""
 },
 {
 	"nom": "Responsabilité",
-	"effet": ""
+	"effet": "Vous vous sentez responsable pour quelqu'un, que vous aidez en cas de soucis. Cette personne, qui peut être un ami ou un membre de votre famille, devrait être un PNJ relativement faible.",
+	"requiredMaison": "",
+	"requiredTypePersonnage": ""
 },
 {
 	"nom": "Serment de fidélité",
-	"effet": ""
+	"effet": "Vous avez juré un serment de fidélité et d'assistance à une personne extérieure à l'alliance. Elle vous demande de temps en temps de tenir votre parole. Le Code hermétique interdit aux mages de prononcer des serments de fidélité. Certains passent outre.",
+	"requiredMaison": "",
+	"requiredTypePersonnage": ""
 },
 {
 	"nom": "Sombre secret",
-	"effet": ""
+	"effet": "Vous êtes hanté par quelque chose qui pourrait mener à la honte, au rejet, voire à une revanche si elle était découverte. Des signes de ce secret réapparaissaient régulièrement, et d'aures personnes peuvent être au courant et risquent de vous trahir. Pour ces raisons, vous évitez et craignez certains endroits, certaines personnes, et certaines choses.",
+	"requiredMaison": "",
+	"requiredTypePersonnage": ""
 },
 {
 	"nom": "Subalternes difficiles",
-	"effet": ""
+	"effet": "Vous ne pouvez prendre cette accroche d'histoire que si votre personnage a des subalternes d'une sorte ou d'une autre, et qu'il compte les conserver. Peu importe le nombre de gens dont vous vous débarrassez, ou l'attention que vous portez à l'embauche de nouveaux candidats, vos subalternes sont toujours une source de problèmes. La nature de ces problèmes peut changer, mais vous êtes régulièrement entraîné dans les conséquences de leurs actions. Si d'autres personnes donnent des ordres à vos subalternes, ils n'ont pas ce problème. il vient de vous, pas d'eux.",
+	"requiredMaison": "",
+	"requiredTypePersonnage": ""
 },
 {
 	"nom": "Voeux monastiques",
-	"effet": ""
+	"effet": "Vous avez prononcé des voeux de pauvreté, de chasteté et d'obéissance à un supérieur religieux. cela couvre les voeux des frères mendiants, ainsi que ceux des moines et des nonnes à proprement parler.",
+	"requiredMaison": "",
+	"requiredTypePersonnage": ""
 }
 ]
