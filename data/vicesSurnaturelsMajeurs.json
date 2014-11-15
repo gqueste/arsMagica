@@ -1,14 +1,14 @@
 [
 {
 	"nom": "Grande malédiction",
-	"effet": ""
+	"effet": "Vous avez été maudit par une puissance surnaturelle, d'une façon qui vous handicape sérieusement."
 },
 {
 	"nom": "Lycanthrope",
-	"effet": ""
+	"effet": "Suite à une malédiction, vous vous transformez en un dangereux prédateur, tel qu'un loup, un lynx ou un ours, les nuits de pleine lune ou d'autres événements astronomiques mensuels similaires. La transformation ne fait pas changer vos vêtements, ni vous autres possessions avec vous. Vous n'êtes pas immunisé contre les armes normales et la malédiction ne se transmet pas aux personnes que vous mordez. tant que vous êtes transformé, vous avez l'intelligence d'un animal et vous réagissez à tous les stimuli comme un animal, tout en reconnaissant vos amis et vos ennemis. Vous ne gardez aucune mémoire de vos actions une fois redevenu vous même, si ce n'est parois dans vos rêves. Il est même possible que vous n'ayez pas conscience d'être maudit. Lorsque vous reprenez forme humaine à l'aube, vous êtes guéri de toutes les blessures subies sous forme animale."
 },
 {
 	"nom": "Vieillissement accéléré",
-	"effet": ""
+	"effet": "Probablement à cause d'une malédiction ou d'une catastrophe magique, vous vieillissez deux fois plus vite que la normale."
 }
 ]

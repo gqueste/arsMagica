@@ -1,122 +1,122 @@
 [
 {
 	"nom": "Arts incompatibles",
-	"effet": ""
+	"effet": "Quelle qu'en soit la raison, vous êtes totalement incapable d'employer deux combinaisons de Technique et de Forme."
 },
 {
-	"nom": " ",
-	"effet": ""
+	"nom": "Circonstances délétères",
+	"effet": "Tous vos totaux magiques sont divisés par deux sous certaines circonstances inhabituelles."
 },
 {
-	"nom": " ",
-	"effet": ""
+	"nom": "Créativité asséchée",
+	"effet": "Vous avez des difficultés à inventer de nouvelles choses dans un laboratoire."
 },
 {
-	"nom": " ",
-	"effet": ""
+	"nom": "Elève sans imagination",
+	"effet": "Vous avez du mal à comprendre les choses par vous-même."
 },
 {
-	"nom": " ",
-	"effet": ""
+	"nom": "Enchantement ardu",
+	"effet": "Votre Don s'accorde mal avec la création d'objets enchantés."
 },
 {
-	"nom": " ",
-	"effet": ""
+	"nom": "Erudition limitée",
+	"effet": "Vous ne comprenez pas ce que l'on tente de vous apprendre."
 },
 {
-	"nom": " ",
-	"effet": ""
+	"nom": "Faible Parma Magica",
+	"effet": "Votre Parma Magica est défectueuse. Elle ne confère que la moitié de sa Résistance magique normale contre une certaine Forme"
 },
 {
-	"nom": " ",
-	"effet": ""
+	"nom": "Forme déficiente",
+	"effet": "Tous les totaux impliquant une forme spécifique sont divisés par deux."
 },
 {
-	"nom": " ",
-	"effet": ""
+	"nom": "Haine des animaux",
+	"effet": "Les animaux réagissent à votre présence comme si vous aviez le Don."
 },
 {
 	"nom": "Imprudence en sorcellerie",
-	"effet": ""
+	"effet": "Vous êtes brouillon dans votre manipulation du pouvoir magique."
 },
 {
 	"nom": "Lancement lent",
-	"effet": ""
+	"effet": "Votre magie nécessite plus de temps de préparation et d'exécution que celle des autres mages."
 },
 {
 	"nom": "Magie biscornue",
-	"effet": ""
+	"effet": "Votre magie s'accompagne d'un effet secondaire déplaisant. Son intensité dépend du niveau du sort."
 },
 {
 	"nom": "Magie cyclique (négatif)",
-	"effet": ""
+	"effet": "Votre magie est moins puissante à certaines périodes."
 },
 {
 	"nom": "Magie désorientante",
-	"effet": ""
+	"effet": "Après avoir lancé un sort, vous devez passer un tour sans rien faire d'autre que de recouvrer vos capacités mentales."
 },
 {
 	"nom": "Magie disjointe",
-	"effet": ""
+	"effet": "Vous ne pouvez pas utiliser les savoirs existants pour vous aider dans votre magie."
 },
 {
 	"nom": "Magie émoussée",
-	"effet": ""
+	"effet": "Votre magie est particulièrement peu efficace pour pénétrer la Résistance magique."
 },
 {
 	"nom": "Magie éphémère",
-	"effet": ""
+	"effet": "Vos sorts ne persistent pas aussi longtemps qu'ils devraient."
 },
 {
 	"nom": "Magie étrange",
-	"effet": ""
+	"effet": "Vous ne contrôlez pas parfaitement votre magie."
 },
 {
 	"nom": "Magie imprévisible",
-	"effet": ""
+	"effet": "Vous lancez toujours un dé de tension lorsque vous lancez un sort, même si vous êtes totalement relaxé."
 },
 {
 	"nom": "Magie lâche",
-	"effet": ""
+	"effet": "Votre Total de progression est divisée par deux lorsque vous tentez de maîtriser des sorts."
 },
 {
 	"nom": "Magie maladroite",
-	"effet": ""
+	"effet": "Vous avez du mal à viser avec précision lorsque vous lancez un sort."
 },
 {
 	"nom": "Magie spontanée difficile",
-	"effet": ""
+	"effet": "La magie spontanée est toujours un effort pour vous."
 },
 {
 	"nom": "Maître tristement célèbre",
-	"effet": ""
+	"effet": "Votre maître était un diaboliste, un paresseux, un idiot ou universellement méprisé ou honni par une autre personne."
 },
 {
 	"nom": "Mauvaise magie formelle",
-	"effet": ""
+	"effet": "Vous n'êtes pas doué pour la magie formelle."
 },
 {
 	"nom": "Parens incompétent",
-	"effet": ""
+	"effet": "Votre professeur était moins puissant et moins bon professeur que la moyenne."
 },
 {
 	"nom": "Rebouteux",
-	"effet": ""
+	"effet": "A cause de votre magie ésotérique, les autres mages ne vous font pas confiance et, plus important, ne vous respectent pas."
 },
 {
 	"nom": "Résistance magique limitée",
-	"effet": ""
+	"effet": "Vous résistez moins bien à la magie que d'autres mages."
 },
 {
 	"nom": "Vulnérabilité au pouvoir divin",
-	"effet": ""
+	"effet": "Vous subissez le double des malus normaux dans une aura divine."
 },
 {
 	"nom": "Vulnérabilité au pouvoir féérique",
-	"effet": ""
+	"effet": "Vous subissez le double des malus normaux dans une aura féérique."
 },
 {
 	"nom": "Vulnérabilité au pouvoir démoniaque",
-	"effet": ""
+	"effet": "Vous subissez le double des malus normaux dans une aura démoniaque."
 }
 ]

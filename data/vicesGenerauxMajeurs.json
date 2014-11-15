@@ -1,42 +1,42 @@
 [
 {
 	"nom": "Asthénie",
-	"effet": ""
+	"effet": "Vous ne pouvez pas faire d'efforts pendant plus de quelques secondes. Des déplacements rapides, comme un combat ou une poursuite, vous laissent éreinté. Les longues promenades sont au dessus de vos forces. Vous ne pouvez pas apprendre de Compétences martiales ou d'autres talents impliquant une fatigue physique. Si vous êtes un mage, les niveaux de Fatigue que vous perdez en lançant des sorts sont doublés."
 },
 {
 	"nom": "Cécité",
-	"effet": ""
+	"effet": "Vous voyez très mal ou pas du tout. L'utilisation d'armes à distance est futile, lire est impossible et l'orientation dans un lieu inconnu est difficile. Les mages aveugles pouvant détecter leurs cibles par d'autres sens, ils sont moins limités que d'autres personnes lorsqu'ils tirent. Cependant, ils ne peuvent pas cibler leurs sorts sans une aide magique."
 },
 {
 	"nom": "Halo magique",
-	"effet": ""
+	"effet": "Les gens et les animaux réagissent comme si vous aviez le Don, bien que, pour autant que vous le sachiez, vous n'ayez aucune capacité magique."
 },
 {
 	"nom": "Infirmité",
-	"effet": ""
+	"effet": "Soit vous n'avez plus de jambes, soit elles sont totalement inutilisables. Vous pouvez les avoir perdues dans un accident ou un châtiment. Vous ne pouvez pas marcher, quoique vous puissiez ramper ou pousser un chariot avec un bâton."
 },
 {
 	"nom": "Manque de confiance en soi",
-	"effet": ""
+	"effet": "Vous avez une priètre opinion de votre propre valeur."
 },
 {
 	"nom": "Mutisme",
-	"effet": ""
+	"effet": "Vous ne pouvez pas parler, peut être parce que votre langue a été coupée. Vous employez probablement des gestes et des grognements rudimentaires pour vous faire comprendre."
 },
 {
 	"nom": "Nain",
-	"effet": ""
+	"effet": "Vous êtes aussi grand qu'un enfant."
 },
 {
 	"nom": "Pauvreté",
-	"effet": ""
+	"effet": "Vous êtes un membre pauvre de votre classe sociale."
 },
 {
 	"nom": "Privé de mains",
-	"effet": ""
+	"effet": "Vous n'avez pas de mains. Toute activité nécessitant des mains est impossible."
 },
 {
 	"nom": "Surdité",
-	"effet": ""
+	"effet": "Vous n'entendez pas du tout."
 }
 ]

@@ -1,10 +1,10 @@
 [
 {
 	"nom": "Etranger",
-	"effet": ""
+	"effet": "Vous appartenez à un groupe que l'on identifie facilement et que l'on méprise ou dont on se méfie. Vous êtes exclu et souvent persécuté pour ce motif, et votre vie et votre liberté sont parfois menacées. Vous n'avez aucun moyen de vous débarasser de cette souillure, qui vous marque où que vous alliez."
 },
 {
 	"nom": "Hors-la-loi",
-	"effet": ""
+	"effet": "Ayant été déclaré Hors-la-loi, vous devez vivre en marge de la société. Vous pouvez prendre des Compétences Martiales lors de la création de personnage."
 }
 ]
